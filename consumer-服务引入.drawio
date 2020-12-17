@@ -1,9 +1,101 @@
-<mxfile host="app.diagrams.net" modified="2020-12-17T04:59:31.604Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="4QQqkGoblWkCmgzdoZh6" version="14.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-17T05:15:22.658Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="8fqG6aL642tQuUVJVEiV" version="14.0.4" type="github">
   <diagram id="H2Gwt1Vl9tpk588tiA88" name="第 1 页">
-    <mxGraphModel dx="1420" dy="778" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1124" dy="519" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="EMUu2rEzcTqFW0xUzOTb-9" target="EMUu2rEzcTqFW0xUzOTb-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-9" value="容器-创建对象" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="70" y="40" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="EMUu2rEzcTqFW0xUzOTb-10" target="EMUu2rEzcTqFW0xUzOTb-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-10" value="Reference属性注入" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="65" y="120" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="EMUu2rEzcTqFW0xUzOTb-13" target="EMUu2rEzcTqFW0xUzOTb-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-13" value="后置处理器处理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="65" y="200" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-20" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="EMUu2rEzcTqFW0xUzOTb-16" target="EMUu2rEzcTqFW0xUzOTb-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-16" value="ReferenceBean" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="65" y="270" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="EMUu2rEzcTqFW0xUzOTb-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="325" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-19" value="ReferenceConfig" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="270" y="40" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="EMUu2rEzcTqFW0xUzOTb-22" target="EMUu2rEzcTqFW0xUzOTb-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-22" value="校验，组装参数" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="270" y="120" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="EMUu2rEzcTqFW0xUzOTb-23">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="325" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-23" value="创建代理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="270" y="200" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-27" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="EMUu2rEzcTqFW0xUzOTb-26" target="EMUu2rEzcTqFW0xUzOTb-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="50" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-26" value="ProxyFacoty" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="270" y="280" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="EMUu2rEzcTqFW0xUzOTb-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="535" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-28" value="生成字节码字符串" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="480" y="40" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="EMUu2rEzcTqFW0xUzOTb-30">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="535" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-30" value="生成的类实现了dubbo 接口" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="460" y="120" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="EMUu2rEzcTqFW0xUzOTb-32">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="535" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-32" value="封装了Invoker对象" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="460" y="200" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="EMUu2rEzcTqFW0xUzOTb-34">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="EMUu2rEzcTqFW0xUzOTb-34" target="EMUu2rEzcTqFW0xUzOTb-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-34" value="Invoker中包含了远程调用逻辑" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="470" y="270" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EMUu2rEzcTqFW0xUzOTb-36" value="代理对象创建完成" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;gradientDirection=east;dashed=1;dashPattern=1 2;" vertex="1" parent="1">
+          <mxGeometry x="690" y="270" width="100" height="40" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
