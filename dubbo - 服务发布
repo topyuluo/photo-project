@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-22T09:35:32.880Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="_sFVUSJ5l3paHkWueMKy" version="14.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-22T09:38:06.296Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="HuVHna3wW-yIGVp9uPQY" version="14.1.1" type="github">
   <diagram id="80YXXx1lSproh9cUq7Hy" name="第 1 页">
     <mxGraphModel dx="1010" dy="723" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -8,37 +8,37 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="VVEkYACOVruszd3MFpFX-1" value="dubbo - service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="410" y="110" width="110" height="30" as="geometry" />
+          <mxGeometry x="560" y="110" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="VVEkYACOVruszd3MFpFX-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VVEkYACOVruszd3MFpFX-2" target="VVEkYACOVruszd3MFpFX-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="VVEkYACOVruszd3MFpFX-2" value="ServiceConfig" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#b85450;fillColor=#f8cecc;" vertex="1" parent="1">
-          <mxGeometry x="410" y="190" width="110" height="30" as="geometry" />
+          <mxGeometry x="560" y="170" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="VVEkYACOVruszd3MFpFX-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VVEkYACOVruszd3MFpFX-4" target="VVEkYACOVruszd3MFpFX-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="VVEkYACOVruszd3MFpFX-4" value="Invoker" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#b85450;fillColor=#f8cecc;" vertex="1" parent="1">
-          <mxGeometry x="410" y="270" width="110" height="30" as="geometry" />
+          <mxGeometry x="560" y="245" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="VVEkYACOVruszd3MFpFX-6" value="Exporter" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#b85450;fillColor=#f8cecc;" vertex="1" parent="1">
-          <mxGeometry x="410" y="350" width="110" height="30" as="geometry" />
+          <mxGeometry x="560" y="290" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="VVEkYACOVruszd3MFpFX-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="VVEkYACOVruszd3MFpFX-8" target="VVEkYACOVruszd3MFpFX-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VVEkYACOVruszd3MFpFX-8" value="ProxyFactory - getInvoker" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="150" y="265" width="160" height="40" as="geometry" />
+        <mxCell id="VVEkYACOVruszd3MFpFX-8" value="ProxyFactory - getInvoker（）" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="150" y="242.5" width="180" height="35" as="geometry" />
         </mxCell>
         <mxCell id="VVEkYACOVruszd3MFpFX-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="VVEkYACOVruszd3MFpFX-10" target="VVEkYACOVruszd3MFpFX-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="VVEkYACOVruszd3MFpFX-10" value="Protocol - export()" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
-          <mxGeometry x="150" y="345" width="160" height="40" as="geometry" />
+          <mxGeometry x="150" y="286.25" width="180" height="37.5" as="geometry" />
         </mxCell>
-        <mxCell id="VVEkYACOVruszd3MFpFX-12" value="Dubbo 的服务导出流程" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="150" y="110" width="140" height="50" as="geometry" />
+        <mxCell id="VVEkYACOVruszd3MFpFX-12" value="Dubbo 的服务导出流程" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#00CC00;" vertex="1" parent="1">
+          <mxGeometry x="140" y="110" width="140" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
