@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-06T09:27:50.823Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="5pHKfnS_JVt9KI6ZeCRG" version="14.5.7" type="github">
+<mxfile host="app.diagrams.net" modified="2021-04-06T11:26:54.214Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="GoqjEs-pn52lS_7PIupN" version="14.5.7" type="github">
   <diagram id="2Xkt2TAEOzTNxrY3dc94" name="第 1 页">
     <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -168,6 +168,96 @@
             <mxPoint x="210" y="1390" as="sourcePoint" />
             <mxPoint x="270" y="1390" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-52" value="阻塞队列：blpop/ brpop 会抛出异常来&lt;br&gt;&lt;br&gt;空闲连接问题 ， 如果线程一致阻塞在哪里 ， redis 客户端连接就成了闲置连接，闲置久了，服务器一般会主动的断开连接 ， 较少闲置资源占用 ，要注意捕获异常， 还要重试" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="125" y="1460" width="625" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-53" value="HyperLogLog" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1530" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-54" value="布隆过滤器" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="75" y="1620" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-55" value="布隆过滤器 ， 可以理解为一个不怎么精确的set 结构 ， 当你使用它的contains 方法判断某个对象是否存在时， 它可能会误判 ，&amp;nbsp; 但是布隆过滤器也不是那么的准确， 只要参数设置的合理 ， 它的精确度可以控制的相对足够准确， 只会有小小的误判概率。&lt;br&gt;&lt;br&gt;当布隆过滤器说某个值存在时 ， 这个值可能不存在， 当它说不存在时， 那就肯定不存在。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="125" y="1654" width="645" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-56" value="原理：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1770" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-57" value="" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1850" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-58" value="" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="1850" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-59" value="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="210" y="1850" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-60" value="" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="250" y="1850" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-61" value="" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="290" y="1850" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-62" value="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1850" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-63" value="" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="370" y="1850" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-64" value="" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="410" y="1850" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-65" value="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="450" y="1850" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-66" value="" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="490" y="1850" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-67" value="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="530" y="1850" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-68" value="" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="570" y="1850" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-69" value="" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="610" y="1850" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-70" value="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="650" y="1850" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-75" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="DcSzvV2dXJmABJle09KA-59">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="1790" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-76" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DcSzvV2dXJmABJle09KA-73" target="DcSzvV2dXJmABJle09KA-62">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="350" y="1790" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-77" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DcSzvV2dXJmABJle09KA-73" target="DcSzvV2dXJmABJle09KA-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-73" value="key" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="265" y="1760" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-78" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DcSzvV2dXJmABJle09KA-74" target="DcSzvV2dXJmABJle09KA-62">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-79" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DcSzvV2dXJmABJle09KA-74" target="DcSzvV2dXJmABJle09KA-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-80" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="DcSzvV2dXJmABJle09KA-74" target="DcSzvV2dXJmABJle09KA-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-74" value="key" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="489" y="1760" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-81" value="布隆过滤器添加元素时 ， 会使用多个hash函数对key 进行 hash 算得一个整数索引值 ， 然后对位数组长度进行取模 ，得到一个位置，每个hash函数都会算得一个不同的位置， 然后在把数组的这几个位置都置为1 就完成了add 操作 。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1920" width="560" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
