@@ -1,1 +1,88 @@
-<mxfile host="app.diagrams.net" modified="2021-04-06T03:01:24.777Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="ncw9zv00b9ckchMaHs1X" version="14.5.4" type="github"><diagram id="4UNNF3A5kf43WCK-ncja" name="第 1 页">dZHBDoIwDIafZnfYIuoZUS6eOHheWGVLBiVjBvTpZdkQF/TStF//rmtLWN5OF8N7eUUBmtBETISdCKWHLJutA08Pdi5yoDFKeJSuoFIvCDAJ9KEEDJHQImqr+hjW2HVQ24hxY3CMZXfUcdeeN7ABVc31lt6UsDKMRfcrL0E1cumcZkefafkiDpMMkgscvxArCMsNovVeO+Wg3e6Wvfi685/s52MGOvujYHbWt+cgOhAr3g==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-04-06T03:31:06.097Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="YzOKnhjLNQeeYuyXQ6jL" version="14.5.4" type="github">
+  <diagram id="4UNNF3A5kf43WCK-ncja" name="第 1 页">
+    <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ySyw7uHwINm7DkDlyFBT-1" value="zookeeper 通过 ZAB（原子广播协议） 一致性协议来实现分布式事务的最终一致性&lt;br&gt;&lt;br&gt;ZAB协议是分布式协调服务Zookeeper 专门设计的一种支持崩溃恢复的一致性协议。&lt;br&gt;&lt;br&gt;ZAB 的消息广播过程使用的原子广播协议，类似两阶段提交" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="570" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wih8X3v5iaJJm385fpzu-1" target="wih8X3v5iaJJm385fpzu-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="355" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-1" value="client" style="rounded=1;whiteSpace=wrap;html=1;align=center;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="320" y="170" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="wih8X3v5iaJJm385fpzu-4" target="wih8X3v5iaJJm385fpzu-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="wih8X3v5iaJJm385fpzu-4" target="wih8X3v5iaJJm385fpzu-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="wih8X3v5iaJJm385fpzu-4" target="wih8X3v5iaJJm385fpzu-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="wih8X3v5iaJJm385fpzu-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="373" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-4" value="Leader" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="317.5" y="290" width="75" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-6" value="request" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="300" y="230" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="wih8X3v5iaJJm385fpzu-7" target="wih8X3v5iaJJm385fpzu-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-7" value="Follower" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="500" y="290" width="75" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="wih8X3v5iaJJm385fpzu-8" target="wih8X3v5iaJJm385fpzu-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="345" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-8" value="Follower" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="100" y="290" width="75" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-16" value="①&amp;nbsp; propose" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="290" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-17" value="①&amp;nbsp; propose" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="290" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-18" value="② ack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="410" y="320" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-19" value="② ack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="320" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-20" value="③ commit" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="410" y="350" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-21" value="③ commit" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="350" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-22" value="ZAB 协议中的两阶段提交 ， 移除了中断的逻辑 ， 所有的Follower 服务器要么正常反馈Leader 提出的事务提议，要么抛弃Leader 服务器 ，&amp;nbsp; 同时 ，可以在过半的Follower 服务器已经反馈 ack 后 ， 就开始提交事务提议了。" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBorderColor=none;" vertex="1" parent="1">
+          <mxGeometry x="60" y="430" width="600" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-23" value="在消息广播过程中，Leader 服务器会为 每个 Follower 服务器分配一个队列， 然后将事务提议依次放入到这些队列中，并且根据 FIFO 的策略来进行消息发送。" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBorderColor=none;" vertex="1" parent="1">
+          <mxGeometry x="60" y="480" width="600" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-24" value="每个Follower 服务器收到这个事务提议后， 会把该事务提议 以事务日志的形式写入到本地磁盘， 并且在写入陈工之后，反馈给 Leader 服务器 ACK。" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBorderColor=none;" vertex="1" parent="1">
+          <mxGeometry x="60" y="530" width="600" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wih8X3v5iaJJm385fpzu-25" value="当Leader 服务器收到过半的 Follower 服务器的ACK， 就发送一个commit 消息，同时Leader 自身完成事务提交 ， Follower 服务器收到Commit 消息后，也进行事务的提交。" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBorderColor=none;" vertex="1" parent="1">
+          <mxGeometry x="60" y="585" width="600" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X5vGeHIdek2SrnsZGL3U-1" value="ZAB 协议" style="text;html=1;strokeColor=#2D7600;fillColor=#60a917;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="140" y="200" width="80" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
