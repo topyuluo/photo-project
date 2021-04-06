@@ -1,1 +1,106 @@
-<mxfile host="app.diagrams.net" modified="2021-04-06T07:06:06.129Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="teAx8lnks3WaMDb8u2kb" version="14.5.7" type="github"><diagram id="2Xkt2TAEOzTNxrY3dc94" name="第 1 页">dZHBDoIwDIafZnfYIuoZUS6eOHheWGVLBiVjBvTpZdkQF/TStF//rmtLWN5OF8N7eUUBmtBETISdCKWHLJutA08Pdi5yoDFKeJSuoFIvCDAJ9KEEDJHQImqr+hjW2HVQ24hxY3CMZXfUcdeeN7ABVc31lt6UsDKMRfcrL0E1cumcZkefafkiDpMMkgscvxArCMsNovVeO+Wg3e6Wvfi685/s52MGOvujYHbWt+cgOhAr3g==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-04-06T08:43:53.932Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="UxuFMZx4Db-rX-FGh0AF" version="14.5.7" type="github">
+  <diagram id="2Xkt2TAEOzTNxrY3dc94" name="第 1 页">
+    <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DcSzvV2dXJmABJle09KA-1" value="redis&amp;nbsp; 的 5中数据结构" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="30" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-2" value="string：字符串" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="80" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-3" value="hash：哈希" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="85" y="400" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-5" value="list:列表" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="170" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-6" value="zset：有序集合" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="75" y="800" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-7" value="set：集合" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="85" y="660" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-8" value="&lt;font color=&quot;#1a1a1a&quot;&gt;redis 的字符串是动态字符串，是可以修改的字符串，内部结构类似于 Java的ArrayList , 采用预分配冗余空间的方式来减少内存的频繁分配，字符串的最大长度是 512M&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="100" width="540" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-9" value="&lt;font color=&quot;#1a1a1a&quot;&gt;Redis 的列表相当于Java语言里面的LinkedList , 注意它是链表而不是数组 ， 这意味着&amp;nbsp; 插入和删除操作非常的快 ，时间复杂度 O(1) , 但是索引定位很慢 ，时间复杂度 O(n)&amp;nbsp;&lt;br&gt;&lt;br&gt;当列表弹出最后一个元素之后 ， 该数据结构自动被删除， 内存被回收。&lt;br&gt;&lt;br&gt;Redis 的列表用来做异步队列使用，将需要延后处理的任务结构体序列化成字符串塞进Redis列表。另一个线程从这个列表中轮询数据进行处理。&lt;br&gt;&lt;br&gt;&lt;br&gt;快速链表： redis底层存储的还不是一个简单的LinkedList ,而是称之为快速链表quicklist的结构，首先在链表元素较少的情况下使用一块连续的存储存储，这个结构是 ziplist , 压缩列表。当数据量比较多的时候才会改成 quicklist&amp;nbsp; ,&amp;nbsp;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="210" width="540" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-10" value="&lt;font color=&quot;#1a1a1a&quot;&gt;Redis的字典相当于Java语言里面的 HashMap , 它是无序字典。 内部实现结构上同 Java的Hashmap 也是一致的 ，同样的数组 + 链表的 二维结构 。第一维 hash 的数组位置碰撞时，就会将碰撞的元素使用链表串接起来。&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="430" width="530" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-11" value="0" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="115" y="510" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DcSzvV2dXJmABJle09KA-12" target="DcSzvV2dXJmABJle09KA-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-12" value="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="155" y="510" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-13" value="2" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="195" y="510" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DcSzvV2dXJmABJle09KA-14" target="DcSzvV2dXJmABJle09KA-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-14" value="3" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="235" y="510" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-15" value="4" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="275" y="510" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-16" value="5" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="315" y="510" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-17" value="6" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="355" y="510" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-18" value="7" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="395" y="510" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-19" value="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="155" y="560" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-21" value="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="235" y="560" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="DcSzvV2dXJmABJle09KA-24">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="255" y="580" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-24" value="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="235" y="610" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="DcSzvV2dXJmABJle09KA-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="375" y="530" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-26" value="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="355" y="560" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="DcSzvV2dXJmABJle09KA-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="373" y="580" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-28" value="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="355" y="610" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-29" value="Hash 也有缺点 ， hash结构的存储消耗要高于单个字符串，到底该使用hash还是字符串，需要根据具体情况确定" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="500" y="570" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-30" value="&lt;font color=&quot;#1a1a1a&quot;&gt;Redis的集合相当于Java语言里面的 HashSet , 它的内部是无序的唯一的 。 它的内部实现相当于一个特殊的字典，字典中所有的Value 都是一个值 NULL&lt;br&gt;&lt;br&gt;当集合中的最后一个元素被移除后 ， 数据结构自动删除，内存被回收。&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="700" width="530" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="DcSzvV2dXJmABJle09KA-31" value="&lt;font color=&quot;#1a1a1a&quot;&gt;zset 可能是Redis提供的最出色的数据结构， 它类似于Java 的SortSet 和HashMap 的结合体。 一方面它是 set ,保证了内部Value的唯一性，另一个方面它可以给每个value 赋予一个score ,&amp;nbsp; 代表这个value 的排序权重 ， 它的内部实现用 一种叫 跳跃列表 的数据结构 。&lt;br&gt;&lt;br&gt;zset 中最后一个value&amp;nbsp; 被移除后， 数据结构自动删除， 内存被回收。&lt;br&gt;&lt;br&gt;&lt;br&gt;zset 内部的排序功能是通过跳跃列表 数据结构来实现的 ，它的结构比较的特殊 ， 也比较的复杂&lt;br&gt;跳跃列表 采用随机策略 来决定新元素可以兼职到第几层。&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="115" y="840" width="535" height="130" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
