@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-07T08:09:22.385Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="5b2C-lhUwZu_hi3L5eJW" version="14.5.7" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-04-07T10:40:36.969Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="FG4SaLbZdaaiKL3VZxUG" version="14.5.7" type="github" pages="5">
   <diagram id="2Xkt2TAEOzTNxrY3dc94" name="数据结构">
     <mxGraphModel dx="1106" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -541,6 +541,393 @@
         <mxCell id="AXepTas1otN2ZdD5XDQn-93" value="&lt;p style=&quot;line-height: 180%&quot;&gt;无盘复制 ，主服务器直接通过套接字将快照内容发送到从节点 ，生成快照是一个遍历的过程，主节点会一边遍历，一边将序列化的内容发送到从节点，从节点还是和之前一样，先将收到的内容存储到硬盘文件中，在进行一次性加载。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
           <mxGeometry x="120" y="3220" width="690" height="40" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="4HDq_m0lPvmAYO2BNJQY" name="集群">
+    <mxGraphModel dx="866" dy="-647" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="nV-omL6sR25xKeSbgsDl-0" />
+        <mxCell id="nV-omL6sR25xKeSbgsDl-1" parent="nV-omL6sR25xKeSbgsDl-0" />
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-44" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fontSize=12;fontColor=#1A1A1A;align=center;dashed=1;fillColor=#FFE6CC;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="115" y="3370" width="595" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="v9Ph8Vd67jHW01WgXYZy-0" value="Redis Sentinel (哨兵)" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="40" y="1200" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v9Ph8Vd67jHW01WgXYZy-10" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.875;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1" source="v9Ph8Vd67jHW01WgXYZy-1" target="v9Ph8Vd67jHW01WgXYZy-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v9Ph8Vd67jHW01WgXYZy-12" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.875;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1" source="v9Ph8Vd67jHW01WgXYZy-1" target="v9Ph8Vd67jHW01WgXYZy-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v9Ph8Vd67jHW01WgXYZy-1" value="Client" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;rounded=1;shadow=1;glass=1;sketch=1;fontSize=12;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="80" y="1390" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="v9Ph8Vd67jHW01WgXYZy-2" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;glass=1;sketch=1;fontSize=12;align=center;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="340" y="1200" width="300" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="v9Ph8Vd67jHW01WgXYZy-3" value="Redis Sentinel" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;glass=1;sketch=1;fontSize=12;fontColor=#1A1A1A;align=center;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="435" y="1220" width="95" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v9Ph8Vd67jHW01WgXYZy-4" value="Redis Sentinel" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;glass=1;sketch=1;fontSize=12;fontColor=#1A1A1A;align=center;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="360" y="1280" width="95" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v9Ph8Vd67jHW01WgXYZy-5" value="Redis Sentinel" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;glass=1;sketch=1;fontSize=12;fontColor=#1A1A1A;align=center;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="530" y="1280" width="95" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v9Ph8Vd67jHW01WgXYZy-6" value="" style="endArrow=classic;startArrow=classic;html=1;fontSize=12;fontColor=#1A1A1A;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1" source="v9Ph8Vd67jHW01WgXYZy-4" target="v9Ph8Vd67jHW01WgXYZy-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="1340" as="sourcePoint" />
+            <mxPoint x="440" y="1290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v9Ph8Vd67jHW01WgXYZy-7" value="" style="endArrow=classic;startArrow=classic;html=1;fontSize=12;fontColor=#1A1A1A;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1" source="v9Ph8Vd67jHW01WgXYZy-3" target="v9Ph8Vd67jHW01WgXYZy-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="417.5" y="1290" as="sourcePoint" />
+            <mxPoint x="445" y="1245" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v9Ph8Vd67jHW01WgXYZy-8" value="" style="endArrow=classic;startArrow=classic;html=1;fontSize=12;fontColor=#1A1A1A;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1" source="v9Ph8Vd67jHW01WgXYZy-4" target="v9Ph8Vd67jHW01WgXYZy-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="427.5" y="1300" as="sourcePoint" />
+            <mxPoint x="455" y="1255" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v9Ph8Vd67jHW01WgXYZy-14" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1" source="v9Ph8Vd67jHW01WgXYZy-11" target="v9Ph8Vd67jHW01WgXYZy-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v9Ph8Vd67jHW01WgXYZy-16" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1" source="v9Ph8Vd67jHW01WgXYZy-11" target="v9Ph8Vd67jHW01WgXYZy-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v9Ph8Vd67jHW01WgXYZy-17" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.48;entryY=1.031;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;fontColor=#1A1A1A;startArrow=block;startFill=1;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1" source="v9Ph8Vd67jHW01WgXYZy-11" target="v9Ph8Vd67jHW01WgXYZy-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v9Ph8Vd67jHW01WgXYZy-11" value="Master" style="ellipse;whiteSpace=wrap;html=1;rounded=1;shadow=1;glass=1;sketch=1;fontSize=12;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="260" y="1450" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="v9Ph8Vd67jHW01WgXYZy-18" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;fontSize=12;fontColor=#1A1A1A;startArrow=blockThin;startFill=1;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1" source="v9Ph8Vd67jHW01WgXYZy-13" target="v9Ph8Vd67jHW01WgXYZy-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v9Ph8Vd67jHW01WgXYZy-13" value="Slave" style="ellipse;whiteSpace=wrap;html=1;rounded=1;shadow=1;glass=1;sketch=1;fontSize=12;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="480" y="1410" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="v9Ph8Vd67jHW01WgXYZy-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.777;entryY=1.038;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;fontColor=#1A1A1A;startArrow=block;startFill=1;elbow=vertical;curved=1;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1" source="v9Ph8Vd67jHW01WgXYZy-15" target="v9Ph8Vd67jHW01WgXYZy-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v9Ph8Vd67jHW01WgXYZy-15" value="Slave" style="ellipse;whiteSpace=wrap;html=1;rounded=1;shadow=1;glass=1;sketch=1;fontSize=12;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="580" y="1500" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-0" value="&lt;p style=&quot;line-height: 180%&quot;&gt;Redis Sentinel&amp;nbsp; 负责持续监控主从节点的健康， 当主节点挂掉时， 自动选择一个最优的从节点切换为主节点 。客户端来连接集群时，会首先连接 sentinel , 通过 sentinel&amp;nbsp; 来查询主节点的地址， 然后再去连接主节点进行数据交互 。 当主节点发生故障时 ， 客户端会重新向sentinel 要地址 ， sentinel&amp;nbsp; 会将最新的主节点地址告诉客户端 ， 如此应用程序将无需重启即可自动完成节点切换。&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="80" y="1590" width="710" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-1" value="消息丢失" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;sketch=1;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="80" y="1690" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-2" value="&lt;p style=&quot;line-height: 180%&quot;&gt;Redis 主从采用异步复制，意味着当主节点挂掉时，从节点可能没有收到全部的同步消息 ， 这部分未同步的消息就丢失了，如果主从延迟特别大，那么丢失的数据就可能会特别多 ， Sentinel&amp;nbsp; 无法保证消息完全不丢失，但是尽可能保证消息少丢失 ， 它有两个选项可以闲置主从延迟过大：&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;min-slaves-to-write&amp;nbsp; 1 :&amp;nbsp; 主节点必须至少有一个从节点在进行正常复制 ，否则就停止对外写服务，丧失可用性&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;min-slaves-max-lag 10 ： 如果10s&amp;nbsp; 没有收到从节点的反馈 就意味着从节点同步不正常， 要么网络断开了， 要么一直没有给反馈&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="120" y="1760" width="700" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-3" value="Codis" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="40" y="1920" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-5" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.875;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;startArrow=none;startFill=0;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1" source="iuwdPfhdbmwhKgVp2Xaa-4" target="iuwdPfhdbmwhKgVp2Xaa-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="2015" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-4" value="Client" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;rounded=1;shadow=1;glass=1;sketch=1;fontSize=12;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="80" y="1990" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-10" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1" source="iuwdPfhdbmwhKgVp2Xaa-6" target="iuwdPfhdbmwhKgVp2Xaa-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-11" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=37.5;entryPerimeter=0;startArrow=none;startFill=0;fontSize=12;fontColor=#1A1A1A;exitPerimeter=0;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1" source="iuwdPfhdbmwhKgVp2Xaa-6" target="iuwdPfhdbmwhKgVp2Xaa-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-12" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1" source="iuwdPfhdbmwhKgVp2Xaa-6" target="iuwdPfhdbmwhKgVp2Xaa-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-6" value="Codis" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=1;shadow=1;glass=1;sketch=1;fontSize=12;fontColor=#1A1A1A;align=center;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="270" y="1987.5" width="55" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-7" value="Redis" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;rounded=1;shadow=1;glass=1;sketch=1;fontSize=12;fontColor=#1A1A1A;align=center;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="460" y="1940" width="50" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-8" value="Redis" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;rounded=1;shadow=1;glass=1;sketch=1;fontSize=12;fontColor=#1A1A1A;align=center;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="460" y="2010" width="50" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-9" value="Redis" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;rounded=1;shadow=1;glass=1;sketch=1;fontSize=12;fontColor=#1A1A1A;align=center;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="460" y="2080" width="50" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-14" value="&lt;p style=&quot;line-height: 180%&quot;&gt;Codis 使用Go 语言开发 ，它是一个代理中间件， 它和Redis 一样也使用 Redis 协议 对外提供服务，当客户端向codis 发送指令时 ，Codis 负责将指令转发到后面的Redis 实例 来执行 ，并将结果在转回给客户端。&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;Codis 上挂接的所有Redis 实例构成了一个Redis集群 ，当集群的空间不足时 ， 可以通过动态增加Redis 实例来实现扩容需求。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="80" y="2160" width="740" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-15" value="Codis 分片原理" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;sketch=1;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="80" y="2280" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-16" value="&lt;p style=&quot;line-height: 180%&quot;&gt;Codis 要负责将特定的key 转发到特定的Redis实例 。Codis 将所有的key 默认划分为 1024 个槽位 ，它首先对客户端传过来的key 进行crc32 运算， 计算hash值 ，在将hash 后的整数值 对1024 进行取模 ， 得到一个余数 ， 这个余数就是对应的槽位。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="120" y="2338" width="690" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-17" value="Redis Cluster" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="40" y="2408" width="90" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-18" value="&lt;p style=&quot;line-height: 180%&quot;&gt;Redis Cluster&amp;nbsp; 去中心化， 每个节点负责整个集群中的一部分数据，每个节点负责的数据多少可能不一样，这三个节点相互连接组成要给对等的集群，他们之间通过一种特殊的二进制协议相互交互集群信息。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="80" y="2470" width="690" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-19" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fontSize=12;align=center;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="330" y="2550" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-21" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fontSize=12;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="150" y="2550" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-22" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fontSize=12;align=center;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="510" y="2550" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-26" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.4;entryY=1.05;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1" source="iuwdPfhdbmwhKgVp2Xaa-23" target="iuwdPfhdbmwhKgVp2Xaa-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-31" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=block;startFill=1;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1" source="iuwdPfhdbmwhKgVp2Xaa-23" target="iuwdPfhdbmwhKgVp2Xaa-25">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="2730" />
+              <mxPoint x="600" y="2730" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-23" value="Node" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fontSize=12;fontColor=#1A1A1A;align=center;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="190" y="2680" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-27" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startArrow=none;startFill=0;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1" source="iuwdPfhdbmwhKgVp2Xaa-24" target="iuwdPfhdbmwhKgVp2Xaa-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-29" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=classicThin;startFill=1;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1" source="iuwdPfhdbmwhKgVp2Xaa-24" target="iuwdPfhdbmwhKgVp2Xaa-23">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="2655" />
+              <mxPoint x="310" y="2695" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-30" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=open;startFill=0;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1" source="iuwdPfhdbmwhKgVp2Xaa-24" target="iuwdPfhdbmwhKgVp2Xaa-25">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="2655" />
+              <mxPoint x="500" y="2685" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-24" value="Node" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fontSize=12;fontColor=#1A1A1A;align=center;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="395" y="2640" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-28" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1" source="iuwdPfhdbmwhKgVp2Xaa-25" target="iuwdPfhdbmwhKgVp2Xaa-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-25" value="Node" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fontSize=12;fontColor=#1A1A1A;align=center;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="570" y="2670" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-32" value="&lt;p style=&quot;line-height: 180%&quot;&gt;Redis Cluster 将所有的数据划分为16384个 slots ,&amp;nbsp; 它比Codis 的 1024 个槽 划分的更为精细， 每个节点负责其中一部分槽位，槽位的信息存储于每个节点中，它不像Codis , 它不需要另外的分布式存储来存储节点槽位信息。&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;当Redis Cluster 的客户都安来连接集群时 ，它也会得到一份集群的槽位配置信息，这样当客户端要查找某个key 时 ，可以直接定位到目标节点。&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;客户端为了可以直接定位某个具体的key所在的节点 ， 它需要缓存槽位相应的信息 ，这样才可以准确快速的定位到相应的节点。同时因为槽位的信息可能会存在客户端与服务器不一致的情况 ，还需要纠正机制来实现槽位信息的校验调整。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="80" y="2770" width="740" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-33" value="槽位定位算法" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;sketch=1;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="80" y="2960" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-34" value="&lt;p style=&quot;line-height: 180%&quot;&gt;Cluster 默认会对key值使用crc16 算法，进行hash 得到一个整数值 ，然后用这个整数对16384进行取模来得到具体的槽位。&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;Cluster 还允许用户强制某个key 挂在特定的槽上，通过在key 字符串里面嵌入 [ tag ] 标记 ，这样就可以强制key 所挂载的槽位等于 tag 所在的槽位。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="120" y="3020" width="700" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-35" value="跳转" style="text;html=1;strokeColor=#0e8088;fillColor=#b0e3e6;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;sketch=1;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="80" y="3130" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-36" value="&lt;p style=&quot;line-height: 180%&quot;&gt;当客户端向一个错误的节点发出了指令，该节点会发现指令的key 所在的槽位并不归自己管理 ，这时它会向客户端发送一个特殊的跳转指令 ，携带目标操作的节点地址，告诉客户端去连这个节点获取数据。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="120" y="3180" width="700" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-37" value="迁移" style="text;html=1;strokeColor=#0e8088;fillColor=#b0e3e6;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;sketch=1;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="80" y="3270" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-38" value="&lt;p style=&quot;line-height: 180%&quot;&gt;Redis 迁移的单位是槽 ， Redis 一个槽 一个槽进行迁移 ，当一个槽正在迁移时 ， 这个槽就处于中间过渡状态 ，&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="120" y="3320" width="700" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-39" value="从源节点获取内容" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=12;fontColor=#1A1A1A;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="120" y="3390" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-40" value="" style="shape=flexArrow;endArrow=classic;html=1;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="3400" as="sourcePoint" />
+            <mxPoint x="330" y="3410" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="300" y="3400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-41" value="存到目标节点" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=12;fontColor=#1A1A1A;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="355" y="3400" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-42" value="" style="shape=flexArrow;endArrow=classic;html=1;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="3410" as="sourcePoint" />
+            <mxPoint x="550" y="3400" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="520" y="3410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iuwdPfhdbmwhKgVp2Xaa-43" value="从源节点删除内容" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=12;fontColor=#1A1A1A;" vertex="1" parent="nV-omL6sR25xKeSbgsDl-1">
+          <mxGeometry x="580" y="3390" width="110" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="NWDxtzFDo4rWd0rjsQyk" name="扩展">
+    <mxGraphModel dx="866" dy="-1816" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="y6MDonX61XFysDYpfcKY-0" />
+        <mxCell id="y6MDonX61XFysDYpfcKY-1" parent="y6MDonX61XFysDYpfcKY-0" />
+        <mxCell id="33S8CbwOZ9GGTe3CevOu-0" value="Stream" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="40" y="2360" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-0" value="&lt;p style=&quot;line-height: 180%&quot;&gt;Redis 5.0后，新增的数据结构 ，它是一个新的强大的支持多播的可持久化的消息队列&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="80" y="2420" width="690" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-1" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fillColor=#FFFFFF;fontSize=12;fontColor=#1A1A1A;align=center;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="80" y="2480" width="640" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-2" value="Stream" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;glass=0;sketch=0;fontSize=12;fontColor=#1A1A1A;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="110" y="2500" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-3" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fillColor=#FFFFFF;fontSize=12;fontColor=#1A1A1A;align=center;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="120" y="2660" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-4" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fillColor=#FFFFFF;fontSize=12;fontColor=#1A1A1A;align=center;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="170" y="2660" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-5" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fillColor=#FFFFFF;fontSize=12;fontColor=#1A1A1A;align=center;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="220" y="2660" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-7" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fillColor=#FFFFFF;fontSize=12;fontColor=#1A1A1A;align=center;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="270" y="2660" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-8" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fillColor=#FFFFFF;fontSize=12;fontColor=#1A1A1A;align=center;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="320" y="2660" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-9" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fillColor=#FFFFFF;fontSize=12;fontColor=#1A1A1A;align=center;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="370" y="2660" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-11" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fillColor=#FFFFFF;fontSize=12;fontColor=#1A1A1A;align=center;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="420" y="2660" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-12" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fillColor=#FFFFFF;fontSize=12;fontColor=#1A1A1A;align=center;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="470" y="2660" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-13" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fillColor=#FFFFFF;fontSize=12;fontColor=#1A1A1A;align=center;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="520" y="2660" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-18" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=open;startFill=0;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="y6MDonX61XFysDYpfcKY-1" source="N6o6JetXOCWTZSmZDfl9-14" target="N6o6JetXOCWTZSmZDfl9-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-14" value="Consumer Group&lt;br&gt;last_delivered_id" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fillColor=#fad7ac;fontSize=12;align=center;strokeColor=#b46504;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="188.75" y="2540" width="112.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-19" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=open;startFill=0;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="y6MDonX61XFysDYpfcKY-1" source="N6o6JetXOCWTZSmZDfl9-15" target="N6o6JetXOCWTZSmZDfl9-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-28" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="y6MDonX61XFysDYpfcKY-1" source="N6o6JetXOCWTZSmZDfl9-15" target="N6o6JetXOCWTZSmZDfl9-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-29" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="y6MDonX61XFysDYpfcKY-1" source="N6o6JetXOCWTZSmZDfl9-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="2565" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-30" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="y6MDonX61XFysDYpfcKY-1" source="N6o6JetXOCWTZSmZDfl9-15" target="N6o6JetXOCWTZSmZDfl9-32">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="2615" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-15" value="Consumer Group&lt;br&gt;last_delivered_id" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fillColor=#fad7ac;fontSize=12;align=center;strokeColor=#b46504;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="393.75" y="2540" width="102.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-17" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=open;startFill=0;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="y6MDonX61XFysDYpfcKY-1" source="N6o6JetXOCWTZSmZDfl9-16" target="N6o6JetXOCWTZSmZDfl9-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-16" value="Consumer Group&lt;br&gt;last_delivered_id" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fillColor=#fad7ac;fontSize=12;align=center;strokeColor=#b46504;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="246.88" y="2720" width="96.25" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-24" value="" style="group" vertex="1" connectable="0" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="280" y="2620" width="112.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-22" value="" style="endArrow=classic;html=1;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="N6o6JetXOCWTZSmZDfl9-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="10" y="20" as="sourcePoint" />
+            <mxPoint x="112.5" y="20" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-23" value="stream direction" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=12;fontColor=#1A1A1A;" vertex="1" parent="N6o6JetXOCWTZSmZDfl9-24">
+          <mxGeometry width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-25" value="Consumer&lt;br&gt;pending_ids[]" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fillColor=#b1ddf0;fontSize=12;align=center;strokeColor=#10739e;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="570" y="2490" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-31" value="Consumer&lt;br&gt;pending_ids[]" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fillColor=#b1ddf0;fontSize=12;align=center;strokeColor=#10739e;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="570" y="2545" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-32" value="Consumer&lt;br&gt;pending_ids[]" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fillColor=#b1ddf0;fontSize=12;align=center;strokeColor=#10739e;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="570" y="2600" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-34" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;fontSize=12;fontColor=#1A1A1A;" edge="1" parent="y6MDonX61XFysDYpfcKY-1" source="N6o6JetXOCWTZSmZDfl9-33" target="N6o6JetXOCWTZSmZDfl9-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-33" value="Message Content" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fillColor=#bac8d3;fontSize=12;align=center;strokeColor=#23445d;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="410" y="2720" width="70" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-35" value="&lt;p style=&quot;line-height: 180%&quot;&gt;Redis Stream 的结构如上图所示， 它有一个消息链表， 将所有加入的消息都串联起来 ， 每个消息都有一个唯一的ID 和对应的内容 ，消息是持久化的，Redis 重启后， 内容还在 。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="80" y="2800" width="690" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-36" value="Info&amp;nbsp;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="40" y="2880" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-37" value="分布式锁" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="40" y="3000" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-38" value="&lt;p style=&quot;line-height: 180%&quot;&gt;Redis 会将设置了过期时间的key 放入一个独立的字典中，以后会定期的遍历整个字典来删除到期的key , 除了定时遍历之外 ， 它还会使用惰性策略来删除过期的key , 所谓的惰性策略就是在客户端访问整个key的时候 ，redis 对key的过期时间进行检查，如果过期了就立即删除，定时删除时集中处理 ，&amp;nbsp; 惰性删除是零散处理。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="120" y="3260" width="690" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-39" value="过期策略" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="40" y="3120" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-40" value="过期key的集合" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="120" y="3200" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-41" value="定时扫描策略" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="120" y="3360" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-42" value="&lt;p style=&quot;line-height: 180%&quot;&gt;Redis 默认会每秒进行10次过期扫描 ，过期扫描不会遍历过期字典中所有的key , 而是采用了一种简单的贪心策略。&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;1. 从过期字典中随机20个key&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;2. 删除这20个key 中已经过期的key&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;3. 如果过期的key的比例超过 1/4 那就重复步骤1&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;同时为了保证过期扫描不会出现循环过度 ， 导致线程卡死现象，算法还增加了扫描时间的上限 ，默认不会超过25ms&lt;/p&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fillColor=#FFFFFF;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="120" y="3420" width="690" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-43" value="从库的过期策略" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="120" y="3620" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-44" value="&lt;p style=&quot;line-height: 180%&quot;&gt;从库不会进行过期扫描 ，从库对过期的处理是被动的，主库在key 到期时 ，会在AOF 文件里增加一条del 指令，同步到所有的从库，从库通过执行这条del&amp;nbsp; 指令来删除过期的key.&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;因为指令同步是异步进行的，所以主库过期的key 的del 指令没有及时同步到从库的话 ， 会出现主从数据的不一致，主库没有的数据，从库里还存在&lt;/p&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fillColor=#FFFFFF;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="120" y="3680" width="690" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-45" value="LRU" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="40" y="3800" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-46" value="&lt;p style=&quot;line-height: 180%&quot;&gt;当Redis 内存超过物理内存限制时 ，内存的数据会开始和磁盘产生频繁的交换，交换会让Redis的性能急剧的下降。对于访问量比较频繁的Redis来说， 这样龟速的存储效率基本上等于不可用。&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;noeviction&amp;nbsp; &amp;nbsp;volatile-lru&amp;nbsp; volatile-ttl volatile-random allkeys-lru allkeys-random volatile-xxx&lt;/p&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fillColor=#FFFFFF;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="80" y="3860" width="690" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-47" value="LRU 算法" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="80" y="3980" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="N6o6JetXOCWTZSmZDfl9-48" value="&lt;p style=&quot;line-height: 180%&quot;&gt;实现LRU 算法 除了需要 [ key-value ] 字典之外 ， 还需要附加一个链表 ， 链表中的元素按照一定的顺序进行排序。 当空间满时，会踢掉链表尾部的元素 ，当字典的某个元素被访问时， 它在链表中的位置会被移动到表头。所以链表的元素排列顺序就是元素最近被访问的时间顺序。&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;位于链表尾部的元素就是不被重用的元素，所以会被剔除掉， 位于表头的元素就是最近刚刚被人用过的元素 ，所以此时不会被踢&lt;/p&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fillColor=#FFFFFF;" vertex="1" parent="y6MDonX61XFysDYpfcKY-1">
+          <mxGeometry x="120" y="4042" width="690" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="enyd1SQA_xRLsmPlYawQ" name="深度极寒">
+    <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="R8Xmmlt4IPB7zrE09Ldw-0" />
+        <mxCell id="R8Xmmlt4IPB7zrE09Ldw-1" parent="R8Xmmlt4IPB7zrE09Ldw-0" />
       </root>
     </mxGraphModel>
   </diagram>
