@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-04-08T03:49:27.808Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="6uF9Nt02A1dmaP_PPB0o" version="14.5.7" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2021-04-08T07:04:42.226Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="twt2bA58VYhrLKyy3gGe" version="14.5.7" type="github" pages="5">
   <diagram id="2Xkt2TAEOzTNxrY3dc94" name="数据结构">
-    <mxGraphModel dx="1420" dy="778" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -278,7 +278,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="T9ofhpVVGzbZsa4hbkmA" name="原理">
-    <mxGraphModel dx="1420" dy="778" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="bH2euOrN30Yw1Qwi_7RK-0" />
         <mxCell id="bH2euOrN30Yw1Qwi_7RK-1" parent="bH2euOrN30Yw1Qwi_7RK-0" />
@@ -815,7 +815,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="4HDq_m0lPvmAYO2BNJQY" name="集群">
-    <mxGraphModel dx="1420" dy="-391" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="866" dy="-647" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="nV-omL6sR25xKeSbgsDl-0" />
         <mxCell id="nV-omL6sR25xKeSbgsDl-1" parent="nV-omL6sR25xKeSbgsDl-0" />
@@ -1215,10 +1215,136 @@
     </mxGraphModel>
   </diagram>
   <diagram id="enyd1SQA_xRLsmPlYawQ" name="深度极寒">
-    <mxGraphModel dx="1420" dy="778" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="R8Xmmlt4IPB7zrE09Ldw-0" />
         <mxCell id="R8Xmmlt4IPB7zrE09Ldw-1" parent="R8Xmmlt4IPB7zrE09Ldw-0" />
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-0" value="字符串 内部结构" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry x="40" y="40" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-1" value="&lt;p style=&quot;line-height: 200%&quot;&gt;Redis 中的字符串是可以修改的字符串，在内存中它是以字节数组的形式存在的。Redis的字符串 叫 SDS , Simple Dynamic String 。他的结构是一个带长度信息的字节数组&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;字符串的长度在小于1M之前 ，扩容空间采用加倍策略 ，也就是保留 100% 的冗余空间，当长度超过1M 之后，为了避免加倍后冗余空间过大而导致浪费，每次扩容只会多分配1M大小的冗余空间&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;" vertex="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry x="80" y="100" width="740" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-2" value="字典 内部结构" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry x="40" y="240" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-3" value="&lt;p style=&quot;line-height: 200%&quot;&gt;dict 是 Redis服务器中出现最为频繁的复合型数据结构 ，除了hash 结构的数据会用到字典外，整个Redis 数据库的所有的key 和 value 也醉成了一个全局字典，还有带有过期时间的key 集合也是一个字典，zset 集合中存储的　value 和 score 值得映射关系也是通过dict 结构实现的。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;" vertex="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry x="80" y="300" width="740" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-4" value="set 内部结构" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry x="40" y="410" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-5" value="&lt;p style=&quot;line-height: 200%&quot;&gt;Redis 里面set的结构底层也是字典，之不过所有的value 都是 NULL ,&amp;nbsp; 其它的特性和字典一样。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;" vertex="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry x="80" y="470" width="740" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-6" value="压缩列表" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry x="40" y="520" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-7" value="&lt;p style=&quot;line-height: 200%&quot;&gt;Redis 为了节约内存空间使用，zset 和 hash 容器对象在元素个数较少的时候，采用压缩列表（ziplist） 进行存储，压缩列表是一块连续的空间，元素之间紧挨着存储，没有任何冗空隙&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;" vertex="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry x="80" y="585" width="740" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-8" value="快速列表" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry x="40" y="640" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-10" value="跳跃列表" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry x="40" y="720" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-11" value="&lt;p style=&quot;line-height: 200%&quot;&gt;Redis 的 zset 是一个复合结构，一方面它需要一个hash 结构来存储 value 和 score 的对应关系 ，另外一个方面需要按照score 来排序功能，还需要能够执行score 的范围获取value 列表的功能。这就需要另外的一个结构&amp;nbsp; 跳跃列表&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;" vertex="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry x="80" y="780" width="740" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-34" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;startArrow=openThin;startFill=0;" edge="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="940.5" as="sourcePoint" />
+            <mxPoint x="200" y="940.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-40" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="R8Xmmlt4IPB7zrE09Ldw-1" source="Ob7KSYr4x1QFicvUf9MM-28" target="Ob7KSYr4x1QFicvUf9MM-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-41" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.178;exitDx=0;exitDy=0;entryX=-0.025;entryY=0.178;entryDx=0;entryDy=0;startArrow=none;startFill=0;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="R8Xmmlt4IPB7zrE09Ldw-1" source="Ob7KSYr4x1QFicvUf9MM-28" target="Ob7KSYr4x1QFicvUf9MM-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-43" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="R8Xmmlt4IPB7zrE09Ldw-1" source="Ob7KSYr4x1QFicvUf9MM-28" target="Ob7KSYr4x1QFicvUf9MM-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-46" value="①" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Ob7KSYr4x1QFicvUf9MM-43">
+          <mxGeometry x="-0.3886" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-28" value="kv head" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;align=left;fillColor=#ffcccc;strokeColor=#36393d;sketch=1;" vertex="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry x="80" y="860" width="50" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-29" value="kv" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;align=center;fillColor=#b0e3e6;strokeColor=#0e8088;" vertex="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry x="200" y="920" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-44" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="R8Xmmlt4IPB7zrE09Ldw-1" source="Ob7KSYr4x1QFicvUf9MM-30" target="Ob7KSYr4x1QFicvUf9MM-31">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="850" />
+              <mxPoint x="320" y="850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-47" value="②" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Ob7KSYr4x1QFicvUf9MM-44">
+          <mxGeometry x="-0.4133" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-30" value="kv" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;align=center;fillColor=#fad7ac;strokeColor=#b46504;" vertex="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry x="420" y="860" width="40" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-45" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="R8Xmmlt4IPB7zrE09Ldw-1" source="Ob7KSYr4x1QFicvUf9MM-31" target="Ob7KSYr4x1QFicvUf9MM-32">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="890" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-48" value="③" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Ob7KSYr4x1QFicvUf9MM-45">
+          <mxGeometry x="0.3167" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-31" value="kv" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;align=center;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry x="310" y="890" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-32" value="kv" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;align=center;fillColor=#b0e3e6;strokeColor=#0e8088;" vertex="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry x="530" y="920" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-33" value="kv" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;align=center;fillColor=#b0e3e6;strokeColor=#0e8088;" vertex="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry x="640" y="920" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-36" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;startArrow=openThin;startFill=0;" edge="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="942" as="sourcePoint" />
+            <mxPoint x="310" y="942" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-37" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;startArrow=openThin;startFill=0;" edge="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="934.5" as="sourcePoint" />
+            <mxPoint x="420" y="934.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-38" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;startArrow=openThin;startFill=0;" edge="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="934.5" as="sourcePoint" />
+            <mxPoint x="530" y="934.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-39" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;startArrow=openThin;startFill=0;" edge="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="934.5" as="sourcePoint" />
+            <mxPoint x="640" y="934.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-42" value="&lt;p style=&quot;line-height: 200%&quot;&gt;Redis 的跳跃表共有64层，意味着最多可以容纳 2的64 次方个元素 ， 对于每一个新插入的节点，都需要调用一个随机算法给它分配要给合理的层数&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;" vertex="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry x="80" y="990" width="740" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ob7KSYr4x1QFicvUf9MM-49" value="紧凑列表" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry x="40" y="1050" width="90" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
