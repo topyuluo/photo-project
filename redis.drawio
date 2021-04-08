@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-08T08:12:04.530Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="d7zxIoMfcBrAeFPKkpNh" version="14.5.7" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2021-04-08T09:31:40.165Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="A69z002l34JnSEsOQBT7" version="14.5.7" type="github" pages="6">
   <diagram id="2Xkt2TAEOzTNxrY3dc94" name="数据结构">
     <mxGraphModel dx="1420" dy="834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1449,26 +1449,68 @@
         <mxCell id="M1zMZmoeTWhk0v8dZeMA-21" value="缓存与数据库双写一致性" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
           <mxGeometry x="40" y="880" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="M1zMZmoeTWhk0v8dZeMA-22" value="&lt;p style=&quot;line-height: 200%&quot;&gt;Redis 和 数据库中都有数据， 那么在更新数据的时候，就会有双写一致性的问题？&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
-          <mxGeometry x="80" y="950" width="735" height="40" as="geometry" />
-        </mxCell>
         <mxCell id="M1zMZmoeTWhk0v8dZeMA-23" value="redis 的 大 key" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
-          <mxGeometry x="40" y="1000" width="110" height="30" as="geometry" />
+          <mxGeometry x="40" y="1680" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="M1zMZmoeTWhk0v8dZeMA-24" value="Redis 的 热点key&amp;nbsp;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
-          <mxGeometry x="40" y="1080" width="110" height="30" as="geometry" />
+          <mxGeometry x="40" y="1760" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="M1zMZmoeTWhk0v8dZeMA-25" value="如何让 一组key&amp;nbsp; 都存储在一台 机器上" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
-          <mxGeometry x="40" y="1169" width="220" height="40" as="geometry" />
+          <mxGeometry x="40" y="1849" width="220" height="40" as="geometry" />
         </mxCell>
         <mxCell id="M1zMZmoeTWhk0v8dZeMA-26" value="Redis&amp;nbsp; CPU&amp;nbsp; 100%" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
-          <mxGeometry x="40" y="1280" width="130" height="30" as="geometry" />
+          <mxGeometry x="40" y="1960" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="4rov-A6-OaIKI-HkXfAs-0" value="什么样的数据适合存放在Redis" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
-          <mxGeometry x="40" y="1360" width="170" height="30" as="geometry" />
+          <mxGeometry x="40" y="2040" width="170" height="30" as="geometry" />
         </mxCell>
         <mxCell id="4rov-A6-OaIKI-HkXfAs-1" value="持久化机制， 各有什么优缺点" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
-          <mxGeometry x="40" y="1440" width="170" height="30" as="geometry" />
+          <mxGeometry x="40" y="2120" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xCT3tCEGww_5zrkCECiz-0" value="&lt;p style=&quot;line-height: 0px&quot;&gt;最经典的缓存 + 数据库读写的模式： Cache Aside Pattern&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;line-height: 24px&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 读的时候先读缓存 ，缓存没有的话在读数据库， 然后取出数据后，在放入缓存中，同时返回响应&lt;/p&gt;&lt;p style=&quot;line-height: 24px&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 更新的时候 ，先删除缓存，在更新数据库， 在删除缓存 ， 延时双删策略&lt;/p&gt;&lt;p style=&quot;line-height: 24px&quot;&gt;延时双删策略其实还是有问题，如果第二次删除缓存失败了，同时第一删除完成之后，更新操作完成之前，来个一个查询请求，那么此时缓存的数据就是更新之前的数据，也会有不一致的问题，当然这时概率的问题，如果业务中不允许出现这样的不一致情况，延时双删策略可能不太合适。&lt;/p&gt;&lt;p style=&quot;line-height: 24px&quot;&gt;如果要保证缓存和数据库的强一致，那就要做串行化操作， 将请求压入队列，在更新操作完成之前，不做读操作。这样其实又带来了两外的一个问题，系统的性能受到影响，串行化后，可能导致大量的读请求 阻塞 ，要解决这个问题，只能是根据并发量 增加机器，增加服务实例的数量，来提高系统的吞吐量&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="80" y="940" width="735" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="xCT3tCEGww_5zrkCECiz-1" value="并发竞争" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="40" y="1210" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xCT3tCEGww_5zrkCECiz-2" value="&lt;p style=&quot;line-height: 200%&quot;&gt;多客户端同时并发写入一个key , 本来应该先到的数据后到了，导致数据版本错了，或者是多个客户同时获取一个key ,修改值之后再写回去&lt;/p&gt;&lt;p style=&quot;line-height: 0px&quot;&gt;只要顺序错了， 数据就错了。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="80" y="1270" width="735" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xCT3tCEGww_5zrkCECiz-3" value="zookeeper" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;sketch=1;align=center;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="348" y="1340" width="82" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xCT3tCEGww_5zrkCECiz-4" value="缓存" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;shadow=0;labelBackgroundColor=none;sketch=1;align=center;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="370" y="1470" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xCT3tCEGww_5zrkCECiz-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="uUWCNbAPGHeyCcKTkVrY-1" source="xCT3tCEGww_5zrkCECiz-5" target="xCT3tCEGww_5zrkCECiz-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xCT3tCEGww_5zrkCECiz-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=37.5;entryPerimeter=0;startArrow=none;startFill=0;" edge="1" parent="uUWCNbAPGHeyCcKTkVrY-1" source="xCT3tCEGww_5zrkCECiz-5" target="xCT3tCEGww_5zrkCECiz-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xCT3tCEGww_5zrkCECiz-5" value="A" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;sketch=1;align=center;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="250" y="1400" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xCT3tCEGww_5zrkCECiz-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="uUWCNbAPGHeyCcKTkVrY-1" source="xCT3tCEGww_5zrkCECiz-6" target="xCT3tCEGww_5zrkCECiz-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xCT3tCEGww_5zrkCECiz-12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=none;startFill=0;" edge="1" parent="uUWCNbAPGHeyCcKTkVrY-1" source="xCT3tCEGww_5zrkCECiz-6" target="xCT3tCEGww_5zrkCECiz-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xCT3tCEGww_5zrkCECiz-6" value="B" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;sketch=1;align=center;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="365" y="1400" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xCT3tCEGww_5zrkCECiz-10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="uUWCNbAPGHeyCcKTkVrY-1" source="xCT3tCEGww_5zrkCECiz-7" target="xCT3tCEGww_5zrkCECiz-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xCT3tCEGww_5zrkCECiz-13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=37.5;entryPerimeter=0;startArrow=none;startFill=0;" edge="1" parent="uUWCNbAPGHeyCcKTkVrY-1" source="xCT3tCEGww_5zrkCECiz-7" target="xCT3tCEGww_5zrkCECiz-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xCT3tCEGww_5zrkCECiz-7" value="C" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;sketch=1;align=center;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="470" y="1400" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xCT3tCEGww_5zrkCECiz-14" value="&lt;p style=&quot;line-height: 200%&quot;&gt;使用 zookeeper 的 分布式锁， 天然的是公平锁，可以保证请求的顺序性，避免数据错乱。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;写入缓存的数据都是从数据库中查询出来的， 一般数据库中表的字段中都有一个&amp;nbsp; update_time 时间戳，每次在写之前，需要先判断一下，缓存中的 时间戳和要写入数据的时间戳 ， 如果缓存中时间戳比 要更新的时间错新的话，此次操作就不能执行。&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="80" y="1540" width="735" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
