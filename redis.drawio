@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-04-07T16:00:04.627Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="AHRaMxO0EgYHqyJUsdWo" version="14.4.4" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2021-04-08T02:23:40.317Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="SJQTnQ3xXpB9kEho8WjN" version="14.5.7" type="github" pages="5">
   <diagram id="2Xkt2TAEOzTNxrY3dc94" name="数据结构">
-    <mxGraphModel dx="1298" dy="701" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1420" dy="778" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -278,12 +278,12 @@
     </mxGraphModel>
   </diagram>
   <diagram id="T9ofhpVVGzbZsa4hbkmA" name="原理">
-    <mxGraphModel dx="1298" dy="701" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1420" dy="778" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="bH2euOrN30Yw1Qwi_7RK-0" />
         <mxCell id="bH2euOrN30Yw1Qwi_7RK-1" parent="bH2euOrN30Yw1Qwi_7RK-0" />
-        <mxCell id="ngkLmRye4pmdnFh268Ew-58" value="" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
-          <mxGeometry x="117" y="470" width="683" height="265" as="geometry" />
+        <mxCell id="ngkLmRye4pmdnFh268Ew-58" value="" style="rounded=0;whiteSpace=wrap;html=1;align=center;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="110" y="470" width="683" height="265" as="geometry" />
         </mxCell>
         <mxCell id="AXepTas1otN2ZdD5XDQn-0" value="线程IO 模型：&lt;br&gt;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="40" y="40" width="80" height="20" as="geometry" />
@@ -410,38 +410,38 @@
         <mxCell id="AXepTas1otN2ZdD5XDQn-56" value="将指定文件的内容强制从内核缓存刷到磁盘 ， 生成环境中 ， 通常是每隔1s 左右执行一次 fsync操作" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="155" y="1903.5" width="540" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="h00gNlVUUtypoUSbmEtx-1" value="优缺点" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="h00gNlVUUtypoUSbmEtx-1" value="优缺点" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="77" y="1960" width="60" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="h00gNlVUUtypoUSbmEtx-2" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;RDB：优点&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;RDB会生成多个数据文件，每个数据文件都代表了某一个时刻中redis的数据，这种多数据文件的方式，每个文件都代表了某一个时刻的完整数据快照，非常适合做冷备&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;对外提供的读写服务，影响非常的小，可以让redis保持高性能，因为redis fork 一个子进程，让子进程执行磁盘io 操作来进行rdb 的持久化&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;相对与AOF 持久化机制来说 ，直接基于RDB 数据文件来重启和恢复Redis 数据， 会更加的快速&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="h00gNlVUUtypoUSbmEtx-2" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;RDB：优点&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;RDB会生成多个数据文件，每个数据文件都代表了某一个时刻中redis的数据，这种多数据文件的方式，每个文件都代表了某一个时刻的完整数据快照，非常适合做冷备&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;对外提供的读写服务，影响非常的小，可以让redis保持高性能，因为redis fork 一个子进程，让子进程执行磁盘io 操作来进行rdb 的持久化&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;相对与AOF 持久化机制来说 ，直接基于RDB 数据文件来重启和恢复Redis 数据， 会更加的快速&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="118.62" y="2000" width="681.38" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="h00gNlVUUtypoUSbmEtx-3" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;RDB：缺点&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;如果想要在Redis故障时，尽可能小的丢失数据，那么RDB没有AOF 好 ，一般来说 RDB的快照文件都是每隔5分钟，或者更长的时间生成一次，这个时候如果宕机，那么就会丢失5分钟甚至是更长时间的数据。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;RDB每次在fork 一个子进程来执行RDB 快照文件的生成时，如果数据文件比较大，可能会导致客户端提供的服务暂停数毫秒甚至数秒，一般不要让RDB 的间隔时间太长，否则每次生成的RDB 文件太大了， 对Redis 本身的性能可能会有影响&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="h00gNlVUUtypoUSbmEtx-3" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;RDB：缺点&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;如果想要在Redis故障时，尽可能小的丢失数据，那么RDB没有AOF 好 ，一般来说 RDB的快照文件都是每隔5分钟，或者更长的时间生成一次，这个时候如果宕机，那么就会丢失5分钟甚至是更长时间的数据。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;RDB每次在fork 一个子进程来执行RDB 快照文件的生成时，如果数据文件比较大，可能会导致客户端提供的服务暂停数毫秒甚至数秒，一般不要让RDB 的间隔时间太长，否则每次生成的RDB 文件太大了， 对Redis 本身的性能可能会有影响&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="120" y="2200" width="700" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="h00gNlVUUtypoUSbmEtx-4" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;配置&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;save&amp;nbsp; 60 1000&amp;nbsp; ： 每隔60s ，如果有超过1000个key 发生了变更，那么就生成一个dump.rdb 文件，就是当前redis 内存中完整的数据快照， 这个操作也称为 snapshotting ，快照。 也可以手动调用save 或者 bgsave 命令，同步或者异步执行rdb 快照生成。save 可以设置多个，多是多个 snapshotting 检查点，每到一个检查点，就会去check 一下 ，是否有指定的key 数量发生了变更，如果有 就生成一个dump.rdb&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="h00gNlVUUtypoUSbmEtx-4" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;配置&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;save&amp;nbsp; 60 1000&amp;nbsp; ： 每隔60s ，如果有超过1000个key 发生了变更，那么就生成一个dump.rdb 文件，就是当前redis 内存中完整的数据快照， 这个操作也称为 snapshotting ，快照。 也可以手动调用save 或者 bgsave 命令，同步或者异步执行rdb 快照生成。save 可以设置多个，多是多个 snapshotting 检查点，每到一个检查点，就会去check 一下 ，是否有指定的key 数量发生了变更，如果有 就生成一个dump.rdb&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="120" y="2400" width="700" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="h00gNlVUUtypoUSbmEtx-6" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;AOF：优点&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;AOF 可以更好的保证数据的不丢失，一般AOF 会每隔1s ，通过一个后台线程执行一次 「 FSYNC 」 操作 ，最多丢失1s的数据，每隔1s 就执行一次 fsync 操作， 保证os cache 的数据写入到硬盘中，redis 进程挂了，最多丢失 1s 的数据。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;AOF日志文件以 append-only 默写写入，所有没有磁盘寻址的开销 ，写入性能非常的高，而且文件不容易破损，即使文件尾部破损，也很容易修复&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;AOF日志文件即使过大的时候， 后台会出现 「 REWRITE 」操作 ，不会影响客户端的读写，因为在 rewrite log 的时候 ，会对其中的指令进行压缩 ，创建出一份需要恢复数据的最小日志出来 ，在创建新日志文件的时候 ，老的日志文件还是照常写入，当新的merge 后的日志 ready 的时候 ，在交换新老日志文件&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; AOF日志文件的命令通过非常可读的方式进行记录，这个特性非常适合灾难性的误删除后的紧急恢复。&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="h00gNlVUUtypoUSbmEtx-6" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;AOF：优点&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;AOF 可以更好的保证数据的不丢失，一般AOF 会每隔1s ，通过一个后台线程执行一次 「 FSYNC 」 操作 ，最多丢失1s的数据，每隔1s 就执行一次 fsync 操作， 保证os cache 的数据写入到硬盘中，redis 进程挂了，最多丢失 1s 的数据。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;AOF日志文件以 append-only 默写写入，所有没有磁盘寻址的开销 ，写入性能非常的高，而且文件不容易破损，即使文件尾部破损，也很容易修复&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;AOF日志文件即使过大的时候， 后台会出现 「 REWRITE 」操作 ，不会影响客户端的读写，因为在 rewrite log 的时候 ，会对其中的指令进行压缩 ，创建出一份需要恢复数据的最小日志出来 ，在创建新日志文件的时候 ，老的日志文件还是照常写入，当新的merge 后的日志 ready 的时候 ，在交换新老日志文件&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; AOF日志文件的命令通过非常可读的方式进行记录，这个特性非常适合灾难性的误删除后的紧急恢复。&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="120" y="2562" width="690" height="288" as="geometry" />
         </mxCell>
-        <mxCell id="h00gNlVUUtypoUSbmEtx-7" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;AOF：缺点&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;对于同一份数据来说 ， AOF 日志文件通常比RDB数据快照文件要大&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;AOF 开启之后 ，支持写的QPS 会比 RDB 支持的QPS 低 ，因为AOF 一般会设置 每秒 FSYNC 一次日志文件&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;做数据恢复的时候，会比较的慢 ，还有做冷备 定期的备份，不太方便，可能要自己手写复杂的脚本去做，不太适合做冷备&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="h00gNlVUUtypoUSbmEtx-7" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;AOF：缺点&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;对于同一份数据来说 ， AOF 日志文件通常比RDB数据快照文件要大&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;AOF 开启之后 ，支持写的QPS 会比 RDB 支持的QPS 低 ，因为AOF 一般会设置 每秒 FSYNC 一次日志文件&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;做数据恢复的时候，会比较的慢 ，还有做冷备 定期的备份，不太方便，可能要自己手写复杂的脚本去做，不太适合做冷备&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="118.62" y="2850" width="681.38" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="h00gNlVUUtypoUSbmEtx-8" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;配置&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;AOF 默认是关闭的，可以通过&amp;nbsp; appendonly&amp;nbsp; yes&amp;nbsp; 开启。 生成环境中 一般来说是要打开的，除非随便丢失几分钟的数据也无所谓，代开AOF 持久化之后，redis 每次接收到一条写命令 ，就会写入到 日志文件中，当然是先写 os cache 然后每隔一段时间fsync一下。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; AOF 和RDB 都开启的情况下 ，redis重启的时候 ， 会优先从AOF 中进行数据恢复 ， 因为AOF 文件中的数据比较的完整。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="h00gNlVUUtypoUSbmEtx-8" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;配置&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;AOF 默认是关闭的，可以通过&amp;nbsp; appendonly&amp;nbsp; yes&amp;nbsp; 开启。 生成环境中 一般来说是要打开的，除非随便丢失几分钟的数据也无所谓，代开AOF 持久化之后，redis 每次接收到一条写命令 ，就会写入到 日志文件中，当然是先写 os cache 然后每隔一段时间fsync一下。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; AOF 和RDB 都开启的情况下 ，redis重启的时候 ， 会优先从AOF 中进行数据恢复 ， 因为AOF 文件中的数据比较的完整。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="118.62" y="3000" width="700" height="140" as="geometry" />
         </mxCell>
         <mxCell id="AXepTas1otN2ZdD5XDQn-46" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontSize=12;align=center;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="630" y="1813.5" width="40" height="60" as="geometry" />
         </mxCell>
         <mxCell id="AXepTas1otN2ZdD5XDQn-57" value="管道" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
-          <mxGeometry x="47" y="3200" width="40" height="20" as="geometry" />
+          <mxGeometry x="40" y="3200" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="AXepTas1otN2ZdD5XDQn-58" value="管道 本身不是 Redis服务器直接提供的技术 ，这个技术本质上是由客户端提供的，跟服务器没有什么直接的关系" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="102" y="3240" width="660" height="40" as="geometry" />
         </mxCell>
         <mxCell id="AXepTas1otN2ZdD5XDQn-59" value="事务" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
-          <mxGeometry x="47" y="3300" width="40" height="20" as="geometry" />
+          <mxGeometry x="37.5" y="3310" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="AXepTas1otN2ZdD5XDQn-60" value="multi /exec / discard&amp;nbsp;&amp;nbsp;&lt;br&gt;&lt;br&gt;multi 指示 事务的开始 ，&amp;nbsp; exec 指示事务的执行&amp;nbsp; discard 指示 事务的丢弃&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="87" y="3350" width="660" height="40" as="geometry" />
@@ -532,78 +532,78 @@
           <mxGeometry x="127" y="4480" width="700" height="110" as="geometry" />
         </mxCell>
         <mxCell id="AXepTas1otN2ZdD5XDQn-90" value="增加从节点" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
-          <mxGeometry x="87" y="4600" width="70" height="20" as="geometry" />
+          <mxGeometry x="80" y="4600" width="70" height="20" as="geometry" />
         </mxCell>
         <mxCell id="AXepTas1otN2ZdD5XDQn-91" value="&lt;p style=&quot;line-height: 180%&quot;&gt;当从节点刚刚加入集群时 ，它必须先要进行一次快照同步 ，同步完成后，在继续进行增量同步&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="127" y="4640" width="690" height="40" as="geometry" />
         </mxCell>
         <mxCell id="AXepTas1otN2ZdD5XDQn-92" value="无盘复制" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
-          <mxGeometry x="87" y="4690" width="70" height="20" as="geometry" />
+          <mxGeometry x="87" y="4690" width="53" height="20" as="geometry" />
         </mxCell>
         <mxCell id="AXepTas1otN2ZdD5XDQn-93" value="&lt;p style=&quot;line-height: 200%&quot;&gt;无盘复制 ，主服务器直接通过套接字将快照内容发送到从节点 ，生成快照是一个遍历的过程，主节点会一边遍历，一边将序列化的内容发送到从节点，从节点还是和之前一样，先将收到的内容存储到硬盘文件中，在进行一次性加载。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="127" y="4740" width="690" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="AXepTas1otN2ZdD5XDQn-92" target="AXepTas1otN2ZdD5XDQn-92">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="AXepTas1otN2ZdD5XDQn-92" target="AXepTas1otN2ZdD5XDQn-92" edge="1">
           <mxGeometry x="42" y="3200" as="geometry" />
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-38" value="主从复制的原理" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-38" value="主从复制的原理" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="82" y="4800" width="98" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-39" value="Master" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-39" value="Master" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="82.12" y="4920" width="54.88" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ekmjxTff3Y5ltakHXg94-41">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ekmjxTff3Y5ltakHXg94-41" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="140" y="4940" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ekmjxTff3Y5ltakHXg94-41">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-53" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ekmjxTff3Y5ltakHXg94-41" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="740" y="4970" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-54" value="3⃣️" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ekmjxTff3Y5ltakHXg94-53">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-54" value="3⃣️" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ekmjxTff3Y5ltakHXg94-53" vertex="1" connectable="0">
           <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-41" value="Slave" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-41" value="Slave" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="615.12" y="4920" width="54.88" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-42" value="" style="endArrow=none;html=1;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-42" value="" style="endArrow=none;html=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="80" y="4880" as="sourcePoint" />
             <mxPoint x="680" y="4880" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-46" value="&lt;font color=&quot;#00994d&quot;&gt;slave 第一次 连接 master&amp;nbsp; 或长时间断开连接&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ekmjxTff3Y5ltakHXg94-42">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-46" value="&lt;font color=&quot;#00994d&quot;&gt;slave 第一次 连接 master&amp;nbsp; 或长时间断开连接&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ekmjxTff3Y5ltakHXg94-42" vertex="1" connectable="0">
           <mxGeometry x="0.17" y="1" relative="1" as="geometry">
             <mxPoint x="-191" y="1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-45" value="1⃣️&amp;nbsp; 当启动一个slave 的时候，它会发送一个 psync 命令给 master node" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-45" value="1⃣️&amp;nbsp; 当启动一个slave 的时候，它会发送一个 psync 命令给 master node" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="187" y="4910" width="390" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-47" value="2⃣️ 触发 一次 全量复制&amp;nbsp; full&amp;nbsp; resynchronization&amp;nbsp; master &lt;br&gt;启动一个后台线程，开始生成一份 RDB 快照文件" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-47" value="2⃣️ 触发 一次 全量复制&amp;nbsp; full&amp;nbsp; resynchronization&amp;nbsp; master &lt;br&gt;启动一个后台线程，开始生成一份 RDB 快照文件" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="65" y="4990" width="300" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ekmjxTff3Y5ltakHXg94-48">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-50" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ekmjxTff3Y5ltakHXg94-48" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="640" y="4970" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-51" value="快照生成完毕后，发送给 slave" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ekmjxTff3Y5ltakHXg94-50">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-51" value="快照生成完毕后，发送给 slave" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ekmjxTff3Y5ltakHXg94-50" vertex="1" connectable="0">
           <mxGeometry x="0.1327" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-48" value="RDB" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;align=center;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-48" value="RDB" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="97" y="5030" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-49" value="同时会将客户端收到的所有写命令缓存在内存中" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-49" value="同时会将客户端收到的所有写命令缓存在内存中" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="65" y="5075" width="270" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.708;entryY=1.1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.492;exitY=1.033;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ekmjxTff3Y5ltakHXg94-56" target="ekmjxTff3Y5ltakHXg94-41">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-57" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.708;entryY=1.1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.492;exitY=1.033;exitDx=0;exitDy=0;exitPerimeter=0;rounded=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ekmjxTff3Y5ltakHXg94-56" target="ekmjxTff3Y5ltakHXg94-41" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="790" y="5020" as="sourcePoint" />
             <Array as="points">
@@ -613,171 +613,171 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-58" value="然后在加载到内存" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ekmjxTff3Y5ltakHXg94-57">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-58" value="然后在加载到内存" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ekmjxTff3Y5ltakHXg94-57" vertex="1" connectable="0">
           <mxGeometry x="-0.0996" y="1" relative="1" as="geometry">
             <mxPoint x="-14.96" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-56" value="slave 收到快照之后&lt;br&gt;先写入本地磁盘" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-56" value="slave 收到快照之后&lt;br&gt;先写入本地磁盘" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="680" y="4970" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ekmjxTff3Y5ltakHXg94-59">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-60" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ekmjxTff3Y5ltakHXg94-59" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="630" y="4970" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-61" value="4⃣️&amp;nbsp; 将内存中缓存的写命令同步给slave" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ekmjxTff3Y5ltakHXg94-60">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-61" value="4⃣️&amp;nbsp; 将内存中缓存的写命令同步给slave" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ekmjxTff3Y5ltakHXg94-60" vertex="1" connectable="0">
           <mxGeometry x="-0.4137" y="-1" relative="1" as="geometry">
             <mxPoint y="1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-59" value="缓存RDB 复制过程中的写命令" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-59" value="缓存RDB 复制过程中的写命令" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="245" y="5110" width="100" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-63" value="" style="endArrow=none;html=1;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-63" value="" style="endArrow=none;html=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="82" y="5210" as="sourcePoint" />
             <mxPoint x="682" y="5210" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-64" value="&lt;font color=&quot;#00994d&quot;&gt;重新连接&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ekmjxTff3Y5ltakHXg94-63">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-64" value="&lt;font color=&quot;#00994d&quot;&gt;重新连接&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ekmjxTff3Y5ltakHXg94-63" vertex="1" connectable="0">
           <mxGeometry x="0.17" y="1" relative="1" as="geometry">
             <mxPoint x="-293" y="1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-65" value="Master" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-65" value="Master" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="82.12" y="5240" width="54.88" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ekmjxTff3Y5ltakHXg94-69">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ekmjxTff3Y5ltakHXg94-69" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="140" y="5260" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-69" value="Slave" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-69" value="Slave" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="615.12" y="5240" width="54.88" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-80" value="1⃣️&amp;nbsp; master&amp;nbsp; 仅复制缺少的数据给slave" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ekmjxTff3Y5ltakHXg94-80" value="1⃣️&amp;nbsp; master&amp;nbsp; 仅复制缺少的数据给slave" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="270" y="5240" width="210" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-0" value="过期key 的处理" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
-          <mxGeometry x="82.12" y="5320" width="98" height="30" as="geometry" />
+        <mxCell id="ngkLmRye4pmdnFh268Ew-0" value="过期key 的处理" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="82.12" y="5330" width="87.88" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-3" value="&lt;p style=&quot;line-height: 200%&quot;&gt;slave 不会过期key ，只会等待 master 过期key&amp;nbsp; ，如果master 过期了一个key ， 或者通过 LRU 淘汰了一个key&amp;nbsp; ，那么就会模拟一条del 指令 发送给 slave&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
-          <mxGeometry x="119.5" y="5380" width="690" height="40" as="geometry" />
+        <mxCell id="ngkLmRye4pmdnFh268Ew-3" value="&lt;p style=&quot;line-height: 200%&quot;&gt;slave 不会过期key ，只会等待 master 过期key&amp;nbsp; ，如果master 过期了一个key ， 或者通过 LRU 淘汰了一个key&amp;nbsp; ，那么就会模拟一条del 指令 发送给 slave&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="119.5" y="5390" width="690" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-4" value="断点续传" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
-          <mxGeometry x="80" y="5450" width="80" height="30" as="geometry" />
+        <mxCell id="ngkLmRye4pmdnFh268Ew-4" value="断点续传" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="80" y="5460" width="70" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-5" value="&lt;p style=&quot;line-height: 200%&quot;&gt;如果在主从复制的过程中 ，网络连接断掉了，那么可以接着上次复制的地方，继续复制下去，而不是从头开始复制一份ID， offset 就是保存在backlog 中，如果master 和 slave 网络连接断掉了，slave 会让master 从上次的 replica offset 开始继续复制。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
-          <mxGeometry x="123.62" y="5520" width="690" height="40" as="geometry" />
+        <mxCell id="ngkLmRye4pmdnFh268Ew-5" value="&lt;p style=&quot;line-height: 200%&quot;&gt;如果在主从复制的过程中 ，网络连接断掉了，那么可以接着上次复制的地方，继续复制下去，而不是从头开始复制一份ID， offset 就是保存在backlog 中，如果master 和 slave 网络连接断掉了，slave 会让master 从上次的 replica offset 开始继续复制。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="123.62" y="5530" width="690" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-6" value="文件事件处理器：是单线程，所以redis 才是单线程的" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-6" value="文件事件处理器：是单线程，所以redis 才是单线程的" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="82" y="400" width="488" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-8" value="Redis 进程" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-8" value="Redis 进程" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="415.5" y="485" width="70" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;curved=1;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-10" target="ngkLmRye4pmdnFh268Ew-13">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;curved=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-10" target="ngkLmRye4pmdnFh268Ew-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-43" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.017;entryY=0.257;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-10" target="ngkLmRye4pmdnFh268Ew-41">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-43" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.017;entryY=0.257;entryDx=0;entryDy=0;entryPerimeter=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-10" target="ngkLmRye4pmdnFh268Ew-41" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-10" value="客户端" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-10" value="客户端" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="24" y="505" width="73" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-11" value="客户端" style="ellipse;whiteSpace=wrap;html=1;align=center;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-11" value="客户端" style="ellipse;whiteSpace=wrap;html=1;align=center;strokeColor=#6c8ebf;fillColor=#dae8fc;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="21" y="580" width="73" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-12" value="客户端" style="ellipse;whiteSpace=wrap;html=1;align=center;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-12" value="客户端" style="ellipse;whiteSpace=wrap;html=1;align=center;strokeColor=#6c8ebf;fillColor=#dae8fc;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="21" y="650" width="73" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-17" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-13">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-17" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-13" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="250" y="530" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-13" value="server socket" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-13" value="server socket" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="140" y="572.5" width="70" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-15" value="请求建立连接" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-15" value="请求建立连接" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="110" y="530" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-19" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-18" target="ngkLmRye4pmdnFh268Ew-20">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-19" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-18" target="ngkLmRye4pmdnFh268Ew-20" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="287" y="590" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-18" value="AE_READABLE" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-18" value="AE_READABLE" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="210" y="480" width="90" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-21" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-20" target="ngkLmRye4pmdnFh268Ew-22">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-21" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-20" target="ngkLmRye4pmdnFh268Ew-22" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="390" y="600" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-20" value="IO 多路复用程序" style="rounded=1;whiteSpace=wrap;html=1;align=center;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-20" value="IO 多路复用程序" style="rounded=1;whiteSpace=wrap;html=1;align=center;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="234" y="580" width="106" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-30" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-22">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-30" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-22" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="600" y="600" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-22" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3c800;strokeColor=#B09500;fontColor=#ffffff;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-22" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3c800;strokeColor=#B09500;fontColor=#ffffff;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="370" y="582.5" width="200" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-25" value="队列" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-25" value="队列" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="455" y="540" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-35" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-26" target="ngkLmRye4pmdnFh268Ew-31">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-35" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-26" target="ngkLmRye4pmdnFh268Ew-31" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-51" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-26">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-51" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-26" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="720" y="600" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-56" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-26" target="ngkLmRye4pmdnFh268Ew-33">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-56" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-26" target="ngkLmRye4pmdnFh268Ew-33" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-26" value="文件事件派发器" style="rounded=1;whiteSpace=wrap;html=1;align=center;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-26" value="文件事件派发器" style="rounded=1;whiteSpace=wrap;html=1;align=center;fillColor=#bac8d3;strokeColor=#23445d;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="600" y="585" width="94" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-42" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.625;entryY=0.2;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-31" target="ngkLmRye4pmdnFh268Ew-38">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-42" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.625;entryY=0.2;entryDx=0;entryDy=0;entryPerimeter=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-31" target="ngkLmRye4pmdnFh268Ew-38" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-31" value="连接应答处理器" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-31" value="连接应答处理器" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#fad9d5;strokeColor=#ae4132;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="725" y="495" width="55" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-49" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.4;entryY=0.1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-32" target="ngkLmRye4pmdnFh268Ew-39">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-49" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.4;entryY=0.1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-32" target="ngkLmRye4pmdnFh268Ew-39" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-32" value="命令请求处理器" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-32" value="命令请求处理器" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#fad9d5;strokeColor=#ae4132;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="725" y="565" width="55" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-57" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.526;entryY=0.1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-33" target="ngkLmRye4pmdnFh268Ew-40">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-57" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.526;entryY=0.1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-33" target="ngkLmRye4pmdnFh268Ew-40" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-33" value="命令回复处理器" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-33" value="命令回复处理器" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#fad9d5;strokeColor=#ae4132;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="725" y="640" width="55" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-37" value="文件事件处理器模型" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-37" value="文件事件处理器模型" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="399.31" y="440" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-38" value="与socket 建立关联" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;fillColor=#b1ddf0;strokeColor=#10739e;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-38" value="与socket 建立关联" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;fillColor=#b1ddf0;strokeColor=#10739e;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="462.75" y="735" width="124.5" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-39" value="从socket 中读取数据&lt;br&gt;完成相应的命令操作&lt;br&gt;并与命令回复器建立关联" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;fillColor=#b1ddf0;strokeColor=#10739e;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-39" value="从socket 中读取数据&lt;br&gt;完成相应的命令操作&lt;br&gt;并与命令回复器建立关联" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;fillColor=#b1ddf0;strokeColor=#10739e;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="570" y="790" width="149.25" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-40" value="返回结果，并与socket 解除关联" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;fillColor=#b1ddf0;strokeColor=#10739e;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-40" value="返回结果，并与socket 解除关联" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;fillColor=#b1ddf0;strokeColor=#10739e;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="699.12" y="750" width="114.5" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-46" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-41" target="ngkLmRye4pmdnFh268Ew-45">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-46" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-41" target="ngkLmRye4pmdnFh268Ew-45" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-53" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-41" target="ngkLmRye4pmdnFh268Ew-54">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-53" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-41" target="ngkLmRye4pmdnFh268Ew-54" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="220" y="770" as="targetPoint" />
             <Array as="points">
@@ -787,26 +787,29 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-41" value="&amp;nbsp;socket" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-41" value="&amp;nbsp;socket" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="140" y="640" width="60" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-48" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-45" target="ngkLmRye4pmdnFh268Ew-20">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-48" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-45" target="ngkLmRye4pmdnFh268Ew-20" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-45" value="AE_READABLE" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-45" value="AE_READABLE" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="240" y="650" width="90" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-52" value="&lt;font color=&quot;#cc0000&quot;&gt;将事件压入队列&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=90;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-52" value="&lt;font color=&quot;#cc0000&quot;&gt;将事件压入队列&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=90;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="305" y="590" width="95" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-55" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.3;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-54" target="ngkLmRye4pmdnFh268Ew-20">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-55" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.3;exitDx=0;exitDy=0;exitPerimeter=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ngkLmRye4pmdnFh268Ew-54" target="ngkLmRye4pmdnFh268Ew-20" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="320" y="660" as="targetPoint" />
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-54" value="AE_WRITEABLE" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+        <mxCell id="ngkLmRye4pmdnFh268Ew-54" value="AE_WRITEABLE" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
           <mxGeometry x="350" y="680" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="z3oJRxSje1oIvuxIP5Mp-0" value="Gossip&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
+          <mxGeometry x="82.12" y="840" width="122.5" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
