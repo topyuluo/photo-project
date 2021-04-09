@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-09T03:44:42.102Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="C1OzlndmcDoNQmCZmkUF" version="14.5.7" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2021-04-09T05:43:49.053Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="mL9wftlHDxkWSfMab0aR" version="14.5.7" type="github" pages="6">
   <diagram id="2Xkt2TAEOzTNxrY3dc94" name="数据结构">
     <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1581,7 +1581,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="wrkVmGegcRjDCWmV76kZ" name="线上故障">
-    <mxGraphModel dx="1420" dy="834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="uUWCNbAPGHeyCcKTkVrY-0" />
         <mxCell id="uUWCNbAPGHeyCcKTkVrY-1" parent="uUWCNbAPGHeyCcKTkVrY-0" />
@@ -1642,7 +1642,7 @@
         <mxCell id="M1zMZmoeTWhk0v8dZeMA-16" value="&lt;p style=&quot;line-height: 200%&quot;&gt;缓存雪崩：同一个时间缓存大面积失效，大量的请求直接向数据拿数据，直接把MySQL 打死。如果不考虑限流熔断的情况，那将是灾难性的后果，前端的请求已经超过了数据库能支持的流量极限，重启数据库也无济于事，因为启动成功之后，面临的是接着被打死。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
           <mxGeometry x="85" y="240" width="735" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="M1zMZmoeTWhk0v8dZeMA-17" value="&lt;p style=&quot;line-height: 200%&quot;&gt;解决方案， 定时任务写入缓存数据的时候，给缓存的过期时间添加一个随机值， 让缓存的失效的实现相对分散，不要在同一时间集中过期。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
+        <mxCell id="M1zMZmoeTWhk0v8dZeMA-17" value="&lt;p style=&quot;line-height: 200%&quot;&gt;解决方案， 定时任务写入缓存数据的时候，给缓存的过期时间添加一个随机值， 让缓存的失效的实现相对分散，不要在同一时间集中过期。或者设置缓存不过期&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
           <mxGeometry x="80" y="320" width="735" height="60" as="geometry" />
         </mxCell>
         <mxCell id="M1zMZmoeTWhk0v8dZeMA-18" value="&lt;p style=&quot;line-height: 200%&quot;&gt;某一个key 非常的热点，大量的并发都对整个key 进行访问，当这个key 在失效的瞬间，持续的大并发就穿破缓存，直接请求到数据库中，从而打崩数据库。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
@@ -1704,27 +1704,6 @@
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-0" value="&lt;p style=&quot;line-height: 200%&quot;&gt;上面比较粗略的介绍了缓存中可能出现的一些问题和相应的解决方案，下面再来总结一下：&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 缓存过期后，将尝试从后端数据库获取数据，这是一个看似非常合理的流程。但是在高并发场景下，有可能有多个请求去从数据库获取数据，对后端数据库造成极大的冲击 ，甚至导致 「宕机」 的现象。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 此外，当某个缓存key 在被更新时，同时也可能被大量请求在获取，这也会导致不一致的问题。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;那如何避免类似的问题呢 ？&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 很自然的会想到加锁的机制，在缓存更新或者过期的情况下，先尝试获取锁，当更新或者从数据库获取到数据后在释放锁，其它的请求需要牺牲一定的等待时间 ，即可直接从缓存中获取数据。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;缓存穿透：&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;在高并发场景下，如果某一个key 被高并发访问，没有被命中，处于对容错性的考虑，会尝试从数据库中获取，从而导致了大量的请求到达了数据库，而当该key对应的数据本身就是NULL 的情况下，这就导致了数据库中并发的执行了很多不必要的查询操作，从而导致巨大冲击和压力。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 可以通过下面的两种方式来避免缓存穿透的问题：&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 1. 缓存空对象&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 2. 单独过滤处理&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
           <mxGeometry x="80" y="1670" width="735" height="490" as="geometry" />
-        </mxCell>
-        <mxCell id="7whBfMgbD_qqsudYZGVB-1" value="" style="group" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1" connectable="0">
-          <mxGeometry x="40" y="3010" width="220" height="470" as="geometry" />
-        </mxCell>
-        <mxCell id="M1zMZmoeTWhk0v8dZeMA-23" value="redis 的 大 key" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="7whBfMgbD_qqsudYZGVB-1" vertex="1">
-          <mxGeometry width="110" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="M1zMZmoeTWhk0v8dZeMA-24" value="Redis 的 热点key&amp;nbsp;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="7whBfMgbD_qqsudYZGVB-1" vertex="1">
-          <mxGeometry y="80" width="110" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="M1zMZmoeTWhk0v8dZeMA-25" value="如何让 一组key&amp;nbsp; 都存储在一台 机器上" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="7whBfMgbD_qqsudYZGVB-1" vertex="1">
-          <mxGeometry y="169" width="220" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="M1zMZmoeTWhk0v8dZeMA-26" value="Redis&amp;nbsp; CPU&amp;nbsp; 100%" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="7whBfMgbD_qqsudYZGVB-1" vertex="1">
-          <mxGeometry y="280" width="130" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="4rov-A6-OaIKI-HkXfAs-0" value="什么样的数据适合存放在Redis" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="7whBfMgbD_qqsudYZGVB-1" vertex="1">
-          <mxGeometry y="360" width="170" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="4rov-A6-OaIKI-HkXfAs-1" value="持久化机制， 各有什么优缺点" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="7whBfMgbD_qqsudYZGVB-1" vertex="1">
-          <mxGeometry y="440" width="170" height="30" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-2" value="分布式锁的实现原理" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
           <mxGeometry x="40" y="2160" width="120" height="30" as="geometry" />
@@ -1901,6 +1880,77 @@
         </mxCell>
         <mxCell id="qeulV645QN60k744e97G-1" value="&lt;span style=&quot;font-size: 49px&quot;&gt;&lt;font color=&quot;#b3b3b3&quot;&gt;蚂蚁不是ant - Mr.pan&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;opacity=40;textOpacity=20;rotation=-15;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
           <mxGeometry x="139" y="1780" width="575" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="M1zMZmoeTWhk0v8dZeMA-23" value="redis 的 大 key" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
+          <mxGeometry x="40" y="3010" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M1zMZmoeTWhk0v8dZeMA-24" value="Redis 的 热点key&amp;nbsp;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
+          <mxGeometry x="40" y="3090" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M1zMZmoeTWhk0v8dZeMA-25" value="如何让 一组key&amp;nbsp; 都存储在一台 机器上" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
+          <mxGeometry x="40" y="3179" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="M1zMZmoeTWhk0v8dZeMA-26" value="Redis&amp;nbsp; CPU&amp;nbsp; 100%" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
+          <mxGeometry x="40" y="3290" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4rov-A6-OaIKI-HkXfAs-0" value="什么样的数据适合存放在Redis" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
+          <mxGeometry x="40" y="3370" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4rov-A6-OaIKI-HkXfAs-1" value="持久化机制， 各有什么优缺点" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
+          <mxGeometry x="40" y="3450" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FxToyOXMAds_lEhUvf5q-0" value="如何设计一个缓存策略 ，可以动态缓存热点数据？" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="40" y="3530" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="FxToyOXMAds_lEhUvf5q-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=openThin;endFill=0;entryX=0;entryY=0.414;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="uUWCNbAPGHeyCcKTkVrY-1" source="FxToyOXMAds_lEhUvf5q-1" target="FxToyOXMAds_lEhUvf5q-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="3660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FxToyOXMAds_lEhUvf5q-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=openThin;endFill=0;" edge="1" parent="uUWCNbAPGHeyCcKTkVrY-1" source="FxToyOXMAds_lEhUvf5q-1" target="FxToyOXMAds_lEhUvf5q-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FxToyOXMAds_lEhUvf5q-1" value="客户端" style="ellipse;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;opacity=50;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="45" y="3640" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="FxToyOXMAds_lEhUvf5q-3" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="270" y="3600" width="390" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="FxToyOXMAds_lEhUvf5q-4" value="商品1" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="294" y="3620" width="56" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FxToyOXMAds_lEhUvf5q-6" value="商品2" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="370" y="3620" width="56" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FxToyOXMAds_lEhUvf5q-7" value="商品3" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="450" y="3620" width="56" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FxToyOXMAds_lEhUvf5q-8" value="....." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=0;sketch=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="530" y="3625" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FxToyOXMAds_lEhUvf5q-9" value="商品n" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="580" y="3620" width="56" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FxToyOXMAds_lEhUvf5q-10" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="270" y="3720" width="390" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="FxToyOXMAds_lEhUvf5q-11" value="商品信息" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="294" y="3740" width="56" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FxToyOXMAds_lEhUvf5q-16" value="商品信息" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="394" y="3740" width="56" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FxToyOXMAds_lEhUvf5q-17" value="商品信息" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="477" y="3740" width="56" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FxToyOXMAds_lEhUvf5q-18" value="商品信息" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="580" y="3740" width="56" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FxToyOXMAds_lEhUvf5q-21" value="根据商品id 查询商品是否存在" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="55" y="3600" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FxToyOXMAds_lEhUvf5q-22" value="通过商品id查询商品信息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="100" y="3720" width="140" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
