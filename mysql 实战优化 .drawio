@@ -1,11 +1,14 @@
-<mxfile host="app.diagrams.net" modified="2021-04-09T06:55:35.413Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="TjluOpe5p5r5sPwpprYQ" version="14.5.7" type="github">
+<mxfile host="app.diagrams.net" modified="2021-04-09T10:57:36.620Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="nLz5QvYk8hnxoL-n8LVe" version="14.5.7" type="github" pages="2">
   <diagram id="QEoOFMB9QdWzOJR0WDVQ" name="架构设计">
     <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="zALf2eaeC74s68lvdfPb-63" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="215" y="440" width="175" height="60" as="geometry" />
+        </mxCell>
         <mxCell id="zALf2eaeC74s68lvdfPb-34" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;sketch=1;" vertex="1" parent="1">
-          <mxGeometry x="207" y="683" width="360" height="130" as="geometry" />
+          <mxGeometry x="207" y="553" width="463" height="130" as="geometry" />
         </mxCell>
         <mxCell id="zALf2eaeC74s68lvdfPb-18" value="数据库" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;shadow=1;fillColor=#dae8fc;strokeColor=#6c8ebf;sketch=1;" vertex="1" parent="1">
           <mxGeometry x="590" y="120" width="140" height="115" as="geometry" />
@@ -99,8 +102,8 @@
         <mxCell id="zALf2eaeC74s68lvdfPb-32" value="执行器" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=1;" vertex="1" parent="1">
           <mxGeometry x="675" y="290" width="75" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="zALf2eaeC74s68lvdfPb-33" value="InnoDB 架构设计" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="40" y="400" width="100" height="30" as="geometry" />
+        <mxCell id="zALf2eaeC74s68lvdfPb-33" value="InnoDB 更新语句的执行流程" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="40" y="380" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="zALf2eaeC74s68lvdfPb-43" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=45;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="zALf2eaeC74s68lvdfPb-34" target="zALf2eaeC74s68lvdfPb-42">
           <mxGeometry relative="1" as="geometry" />
@@ -110,8 +113,11 @@
             <mxPoint x="-34" y="9" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="zALf2eaeC74s68lvdfPb-69" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="zALf2eaeC74s68lvdfPb-35" target="zALf2eaeC74s68lvdfPb-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="zALf2eaeC74s68lvdfPb-35" value="Buffer Pool&lt;br&gt;缓冲池" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="237.75" y="723" width="78.5" height="50" as="geometry" />
+          <mxGeometry x="237.75" y="593" width="78.5" height="50" as="geometry" />
         </mxCell>
         <mxCell id="zALf2eaeC74s68lvdfPb-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="zALf2eaeC74s68lvdfPb-36" target="zALf2eaeC74s68lvdfPb-35">
           <mxGeometry relative="1" as="geometry" />
@@ -122,26 +128,26 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="zALf2eaeC74s68lvdfPb-36" value="磁盘" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;shadow=1;sketch=1;" vertex="1" parent="1">
-          <mxGeometry x="252" y="850" width="50" height="30" as="geometry" />
+          <mxGeometry x="252" y="720" width="50" height="30" as="geometry" />
         </mxCell>
         <mxCell id="zALf2eaeC74s68lvdfPb-40" value="&lt;p style=&quot;line-height: 200%&quot;&gt;在执行这一条更新语句的时候，首先要找到这条更新语句 ，先看是否在缓冲池中，如果不在，就直接从磁盘加载到缓冲池中，然后给该记录添加独占锁&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;将原来的旧值，写入到 undo 日志文件 ，便于回滚操作&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;更新内存中的数据 ， 此时脏数据便产生了，因为内存中的数据是更新后的值，但是磁盘中对应的数据还是原来的值&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;将更新操作，写入到 redo log buffer 中&amp;nbsp; ，作为备选方案，在服务宕机时，完成数据的一致性。&amp;nbsp; 注意此时事务还没有提交，系统宕机不影响数据的一致性 ，提交事务的时候，按照一定的策略把redo 日志从redo log buffer 里刷入到磁盘文件里去。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=0;" vertex="1" parent="1">
-          <mxGeometry x="80" y="910" width="740" height="180" as="geometry" />
+          <mxGeometry x="80" y="780" width="740" height="180" as="geometry" />
         </mxCell>
         <mxCell id="zALf2eaeC74s68lvdfPb-42" value="undo&amp;nbsp; 日志文件" style="shape=card;whiteSpace=wrap;html=1;shadow=0;sketch=1;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="117" y="837" width="60" height="43" as="geometry" />
+          <mxGeometry x="117" y="707" width="60" height="43" as="geometry" />
         </mxCell>
         <mxCell id="zALf2eaeC74s68lvdfPb-47" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="zALf2eaeC74s68lvdfPb-45" target="zALf2eaeC74s68lvdfPb-35">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="zALf2eaeC74s68lvdfPb-45" value="更新语句" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;sketch=1;align=center;" vertex="1" parent="1">
-          <mxGeometry x="232" y="590" width="90" height="30" as="geometry" />
+        <mxCell id="zALf2eaeC74s68lvdfPb-45" value="更新语句" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;sketch=1;align=center;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="232" y="460" width="90" height="30" as="geometry" />
         </mxCell>
         <mxCell id="zALf2eaeC74s68lvdfPb-48" value="" style="endArrow=classic;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="zALf2eaeC74s68lvdfPb-35">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="280" y="700" as="sourcePoint" />
-            <mxPoint x="460" y="840" as="targetPoint" />
+            <mxPoint x="280" y="570" as="sourcePoint" />
+            <mxPoint x="460" y="710" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="390" y="720" />
+              <mxPoint x="390" y="590" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -150,21 +156,21 @@
             <mxPoint x="19.34" y="6.14" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="zALf2eaeC74s68lvdfPb-50" value="Inno DB" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=1;" vertex="1" parent="1">
-          <mxGeometry x="500" y="690" width="65" height="20" as="geometry" />
+        <mxCell id="zALf2eaeC74s68lvdfPb-50" value="&lt;font color=&quot;#666600&quot;&gt;Inno DB 存储引擎&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="560" width="110" height="20" as="geometry" />
         </mxCell>
         <mxCell id="zALf2eaeC74s68lvdfPb-55" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=45;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="zALf2eaeC74s68lvdfPb-51" target="zALf2eaeC74s68lvdfPb-54">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="zALf2eaeC74s68lvdfPb-51" value="Redo Log Buffer" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="380" y="760" width="110" height="40" as="geometry" />
+          <mxGeometry x="455" y="630" width="110" height="40" as="geometry" />
         </mxCell>
         <mxCell id="zALf2eaeC74s68lvdfPb-52" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="zALf2eaeC74s68lvdfPb-51" target="zALf2eaeC74s68lvdfPb-51">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="435" y="730" />
-              <mxPoint x="550" y="730" />
-              <mxPoint x="550" y="780" />
+              <mxPoint x="510" y="600" />
+              <mxPoint x="625" y="600" />
+              <mxPoint x="625" y="650" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -174,17 +180,17 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="zALf2eaeC74s68lvdfPb-54" value="redo log&amp;nbsp;&lt;br&gt;日志文件" style="shape=card;whiteSpace=wrap;html=1;shadow=0;sketch=1;align=left;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="390" y="860" width="60" height="43" as="geometry" />
+          <mxGeometry x="465" y="730" width="60" height="43" as="geometry" />
         </mxCell>
         <mxCell id="zALf2eaeC74s68lvdfPb-56" value="⑥&amp;nbsp; 通过 innodb_flush_log_at_trx_commit 来刷磁盘" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
-          <mxGeometry x="315" y="830" width="290" height="20" as="geometry" />
+          <mxGeometry x="440" y="690" width="290" height="20" as="geometry" />
         </mxCell>
         <mxCell id="zALf2eaeC74s68lvdfPb-57" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="280" y="650" as="sourcePoint" />
-            <mxPoint x="280" y="680" as="targetPoint" />
+            <mxPoint x="280" y="520" as="sourcePoint" />
+            <mxPoint x="280" y="550" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="360" y="660" />
+              <mxPoint x="360" y="530" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -192,6 +198,72 @@
           <mxGeometry x="-0.206" y="-2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="zALf2eaeC74s68lvdfPb-59" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#cc0066&quot;&gt;innodb_flush_log_at_trx_commit:&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; 0 - 提交事务的时候，不立即把redo log buffer 中的数据刷入磁盘，而是依靠 innodb 的主线程每秒执行一次刷新到磁盘&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; 1- 提交事务的时候，必须把redo_log_buffer 中的数据写入磁盘&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; 2 - 提交事务的时候，把 redo_log_buffer 中的数据写入 os cache , 而不是直接写入磁盘，依靠操作系统的调度来写磁盘&lt;/p&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="990" width="740" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zALf2eaeC74s68lvdfPb-72" style="edgeStyle=none;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=30;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="zALf2eaeC74s68lvdfPb-60" target="zALf2eaeC74s68lvdfPb-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zALf2eaeC74s68lvdfPb-60" value="bin log&amp;nbsp; 日志文件" style="shape=card;whiteSpace=wrap;html=1;shadow=0;sketch=1;align=left;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="700" y="720" width="60" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="zALf2eaeC74s68lvdfPb-61" value="" style="endArrow=classic;html=1;entryX=0;entryY=0;entryDx=45;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;elbow=vertical;" edge="1" parent="1" target="zALf2eaeC74s68lvdfPb-60">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="530" as="sourcePoint" />
+            <mxPoint x="535" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zALf2eaeC74s68lvdfPb-62" value="⑦ 写入bin log 日志文件" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="zALf2eaeC74s68lvdfPb-61">
+          <mxGeometry x="0.3652" y="-1" relative="1" as="geometry">
+            <mxPoint x="11" y="5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zALf2eaeC74s68lvdfPb-64" value="执行器" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="440" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zALf2eaeC74s68lvdfPb-66" value="⑧&amp;nbsp; 写入binlog 文件与位置&amp;nbsp;&lt;br&gt;写入commit 标记" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="713.5" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zALf2eaeC74s68lvdfPb-70" style="edgeStyle=none;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="zALf2eaeC74s68lvdfPb-67" target="zALf2eaeC74s68lvdfPb-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zALf2eaeC74s68lvdfPb-71" value="⑨ 后台线程，执行脏页落盘" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="zALf2eaeC74s68lvdfPb-70">
+          <mxGeometry x="0.2146" y="2" relative="1" as="geometry">
+            <mxPoint x="29.61" y="-4.85" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zALf2eaeC74s68lvdfPb-67" value="io 线程" style="ellipse;whiteSpace=wrap;html=1;shadow=0;sketch=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="359" y="630" width="55" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zALf2eaeC74s68lvdfPb-75" value="压测" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1180" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zALf2eaeC74s68lvdfPb-76" value="sysbench" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1240" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zALf2eaeC74s68lvdfPb-77" value="监控" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1280" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zALf2eaeC74s68lvdfPb-80" value="&lt;h1 style=&quot;font-family: &amp;#34;microsoft yahei&amp;#34; ; font-size: 14px&quot;&gt;&lt;font color=&quot;#1a1a1a&quot; style=&quot;font-weight: normal&quot;&gt;prometheus + Grafana&lt;/font&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1320" width="168" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="RD104Iu35cGpDa-m4dpr" name="Buffer Pool">
+    <mxGraphModel dx="866" dy="-647" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="hZ35b4r6HPtFQP_8WnYt-0" />
+        <mxCell id="hZ35b4r6HPtFQP_8WnYt-1" parent="hZ35b4r6HPtFQP_8WnYt-0" />
+        <mxCell id="p_YL0OfOBHn9h6odL_zA-0" value="如何配置Buffer pool 的大小" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+          <mxGeometry x="40" y="1200" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p_YL0OfOBHn9h6odL_zA-1" value="&lt;font color=&quot;#333333&quot; style=&quot;line-height: 150%&quot;&gt;Buffer Pool&amp;nbsp; 默认大小 128M .&lt;br&gt;&lt;br&gt;修改Buffer Pool 的大小：&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;font-family: sans-serif ; font-size: 13.0833px ; background-color: rgb(255 , 255 , 255)&quot;&gt;innodb_buffer_pool_size = 2147483648&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=1;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+          <mxGeometry x="80" y="1270" width="740" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p_YL0OfOBHn9h6odL_zA-2" value="&lt;font color=&quot;#333333&quot;&gt;15&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=1;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+          <mxGeometry x="80" y="1390" width="280" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
