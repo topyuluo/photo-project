@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-04-09T03:31:47.637Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="1avGOspcpWXgSfgCZJlQ" version="14.5.7" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2021-04-09T03:33:28.899Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="x4eTiQ6EVhw2BDza8wqn" version="14.5.7" type="github" pages="6">
   <diagram id="2Xkt2TAEOzTNxrY3dc94" name="数据结构">
-    <mxGraphModel dx="1420" dy="834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -537,333 +537,6 @@
         <mxCell id="a0pn-dlbp93B09sLRIuo-3" value="&lt;span style=&quot;font-size: 49px&quot;&gt;&lt;font color=&quot;#b3b3b3&quot;&gt;蚂蚁不是ant - Mr.pan&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;opacity=40;textOpacity=20;rotation=-15;" parent="a0pn-dlbp93B09sLRIuo-2" vertex="1">
           <mxGeometry x="30" y="12" width="575" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="yQ0uILBsWEMAl1AqhaMr-0" value="" style="group" vertex="1" connectable="0" parent="bH2euOrN30Yw1Qwi_7RK-1">
-          <mxGeometry x="43" y="1680" width="783.8946830706016" height="3990" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-38" value="AOF 原理" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="40" width="60" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-39" value="&lt;p style=&quot;line-height: 190%&quot;&gt;AOF 日志存储的是Redis 服务器的顺序指令序列 ，AOF 日志只记录对内存进行修改的指令记录。&lt;br&gt;&lt;br&gt;Redis在收到客户端修改指令后，先进行参数校验，如果没问题，就立即将该指令文本存储到 AOF 日志中，也就是先存到磁盘，然后在执行指令。 这样即使遇到突发宕机 ， 已经存储到AOF日志的指令进行重放一下 ，就可以恢复到宕机前的准备。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="80" y="40" width="660" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-40" value="AOF 重写&amp;nbsp;" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;glass=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="78.62" y="160" width="60" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-41" value="&lt;p style=&quot;line-height: 200%&quot;&gt;Redis 提供了 bgrewirteaof 指令对aof 日志进行瘦身 ，其原理即使开辟一个子进程对内存进行遍历转换成一系列Redis 的操作指令，序列化到一个新的AOF日志文件中，序列化完毕后 ，在将操作期间发生的AOF 日志追加到新的AOF日志文件中，追加完毕后，就立即替代旧的AOF日志文件了 ，瘦身工作就完成了。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="117" y="213.5" width="663" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-49" value="AOF文件" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="580" y="273.5" width="60" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-50" value="os cache" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fontSize=12;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="365.5" y="318.5" width="80" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-53" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.16;entryY=0.55;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;" parent="yQ0uILBsWEMAl1AqhaMr-0" source="AXepTas1otN2ZdD5XDQn-51" target="AXepTas1otN2ZdD5XDQn-50" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-51" value="redis&amp;nbsp; server" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="130" y="328.5" width="90" height="35" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-55" value="fsync" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="250" y="293.5" width="40" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-56" value="将指定文件的内容强制从内核缓存刷到磁盘 ， 生成环境中 ， 通常是每隔1s 左右执行一次 fsync操作" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="115" y="403.5" width="540" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="h00gNlVUUtypoUSbmEtx-1" value="优缺点" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="37" y="460" width="60" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="h00gNlVUUtypoUSbmEtx-2" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;RDB：优点&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;RDB会生成多个数据文件，每个数据文件都代表了某一个时刻中redis的数据，这种多数据文件的方式，每个文件都代表了某一个时刻的完整数据快照，非常适合做冷备&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;对外提供的读写服务，影响非常的小，可以让redis保持高性能，因为redis fork 一个子进程，让子进程执行磁盘io 操作来进行rdb 的持久化&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;相对与AOF 持久化机制来说 ，直接基于RDB 数据文件来重启和恢复Redis 数据， 会更加的快速&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="81.31" y="500" width="681.38" height="190" as="geometry" />
-        </mxCell>
-        <mxCell id="h00gNlVUUtypoUSbmEtx-3" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;RDB：缺点&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;如果想要在Redis故障时，尽可能小的丢失数据，那么RDB没有AOF 好 ，一般来说 RDB的快照文件都是每隔5分钟，或者更长的时间生成一次，这个时候如果宕机，那么就会丢失5分钟甚至是更长时间的数据。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;RDB每次在fork 一个子进程来执行RDB 快照文件的生成时，如果数据文件比较大，可能会导致客户端提供的服务暂停数毫秒甚至数秒，一般不要让RDB 的间隔时间太长，否则每次生成的RDB 文件太大了， 对Redis 本身的性能可能会有影响&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="80" y="698" width="700" height="140" as="geometry" />
-        </mxCell>
-        <mxCell id="h00gNlVUUtypoUSbmEtx-6" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;AOF：优点&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;AOF 可以更好的保证数据的不丢失，一般AOF 会每隔1s ，通过一个后台线程执行一次 「 FSYNC 」 操作 ，最多丢失1s的数据，每隔1s 就执行一次 fsync 操作， 保证os cache 的数据写入到硬盘中，redis 进程挂了，最多丢失 1s 的数据。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;AOF日志文件以 append-only 默写写入，所有没有磁盘寻址的开销 ，写入性能非常的高，而且文件不容易破损，即使文件尾部破损，也很容易修复&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;AOF日志文件即使过大的时候， 后台会出现 「 REWRITE 」操作 ，不会影响客户端的读写，因为在 rewrite log 的时候 ，会对其中的指令进行压缩 ，创建出一份需要恢复数据的最小日志出来 ，在创建新日志文件的时候 ，老的日志文件还是照常写入，当新的merge 后的日志 ready 的时候 ，在交换新老日志文件&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; AOF日志文件的命令通过非常可读的方式进行记录，这个特性非常适合灾难性的误删除后的紧急恢复。&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="79.5" y="1020" width="690" height="250" as="geometry" />
-        </mxCell>
-        <mxCell id="h00gNlVUUtypoUSbmEtx-7" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;AOF：缺点&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;对于同一份数据来说 ， AOF 日志文件通常比RDB数据快照文件要大&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;AOF 开启之后 ，支持写的QPS 会比 RDB 支持的QPS 低 ，因为AOF 一般会设置 每秒 FSYNC 一次日志文件&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;做数据恢复的时候，会比较的慢 ，还有做冷备 定期的备份，不太方便，可能要自己手写复杂的脚本去做，不太适合做冷备&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="79.5" y="1300" width="681.38" height="130" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-46" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontSize=12;align=center;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="590" y="313.5" width="40" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-54" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.875;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;" parent="yQ0uILBsWEMAl1AqhaMr-0" source="AXepTas1otN2ZdD5XDQn-50" target="AXepTas1otN2ZdD5XDQn-46" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-57" value="管道" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry y="1620" width="40" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-58" value="管道 本身不是 Redis服务器直接提供的技术 ，这个技术本质上是由客户端提供的，跟服务器没有什么直接的关系" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="62" y="1660" width="660" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-59" value="事务" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="0.5" y="1700" width="40" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-60" value="multi /exec / discard&amp;nbsp;&amp;nbsp;&lt;br&gt;&lt;br&gt;multi 指示 事务的开始 ，&amp;nbsp; exec 指示事务的执行&amp;nbsp; discard 指示 事务的丢弃&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="50" y="1740" width="660" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-61" value="&lt;p style=&quot;line-height: 180%&quot;&gt;所有的指令在exec 之前 不执行 ， 而是缓存在服务器的一个事务队列中 ， 服务器一旦收到exec 指令 ， 才开始执行整个事务队列 ， 执行完毕后一次性返回所有指令的执行结果 ， redis事务根本不能算 原子性， 而仅仅是满足了事务的隔离性 ， 隔离性中的串行化&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="50" y="1800" width="710" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-62" value="pub/sub - 发布订阅模型" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="3.1199999999999974" y="1880" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-63" value="&lt;p style=&quot;line-height: 200%&quot;&gt;Pub Sub 的生产者传递过来一个消息， Redis 会直接找到相应的消费者传递过去， 如果一个消费者都没有， 那么消息直接丢弃 ，如果开始又三个消费者，一个消费者突然挂掉了，生产者会继续发送消息，另外两个消费者可以持续收到消息， 但是挂掉的消费者重新连上的时候， 这段时间生产者发送的消息， 对于整个消费者来说就是彻底的丢失了。&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;如果Redis 停机重启 ， PubSub 的消息是不会持久化的， 毕竟 Redis 宕机就相当于一个消费者都没有 ，&amp;nbsp; 所有的消息直接被丢弃。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="50" y="1940" width="710" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-65" value="主从同步" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="5" y="2070" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-66" value="CAP原理" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="40" y="2140" width="60" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-67" value="&lt;p style=&quot;line-height: 180%&quot;&gt;C - Consistent : 一致性&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;A - Availability : 可用性&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;P - Partition tolerance , 分区容忍性&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;网络分区发生时， 一致性和可用性两难全&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="80" y="2190" width="270" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-68" value="最终一致" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="40" y="2330" width="60" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-69" value="&lt;p style=&quot;line-height: 180%&quot;&gt;Redis 的主从同步是异步复制的 ， 所以分布式的Redis 系统并不满足一致性的要求 ， Redis 保证 【最终一致】&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="80" y="2370" width="700" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-70" value="主从同步" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="40" y="2430" width="60" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-71" value="&lt;p style=&quot;line-height: 180%&quot;&gt;Redis 同步支持主从同步和从从同步 。从从同步功能是Redis 后续版本增加的功能 ，为了减轻主库的同步负担&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="80" y="2470" width="700" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-72" value="Master&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;rounded=1;shadow=1;glass=1;sketch=1;fontSize=12;align=center;fillColor=#f8cecc;strokeColor=#b85450;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="95" y="2550" width="70" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-77" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=12;fontColor=#1A1A1A;" parent="yQ0uILBsWEMAl1AqhaMr-0" source="AXepTas1otN2ZdD5XDQn-73" edge="1">
-          <mxGeometry x="-5" y="1590" as="geometry">
-            <mxPoint x="380" y="2540" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-73" value="slave" style="ellipse;whiteSpace=wrap;html=1;rounded=1;shadow=1;glass=1;sketch=1;fontSize=12;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="230" y="2520" width="70" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-75" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;fontColor=#1A1A1A;" parent="yQ0uILBsWEMAl1AqhaMr-0" source="AXepTas1otN2ZdD5XDQn-72" target="AXepTas1otN2ZdD5XDQn-73" edge="1">
-          <mxGeometry x="-5" y="1590" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-79" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=12;fontColor=#1A1A1A;" parent="yQ0uILBsWEMAl1AqhaMr-0" source="AXepTas1otN2ZdD5XDQn-74" edge="1">
-          <mxGeometry x="-5" y="1590" as="geometry">
-            <mxPoint x="380" y="2620" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-74" value="slave" style="ellipse;whiteSpace=wrap;html=1;rounded=1;shadow=1;glass=1;sketch=1;fontSize=12;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="230" y="2600" width="70" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-76" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.014;entryY=0.675;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;fontColor=#1A1A1A;" parent="yQ0uILBsWEMAl1AqhaMr-0" source="AXepTas1otN2ZdD5XDQn-72" target="AXepTas1otN2ZdD5XDQn-74" edge="1">
-          <mxGeometry x="-5" y="1590" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-78" value="slave" style="ellipse;whiteSpace=wrap;html=1;rounded=1;shadow=1;glass=1;sketch=1;fontSize=12;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="380" y="2520" width="70" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-80" value="slave" style="ellipse;whiteSpace=wrap;html=1;rounded=1;shadow=1;glass=1;sketch=1;fontSize=12;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="385" y="2600" width="65" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-81" value="replicate" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=1;sketch=1;fontSize=12;fontColor=#1A1A1A;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="165" y="2520" width="40" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-83" value="replicate" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=1;sketch=1;fontSize=12;fontColor=#1A1A1A;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="160" y="2600" width="40" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-84" value="replicate" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=1;sketch=1;fontSize=12;fontColor=#1A1A1A;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="320" y="2520" width="40" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-85" value="replicate" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=1;sketch=1;fontSize=12;fontColor=#1A1A1A;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="320" y="2600" width="40" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-86" value="增量同步" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="40" y="2670" width="60" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-87" value="&lt;p style=&quot;line-height: 200%&quot;&gt;Redis 同步的是指令流 ，主节点会将哪些对自己的状态产生修改性影响的指令记录在本地的内存buffer 中， 然后异步将buffer 中的指令同步到 从节点 ，从节点一边执行同步的指令流来达到和主节点一样的状态 ， 一边向主节点反馈自己同步到哪里了(偏移量)&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;因为内存的buffer 是有限的， 所以Redis 主库不能将所有的指令都记录在内存buffer 中 ，Redis 的复制内存buffer 是一个定长的环形数组，如果数组内容满了， 就会从头开始覆盖前面的内容。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="73" y="2710" width="700" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-88" value="快照同步" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="40" y="2833" width="60" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-89" value="&lt;p style=&quot;line-height: 200%&quot;&gt;快照同步是一个非常耗费资源的操作， 它首先需要在主库上进行一次bgsave 将当前内存的数据全部快照到磁盘上，然后再将快照文件的内容全部传送到从节点 ，从节点快照文件接受完毕后，立即执行一次全量加载 ， 加载之前要将当前内存的数据清空，加载完毕后，通知主节点继续增量的同步数据。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="80" y="2870" width="700" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-90" value="增加从节点" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="33" y="2990" width="70" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-91" value="&lt;p style=&quot;line-height: 180%&quot;&gt;当从节点刚刚加入集群时 ，它必须先要进行一次快照同步 ，同步完成后，在继续进行增量同步&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="83" y="3060" width="690" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-92" value="无盘复制" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="43" y="3110" width="53" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="AXepTas1otN2ZdD5XDQn-93" value="&lt;p style=&quot;line-height: 200%&quot;&gt;无盘复制 ，主服务器直接通过套接字将快照内容发送到从节点 ，生成快照是一个遍历的过程，主节点会一边遍历，一边将序列化的内容发送到从节点，从节点还是和之前一样，先将收到的内容存储到硬盘文件中，在进行一次性加载。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="83" y="3160" width="690" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="yQ0uILBsWEMAl1AqhaMr-0" source="AXepTas1otN2ZdD5XDQn-92" target="AXepTas1otN2ZdD5XDQn-92" edge="1">
-          <mxGeometry x="-2" y="1620" as="geometry" />
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-38" value="主从复制的原理" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="38" y="3220" width="98" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-39" value="Master" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="38.120000000000005" y="3340" width="54.88" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" source="ekmjxTff3Y5ltakHXg94-41" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="96" y="3360" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-53" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="yQ0uILBsWEMAl1AqhaMr-0" source="ekmjxTff3Y5ltakHXg94-41" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="696" y="3390" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-54" value="3⃣️" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ekmjxTff3Y5ltakHXg94-53" vertex="1" connectable="0">
-          <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-41" value="Slave" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="571.12" y="3340" width="54.88" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-42" value="" style="endArrow=none;html=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="36" y="3300" as="sourcePoint" />
-            <mxPoint x="636" y="3300" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-46" value="&lt;font color=&quot;#00994d&quot;&gt;slave 第一次 连接 master&amp;nbsp; 或长时间断开连接&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ekmjxTff3Y5ltakHXg94-42" vertex="1" connectable="0">
-          <mxGeometry x="0.17" y="1" relative="1" as="geometry">
-            <mxPoint x="-191" y="1" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-45" value="1⃣️&amp;nbsp; 当启动一个slave 的时候，它会发送一个 psync 命令给 master node" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="143" y="3330" width="390" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-47" value="2⃣️ 触发 一次 全量复制&amp;nbsp; full&amp;nbsp; resynchronization&amp;nbsp; master &lt;br&gt;启动一个后台线程，开始生成一份 RDB 快照文件" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="21" y="3410" width="300" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-50" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" source="ekmjxTff3Y5ltakHXg94-48" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="596" y="3390" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-51" value="快照生成完毕后，发送给 slave" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ekmjxTff3Y5ltakHXg94-50" vertex="1" connectable="0">
-          <mxGeometry x="0.1327" y="-1" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-48" value="RDB" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="53" y="3450" width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-49" value="同时会将客户端收到的所有写命令缓存在内存中" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="21" y="3495" width="270" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-57" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.708;entryY=1.1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.492;exitY=1.033;exitDx=0;exitDy=0;exitPerimeter=0;rounded=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" source="ekmjxTff3Y5ltakHXg94-56" target="ekmjxTff3Y5ltakHXg94-41" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="746" y="3440" as="sourcePoint" />
-            <Array as="points">
-              <mxPoint x="745" y="3431" />
-              <mxPoint x="745" y="3490" />
-              <mxPoint x="610" y="3490" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-58" value="然后在加载到内存" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ekmjxTff3Y5ltakHXg94-57" vertex="1" connectable="0">
-          <mxGeometry x="-0.0996" y="1" relative="1" as="geometry">
-            <mxPoint x="-14.96" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-56" value="slave 收到快照之后&lt;br&gt;先写入本地磁盘" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="636" y="3390" width="120" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-60" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="yQ0uILBsWEMAl1AqhaMr-0" source="ekmjxTff3Y5ltakHXg94-59" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="586" y="3390" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-61" value="4⃣️&amp;nbsp; 将内存中缓存的写命令同步给slave" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ekmjxTff3Y5ltakHXg94-60" vertex="1" connectable="0">
-          <mxGeometry x="-0.4137" y="-1" relative="1" as="geometry">
-            <mxPoint y="1" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-59" value="缓存RDB 复制过程中的写命令" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="201" y="3530" width="100" height="45" as="geometry" />
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-63" value="" style="endArrow=none;html=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="38" y="3630" as="sourcePoint" />
-            <mxPoint x="638" y="3630" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-64" value="&lt;font color=&quot;#00994d&quot;&gt;重新连接&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ekmjxTff3Y5ltakHXg94-63" vertex="1" connectable="0">
-          <mxGeometry x="0.17" y="1" relative="1" as="geometry">
-            <mxPoint x="-293" y="1" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-65" value="Master" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="38.120000000000005" y="3660" width="54.88" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="yQ0uILBsWEMAl1AqhaMr-0" source="ekmjxTff3Y5ltakHXg94-69" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="96" y="3680" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-69" value="Slave" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="571.12" y="3660" width="54.88" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="ekmjxTff3Y5ltakHXg94-80" value="1⃣️&amp;nbsp; master&amp;nbsp; 仅复制缺少的数据给slave" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="226" y="3660" width="210" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-0" value="过期key 的处理" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="38.120000000000005" y="3750" width="87.88" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-3" value="&lt;p style=&quot;line-height: 200%&quot;&gt;slave 不会过期key ，只会等待 master 过期key&amp;nbsp; ，如果master 过期了一个key ， 或者通过 LRU 淘汰了一个key&amp;nbsp; ，那么就会模拟一条del 指令 发送给 slave&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="75.5" y="3810" width="690" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-4" value="断点续传" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="36" y="3880" width="70" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="ngkLmRye4pmdnFh268Ew-5" value="&lt;p style=&quot;line-height: 200%&quot;&gt;如果在主从复制的过程中 ，网络连接断掉了，那么可以接着上次复制的地方，继续复制下去，而不是从头开始复制一份ID， offset 就是保存在backlog 中，如果master 和 slave 网络连接断掉了，slave 会让master 从上次的 replica offset 开始继续复制。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1">
-          <mxGeometry x="79.62" y="3950" width="690" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="a0pn-dlbp93B09sLRIuo-0" value="" style="group;rotation=-15;textOpacity=20;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1" connectable="0">
-          <mxGeometry x="64" y="293.5" width="650" height="130" as="geometry" />
-        </mxCell>
-        <mxCell id="a0pn-dlbp93B09sLRIuo-1" value="&lt;span style=&quot;font-size: 49px&quot;&gt;&lt;font color=&quot;#b3b3b3&quot;&gt;蚂蚁不是ant - Mr.pan&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;opacity=40;textOpacity=20;rotation=-15;" parent="a0pn-dlbp93B09sLRIuo-0" vertex="1">
-          <mxGeometry x="30" y="12" width="575" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="a0pn-dlbp93B09sLRIuo-4" value="" style="group;rotation=-15;textOpacity=20;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1" connectable="0">
-          <mxGeometry x="60" y="820" width="707" height="180" as="geometry" />
-        </mxCell>
-        <mxCell id="a0pn-dlbp93B09sLRIuo-5" value="&lt;span style=&quot;font-size: 49px&quot;&gt;&lt;font color=&quot;#b3b3b3&quot;&gt;蚂蚁不是ant - Mr.pan&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;opacity=40;textOpacity=20;rotation=-15;" parent="a0pn-dlbp93B09sLRIuo-4" vertex="1">
-          <mxGeometry x="30" y="12" width="575" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="h00gNlVUUtypoUSbmEtx-4" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;配置&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;save&amp;nbsp; 60 1000&amp;nbsp; ： 每隔60s ，如果有超过1000个key 发生了变更，那么就生成一个dump.rdb 文件，就是当前redis 内存中完整的数据快照， 这个操作也称为 snapshotting ，快照。 也可以手动调用save 或者 bgsave 命令，同步或者异步执行rdb 快照生成。save 可以设置多个，多是多个 snapshotting 检查点，每到一个检查点，就会去check 一下 ，是否有指定的key 数量发生了变更，如果有 就生成一个dump.rdb&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="a0pn-dlbp93B09sLRIuo-4" vertex="1">
-          <mxGeometry x="20" y="40" width="700" height="130" as="geometry" />
-        </mxCell>
-        <mxCell id="a0pn-dlbp93B09sLRIuo-6" value="" style="group;rotation=-15;textOpacity=20;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1" connectable="0">
-          <mxGeometry x="50" y="1480" width="729.5" height="130" as="geometry" />
-        </mxCell>
-        <mxCell id="a0pn-dlbp93B09sLRIuo-7" value="&lt;span style=&quot;font-size: 49px&quot;&gt;&lt;font color=&quot;#b3b3b3&quot;&gt;蚂蚁不是ant - Mr.pan&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;opacity=40;textOpacity=20;rotation=-15;" parent="a0pn-dlbp93B09sLRIuo-6" vertex="1">
-          <mxGeometry x="30" y="12" width="575" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="h00gNlVUUtypoUSbmEtx-8" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;配置&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;AOF 默认是关闭的，可以通过&amp;nbsp; appendonly&amp;nbsp; yes&amp;nbsp; 开启。 生成环境中 一般来说是要打开的，除非随便丢失几分钟的数据也无所谓，代开AOF 持久化之后，redis 每次接收到一条写命令 ，就会写入到 日志文件中，当然是先写 os cache 然后每隔一段时间fsync一下。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; AOF 和RDB 都开启的情况下 ，redis重启的时候 ， 会优先从AOF 中进行数据恢复 ， 因为AOF 文件中的数据比较的完整。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="a0pn-dlbp93B09sLRIuo-6" vertex="1">
-          <mxGeometry x="29.5" y="-18" width="700" height="140" as="geometry" />
-        </mxCell>
-        <mxCell id="a0pn-dlbp93B09sLRIuo-8" value="" style="group;rotation=-15;textOpacity=20;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1" connectable="0">
-          <mxGeometry x="57.5" y="2650" width="650" height="130" as="geometry" />
-        </mxCell>
-        <mxCell id="a0pn-dlbp93B09sLRIuo-9" value="&lt;span style=&quot;font-size: 49px&quot;&gt;&lt;font color=&quot;#b3b3b3&quot;&gt;蚂蚁不是ant - Mr.pan&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;opacity=40;textOpacity=20;rotation=-15;" parent="a0pn-dlbp93B09sLRIuo-8" vertex="1">
-          <mxGeometry x="30" y="12" width="575" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="a0pn-dlbp93B09sLRIuo-10" value="" style="group;rotation=-15;textOpacity=20;" parent="yQ0uILBsWEMAl1AqhaMr-0" vertex="1" connectable="0">
-          <mxGeometry x="33" y="3560" width="650" height="130" as="geometry" />
-        </mxCell>
-        <mxCell id="a0pn-dlbp93B09sLRIuo-11" value="&lt;span style=&quot;font-size: 49px&quot;&gt;&lt;font color=&quot;#b3b3b3&quot;&gt;蚂蚁不是ant - Mr.pan&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;opacity=40;textOpacity=20;rotation=-15;" parent="a0pn-dlbp93B09sLRIuo-10" vertex="1">
-          <mxGeometry x="30" y="12" width="575" height="110" as="geometry" />
-        </mxCell>
         <mxCell id="yQ0uILBsWEMAl1AqhaMr-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="bH2euOrN30Yw1Qwi_7RK-1" source="yQ0uILBsWEMAl1AqhaMr-1" target="yQ0uILBsWEMAl1AqhaMr-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -940,11 +613,335 @@
         <mxCell id="yQ0uILBsWEMAl1AqhaMr-25" value="appendonly.aof" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=0;sketch=0;" vertex="1" parent="bH2euOrN30Yw1Qwi_7RK-1">
           <mxGeometry x="753" y="1065" width="40" height="20" as="geometry" />
         </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-38" value="AOF 原理" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="83" y="1680" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-39" value="&lt;p style=&quot;line-height: 190%&quot;&gt;AOF 日志存储的是Redis 服务器的顺序指令序列 ，AOF 日志只记录对内存进行修改的指令记录。&lt;br&gt;&lt;br&gt;Redis在收到客户端修改指令后，先进行参数校验，如果没问题，就立即将该指令文本存储到 AOF 日志中，也就是先存到磁盘，然后在执行指令。 这样即使遇到突发宕机 ， 已经存储到AOF日志的指令进行重放一下 ，就可以恢复到宕机前的准备。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="123" y="1720" width="660" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-40" value="AOF 重写&amp;nbsp;" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;glass=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="121.62" y="1840" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-41" value="&lt;p style=&quot;line-height: 200%&quot;&gt;Redis 提供了 bgrewirteaof 指令对aof 日志进行瘦身 ，其原理即使开辟一个子进程对内存进行遍历转换成一系列Redis 的操作指令，序列化到一个新的AOF日志文件中，序列化完毕后 ，在将操作期间发生的AOF 日志追加到新的AOF日志文件中，追加完毕后，就立即替代旧的AOF日志文件了 ，瘦身工作就完成了。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="160" y="1893.5" width="663" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-49" value="AOF文件" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="623" y="1953.5" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-50" value="os cache" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fontSize=12;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="408.5" y="1998.5" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-53" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.16;entryY=0.55;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="AXepTas1otN2ZdD5XDQn-51" target="AXepTas1otN2ZdD5XDQn-50" edge="1">
+          <mxGeometry x="43" y="1680" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-51" value="redis&amp;nbsp; server" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="173" y="2008.5" width="90" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-55" value="fsync" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="293" y="1973.5" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-56" value="将指定文件的内容强制从内核缓存刷到磁盘 ， 生成环境中 ， 通常是每隔1s 左右执行一次 fsync操作" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="158" y="2083.5" width="540" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h00gNlVUUtypoUSbmEtx-1" value="优缺点" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="80" y="2140" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="h00gNlVUUtypoUSbmEtx-2" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;RDB：优点&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;RDB会生成多个数据文件，每个数据文件都代表了某一个时刻中redis的数据，这种多数据文件的方式，每个文件都代表了某一个时刻的完整数据快照，非常适合做冷备&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;对外提供的读写服务，影响非常的小，可以让redis保持高性能，因为redis fork 一个子进程，让子进程执行磁盘io 操作来进行rdb 的持久化&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;相对与AOF 持久化机制来说 ，直接基于RDB 数据文件来重启和恢复Redis 数据， 会更加的快速&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="124.31" y="2180" width="681.38" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="h00gNlVUUtypoUSbmEtx-3" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;RDB：缺点&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;如果想要在Redis故障时，尽可能小的丢失数据，那么RDB没有AOF 好 ，一般来说 RDB的快照文件都是每隔5分钟，或者更长的时间生成一次，这个时候如果宕机，那么就会丢失5分钟甚至是更长时间的数据。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;RDB每次在fork 一个子进程来执行RDB 快照文件的生成时，如果数据文件比较大，可能会导致客户端提供的服务暂停数毫秒甚至数秒，一般不要让RDB 的间隔时间太长，否则每次生成的RDB 文件太大了， 对Redis 本身的性能可能会有影响&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="123" y="2378" width="700" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="h00gNlVUUtypoUSbmEtx-6" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;AOF：优点&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;AOF 可以更好的保证数据的不丢失，一般AOF 会每隔1s ，通过一个后台线程执行一次 「 FSYNC 」 操作 ，最多丢失1s的数据，每隔1s 就执行一次 fsync 操作， 保证os cache 的数据写入到硬盘中，redis 进程挂了，最多丢失 1s 的数据。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;AOF日志文件以 append-only 默写写入，所有没有磁盘寻址的开销 ，写入性能非常的高，而且文件不容易破损，即使文件尾部破损，也很容易修复&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;AOF日志文件即使过大的时候， 后台会出现 「 REWRITE 」操作 ，不会影响客户端的读写，因为在 rewrite log 的时候 ，会对其中的指令进行压缩 ，创建出一份需要恢复数据的最小日志出来 ，在创建新日志文件的时候 ，老的日志文件还是照常写入，当新的merge 后的日志 ready 的时候 ，在交换新老日志文件&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; AOF日志文件的命令通过非常可读的方式进行记录，这个特性非常适合灾难性的误删除后的紧急恢复。&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="122.5" y="2700" width="690" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="h00gNlVUUtypoUSbmEtx-7" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;AOF：缺点&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;对于同一份数据来说 ， AOF 日志文件通常比RDB数据快照文件要大&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;AOF 开启之后 ，支持写的QPS 会比 RDB 支持的QPS 低 ，因为AOF 一般会设置 每秒 FSYNC 一次日志文件&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;做数据恢复的时候，会比较的慢 ，还有做冷备 定期的备份，不太方便，可能要自己手写复杂的脚本去做，不太适合做冷备&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="122.5" y="2980" width="681.38" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-46" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontSize=12;align=center;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="633" y="1993.5" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-54" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.875;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="AXepTas1otN2ZdD5XDQn-50" target="AXepTas1otN2ZdD5XDQn-46" edge="1">
+          <mxGeometry x="43" y="1680" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-57" value="管道" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="43" y="3300" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-58" value="管道 本身不是 Redis服务器直接提供的技术 ，这个技术本质上是由客户端提供的，跟服务器没有什么直接的关系" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="105" y="3340" width="660" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-59" value="事务" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="43.5" y="3380" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-60" value="multi /exec / discard&amp;nbsp;&amp;nbsp;&lt;br&gt;&lt;br&gt;multi 指示 事务的开始 ，&amp;nbsp; exec 指示事务的执行&amp;nbsp; discard 指示 事务的丢弃&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="93" y="3420" width="660" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-61" value="&lt;p style=&quot;line-height: 180%&quot;&gt;所有的指令在exec 之前 不执行 ， 而是缓存在服务器的一个事务队列中 ， 服务器一旦收到exec 指令 ， 才开始执行整个事务队列 ， 执行完毕后一次性返回所有指令的执行结果 ， redis事务根本不能算 原子性， 而仅仅是满足了事务的隔离性 ， 隔离性中的串行化&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="93" y="3480" width="710" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-62" value="pub/sub - 发布订阅模型" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="46.12" y="3560" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-63" value="&lt;p style=&quot;line-height: 200%&quot;&gt;Pub Sub 的生产者传递过来一个消息， Redis 会直接找到相应的消费者传递过去， 如果一个消费者都没有， 那么消息直接丢弃 ，如果开始又三个消费者，一个消费者突然挂掉了，生产者会继续发送消息，另外两个消费者可以持续收到消息， 但是挂掉的消费者重新连上的时候， 这段时间生产者发送的消息， 对于整个消费者来说就是彻底的丢失了。&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;如果Redis 停机重启 ， PubSub 的消息是不会持久化的， 毕竟 Redis 宕机就相当于一个消费者都没有 ，&amp;nbsp; 所有的消息直接被丢弃。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="93" y="3620" width="710" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-65" value="主从同步" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="48" y="3750" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-66" value="CAP原理" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="83" y="3820" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-67" value="&lt;p style=&quot;line-height: 180%&quot;&gt;C - Consistent : 一致性&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;A - Availability : 可用性&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;P - Partition tolerance , 分区容忍性&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;网络分区发生时， 一致性和可用性两难全&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="123" y="3870" width="270" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-68" value="最终一致" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="83" y="4010" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-69" value="&lt;p style=&quot;line-height: 180%&quot;&gt;Redis 的主从同步是异步复制的 ， 所以分布式的Redis 系统并不满足一致性的要求 ， Redis 保证 【最终一致】&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="123" y="4050" width="700" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-70" value="主从同步" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="83" y="4110" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-71" value="&lt;p style=&quot;line-height: 180%&quot;&gt;Redis 同步支持主从同步和从从同步 。从从同步功能是Redis 后续版本增加的功能 ，为了减轻主库的同步负担&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="123" y="4150" width="700" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-72" value="Master&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;rounded=1;shadow=1;glass=1;sketch=1;fontSize=12;align=center;fillColor=#f8cecc;strokeColor=#b85450;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="138" y="4230" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-77" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="AXepTas1otN2ZdD5XDQn-73" edge="1">
+          <mxGeometry x="38" y="3270" as="geometry">
+            <mxPoint x="423" y="4220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-73" value="slave" style="ellipse;whiteSpace=wrap;html=1;rounded=1;shadow=1;glass=1;sketch=1;fontSize=12;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="273" y="4200" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-75" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="AXepTas1otN2ZdD5XDQn-72" target="AXepTas1otN2ZdD5XDQn-73" edge="1">
+          <mxGeometry x="38" y="3270" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-79" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="AXepTas1otN2ZdD5XDQn-74" edge="1">
+          <mxGeometry x="38" y="3270" as="geometry">
+            <mxPoint x="423" y="4300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-74" value="slave" style="ellipse;whiteSpace=wrap;html=1;rounded=1;shadow=1;glass=1;sketch=1;fontSize=12;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="273" y="4280" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-76" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.014;entryY=0.675;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="AXepTas1otN2ZdD5XDQn-72" target="AXepTas1otN2ZdD5XDQn-74" edge="1">
+          <mxGeometry x="38" y="3270" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-78" value="slave" style="ellipse;whiteSpace=wrap;html=1;rounded=1;shadow=1;glass=1;sketch=1;fontSize=12;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="423" y="4200" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-80" value="slave" style="ellipse;whiteSpace=wrap;html=1;rounded=1;shadow=1;glass=1;sketch=1;fontSize=12;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="428" y="4280" width="65" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-81" value="replicate" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=1;sketch=1;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="208" y="4200" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-83" value="replicate" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=1;sketch=1;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="203" y="4280" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-84" value="replicate" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=1;sketch=1;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="363" y="4200" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-85" value="replicate" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=1;sketch=1;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="363" y="4280" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-86" value="增量同步" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="83" y="4350" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-87" value="&lt;p style=&quot;line-height: 200%&quot;&gt;Redis 同步的是指令流 ，主节点会将哪些对自己的状态产生修改性影响的指令记录在本地的内存buffer 中， 然后异步将buffer 中的指令同步到 从节点 ，从节点一边执行同步的指令流来达到和主节点一样的状态 ， 一边向主节点反馈自己同步到哪里了(偏移量)&lt;/p&gt;&lt;p style=&quot;line-height: 180%&quot;&gt;因为内存的buffer 是有限的， 所以Redis 主库不能将所有的指令都记录在内存buffer 中 ，Redis 的复制内存buffer 是一个定长的环形数组，如果数组内容满了， 就会从头开始覆盖前面的内容。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="116" y="4390" width="700" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-88" value="快照同步" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="83" y="4513" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-89" value="&lt;p style=&quot;line-height: 200%&quot;&gt;快照同步是一个非常耗费资源的操作， 它首先需要在主库上进行一次bgsave 将当前内存的数据全部快照到磁盘上，然后再将快照文件的内容全部传送到从节点 ，从节点快照文件接受完毕后，立即执行一次全量加载 ， 加载之前要将当前内存的数据清空，加载完毕后，通知主节点继续增量的同步数据。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="123" y="4550" width="700" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-90" value="增加从节点" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="76" y="4670" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-91" value="&lt;p style=&quot;line-height: 180%&quot;&gt;当从节点刚刚加入集群时 ，它必须先要进行一次快照同步 ，同步完成后，在继续进行增量同步&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="123" y="4720" width="690" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-92" value="无盘复制" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="86" y="4790" width="53" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AXepTas1otN2ZdD5XDQn-93" value="&lt;p style=&quot;line-height: 200%&quot;&gt;无盘复制 ，主服务器直接通过套接字将快照内容发送到从节点 ，生成快照是一个遍历的过程，主节点会一边遍历，一边将序列化的内容发送到从节点，从节点还是和之前一样，先将收到的内容存储到硬盘文件中，在进行一次性加载。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="126" y="4840" width="690" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="AXepTas1otN2ZdD5XDQn-92" target="AXepTas1otN2ZdD5XDQn-92" edge="1">
+          <mxGeometry x="41" y="3300" as="geometry" />
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-38" value="主从复制的原理" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="81" y="4900" width="98" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-39" value="Master" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="81.12" y="5020" width="54.88" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ekmjxTff3Y5ltakHXg94-41" edge="1">
+          <mxGeometry x="43" y="1680" as="geometry">
+            <mxPoint x="139" y="5040" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-53" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ekmjxTff3Y5ltakHXg94-41" edge="1">
+          <mxGeometry x="43" y="1680" as="geometry">
+            <mxPoint x="739" y="5070" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-54" value="3⃣️" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ekmjxTff3Y5ltakHXg94-53" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-41" value="Slave" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="614.12" y="5020" width="54.88" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-42" value="" style="endArrow=none;html=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" edge="1">
+          <mxGeometry x="43" y="1680" width="50" height="50" as="geometry">
+            <mxPoint x="79" y="4980" as="sourcePoint" />
+            <mxPoint x="679" y="4980" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-46" value="&lt;font color=&quot;#00994d&quot;&gt;slave 第一次 连接 master&amp;nbsp; 或长时间断开连接&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ekmjxTff3Y5ltakHXg94-42" vertex="1" connectable="0">
+          <mxGeometry x="0.17" y="1" relative="1" as="geometry">
+            <mxPoint x="-191" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-45" value="1⃣️&amp;nbsp; 当启动一个slave 的时候，它会发送一个 psync 命令给 master node" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="186" y="5010" width="390" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-47" value="2⃣️ 触发 一次 全量复制&amp;nbsp; full&amp;nbsp; resynchronization&amp;nbsp; master &lt;br&gt;启动一个后台线程，开始生成一份 RDB 快照文件" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="64" y="5090" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-50" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ekmjxTff3Y5ltakHXg94-48" edge="1">
+          <mxGeometry x="43" y="1680" as="geometry">
+            <mxPoint x="639" y="5070" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-51" value="快照生成完毕后，发送给 slave" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ekmjxTff3Y5ltakHXg94-50" vertex="1" connectable="0">
+          <mxGeometry x="0.1327" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-48" value="RDB" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="96" y="5130" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-49" value="同时会将客户端收到的所有写命令缓存在内存中" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="64" y="5175" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-57" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.708;entryY=1.1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.492;exitY=1.033;exitDx=0;exitDy=0;exitPerimeter=0;rounded=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ekmjxTff3Y5ltakHXg94-56" target="ekmjxTff3Y5ltakHXg94-41" edge="1">
+          <mxGeometry x="43" y="1680" as="geometry">
+            <mxPoint x="789" y="5120" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="788" y="5111" />
+              <mxPoint x="788" y="5170" />
+              <mxPoint x="653" y="5170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-58" value="然后在加载到内存" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ekmjxTff3Y5ltakHXg94-57" vertex="1" connectable="0">
+          <mxGeometry x="-0.0996" y="1" relative="1" as="geometry">
+            <mxPoint x="-14.96" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-56" value="slave 收到快照之后&lt;br&gt;先写入本地磁盘" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="679" y="5070" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-60" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ekmjxTff3Y5ltakHXg94-59" edge="1">
+          <mxGeometry x="43" y="1680" as="geometry">
+            <mxPoint x="629" y="5070" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-61" value="4⃣️&amp;nbsp; 将内存中缓存的写命令同步给slave" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ekmjxTff3Y5ltakHXg94-60" vertex="1" connectable="0">
+          <mxGeometry x="-0.4137" y="-1" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-59" value="缓存RDB 复制过程中的写命令" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="244" y="5210" width="100" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-63" value="" style="endArrow=none;html=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" edge="1">
+          <mxGeometry x="43" y="1680" width="50" height="50" as="geometry">
+            <mxPoint x="81" y="5310" as="sourcePoint" />
+            <mxPoint x="681" y="5310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-64" value="&lt;font color=&quot;#00994d&quot;&gt;重新连接&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ekmjxTff3Y5ltakHXg94-63" vertex="1" connectable="0">
+          <mxGeometry x="0.17" y="1" relative="1" as="geometry">
+            <mxPoint x="-293" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-65" value="Master" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="81.12" y="5340" width="54.88" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="bH2euOrN30Yw1Qwi_7RK-1" source="ekmjxTff3Y5ltakHXg94-69" edge="1">
+          <mxGeometry x="43" y="1680" as="geometry">
+            <mxPoint x="139" y="5360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-69" value="Slave" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="614.12" y="5340" width="54.88" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ekmjxTff3Y5ltakHXg94-80" value="1⃣️&amp;nbsp; master&amp;nbsp; 仅复制缺少的数据给slave" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="269" y="5340" width="210" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ngkLmRye4pmdnFh268Ew-0" value="过期key 的处理" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="81.12" y="5430" width="87.88" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ngkLmRye4pmdnFh268Ew-3" value="&lt;p style=&quot;line-height: 200%&quot;&gt;slave 不会过期key ，只会等待 master 过期key&amp;nbsp; ，如果master 过期了一个key ， 或者通过 LRU 淘汰了一个key&amp;nbsp; ，那么就会模拟一条del 指令 发送给 slave&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="118.5" y="5490" width="690" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ngkLmRye4pmdnFh268Ew-4" value="断点续传" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="79" y="5560" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ngkLmRye4pmdnFh268Ew-5" value="&lt;p style=&quot;line-height: 200%&quot;&gt;如果在主从复制的过程中 ，网络连接断掉了，那么可以接着上次复制的地方，继续复制下去，而不是从头开始复制一份ID， offset 就是保存在backlog 中，如果master 和 slave 网络连接断掉了，slave 会让master 从上次的 replica offset 开始继续复制。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1A1A1A;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1">
+          <mxGeometry x="122.62" y="5630" width="690" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="a0pn-dlbp93B09sLRIuo-0" value="" style="group;rotation=-15;textOpacity=20;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1" connectable="0">
+          <mxGeometry x="107" y="1973.5" width="650" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="a0pn-dlbp93B09sLRIuo-1" value="&lt;span style=&quot;font-size: 49px&quot;&gt;&lt;font color=&quot;#b3b3b3&quot;&gt;蚂蚁不是ant - Mr.pan&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;opacity=40;textOpacity=20;rotation=-15;" parent="a0pn-dlbp93B09sLRIuo-0" vertex="1">
+          <mxGeometry x="30" y="12" width="575" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="a0pn-dlbp93B09sLRIuo-4" value="" style="group;rotation=-15;textOpacity=20;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1" connectable="0">
+          <mxGeometry x="103" y="2500" width="707" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="a0pn-dlbp93B09sLRIuo-5" value="&lt;span style=&quot;font-size: 49px&quot;&gt;&lt;font color=&quot;#b3b3b3&quot;&gt;蚂蚁不是ant - Mr.pan&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;opacity=40;textOpacity=20;rotation=-15;" parent="a0pn-dlbp93B09sLRIuo-4" vertex="1">
+          <mxGeometry x="30" y="12" width="575" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="h00gNlVUUtypoUSbmEtx-4" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;配置&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;save&amp;nbsp; 60 1000&amp;nbsp; ： 每隔60s ，如果有超过1000个key 发生了变更，那么就生成一个dump.rdb 文件，就是当前redis 内存中完整的数据快照， 这个操作也称为 snapshotting ，快照。 也可以手动调用save 或者 bgsave 命令，同步或者异步执行rdb 快照生成。save 可以设置多个，多是多个 snapshotting 检查点，每到一个检查点，就会去check 一下 ，是否有指定的key 数量发生了变更，如果有 就生成一个dump.rdb&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="a0pn-dlbp93B09sLRIuo-4" vertex="1">
+          <mxGeometry x="20" y="40" width="700" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="a0pn-dlbp93B09sLRIuo-6" value="" style="group;rotation=-15;textOpacity=20;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1" connectable="0">
+          <mxGeometry x="93" y="3160" width="729.5" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="a0pn-dlbp93B09sLRIuo-7" value="&lt;span style=&quot;font-size: 49px&quot;&gt;&lt;font color=&quot;#b3b3b3&quot;&gt;蚂蚁不是ant - Mr.pan&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;opacity=40;textOpacity=20;rotation=-15;" parent="a0pn-dlbp93B09sLRIuo-6" vertex="1">
+          <mxGeometry x="30" y="12" width="575" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="h00gNlVUUtypoUSbmEtx-8" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;配置&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;AOF 默认是关闭的，可以通过&amp;nbsp; appendonly&amp;nbsp; yes&amp;nbsp; 开启。 生成环境中 一般来说是要打开的，除非随便丢失几分钟的数据也无所谓，代开AOF 持久化之后，redis 每次接收到一条写命令 ，就会写入到 日志文件中，当然是先写 os cache 然后每隔一段时间fsync一下。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; AOF 和RDB 都开启的情况下 ，redis重启的时候 ， 会优先从AOF 中进行数据恢复 ， 因为AOF 文件中的数据比较的完整。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="a0pn-dlbp93B09sLRIuo-6" vertex="1">
+          <mxGeometry x="29.5" y="-18" width="700" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="a0pn-dlbp93B09sLRIuo-8" value="" style="group;rotation=-15;textOpacity=20;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1" connectable="0">
+          <mxGeometry x="100.5" y="4330" width="650" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="a0pn-dlbp93B09sLRIuo-9" value="&lt;span style=&quot;font-size: 49px&quot;&gt;&lt;font color=&quot;#b3b3b3&quot;&gt;蚂蚁不是ant - Mr.pan&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;opacity=40;textOpacity=20;rotation=-15;" parent="a0pn-dlbp93B09sLRIuo-8" vertex="1">
+          <mxGeometry x="30" y="12" width="575" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="a0pn-dlbp93B09sLRIuo-10" value="" style="group;rotation=-15;textOpacity=20;" parent="bH2euOrN30Yw1Qwi_7RK-1" vertex="1" connectable="0">
+          <mxGeometry x="76" y="5240" width="650" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="a0pn-dlbp93B09sLRIuo-11" value="&lt;span style=&quot;font-size: 49px&quot;&gt;&lt;font color=&quot;#b3b3b3&quot;&gt;蚂蚁不是ant - Mr.pan&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;opacity=40;textOpacity=20;rotation=-15;" parent="a0pn-dlbp93B09sLRIuo-10" vertex="1">
+          <mxGeometry x="30" y="12" width="575" height="110" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="4HDq_m0lPvmAYO2BNJQY" name="集群">
-    <mxGraphModel dx="1420" dy="-335" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="866" dy="-647" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="nV-omL6sR25xKeSbgsDl-0" />
         <mxCell id="nV-omL6sR25xKeSbgsDl-1" parent="nV-omL6sR25xKeSbgsDl-0" />
