@@ -1,1 +1,138 @@
-<mxfile host="app.diagrams.net" modified="2021-04-10T07:08:53.949Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="RAATyXp1K0nNtlcFis1u" version="14.5.9" type="github"><diagram id="2zVz73OAWtEFKAqmSP-u" name="第 1 页">dZE9D4MgEIZ/DbtCYnW2tl06OXQmchUS9AzSSPvrqwFrie3E8dx734SVnTsbPsgrCtCEJsIRdiSUprTI52chT0/yLPOgNUoE0QZq9YIAk0AfSsAYCS2itmqIYYN9D42NGDcGp1h2Rx1XHXgLO1A3XO/pTQkrwxT0sPELqFauldOs8J6Or+IwySi5wOkLsYqw0iBab3WuBL0sb92Ljzv98X4aM9DbHwGzseWeP9GFWPUG</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-04-12T14:14:54.461Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="1vSkBDWJrcu5pGpPs5LZ" version="14.5.9" type="github">
+  <diagram id="2zVz73OAWtEFKAqmSP-u" name="第 1 页">
+    <mxGraphModel dx="1298" dy="866" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="fe56MnwprM_20OIwC9dD-2" value="Ribbon 均衡器" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;sketch=0;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-3" value="Ribbon + RestTemplate" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;sketch=0;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="480" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-4" value="Ribbon 负载均衡策略" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;sketch=0;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="600" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-5" value="&lt;p style=&quot;line-height: 170%; font-size: 12px;&quot;&gt;负载均衡 ，通过软件或者硬件，将来自客户端的请求，按照某种策略平均的分配到集群的每一个节点上，保证这些节点的CPU ， 内存 等设备负载情况大致在一条水平线，避免由于局部节点过高产生宕机，在将这些处理压力传递到其它的节点上产生系统性的崩溃。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;sketch=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="740" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-6" value="&lt;p style=&quot;line-height: 170% ; font-size: 12px&quot;&gt;服务端负载均衡&lt;/p&gt;&lt;p style=&quot;line-height: 170% ; font-size: 12px&quot;&gt;客户端负载均衡&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;sketch=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="160" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="1" source="fe56MnwprM_20OIwC9dD-7" target="fe56MnwprM_20OIwC9dD-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="1" source="fe56MnwprM_20OIwC9dD-7" target="fe56MnwprM_20OIwC9dD-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-22" value="3.&amp;nbsp; 从服务注册中心，获取远程服务列表" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="fe56MnwprM_20OIwC9dD-21">
+          <mxGeometry x="-0.0658" y="-2" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-7" value="客户端" style="ellipse;whiteSpace=wrap;html=1;shadow=1;sketch=0;fontSize=12;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="90" y="247.5" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=12;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="fe56MnwprM_20OIwC9dD-8" target="fe56MnwprM_20OIwC9dD-24">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-29" value="4.&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="fe56MnwprM_20OIwC9dD-23">
+          <mxGeometry x="0.4704" y="1" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-8" value="Ribbon" style="ellipse;whiteSpace=wrap;html=1;shadow=1;sketch=0;fontSize=12;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="140" y="272.5" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-9" value="组册中心" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=1;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="430" y="275" width="80" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="1" source="fe56MnwprM_20OIwC9dD-10" target="fe56MnwprM_20OIwC9dD-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-10" value="服务实例3" style="ellipse;whiteSpace=wrap;html=1;shadow=1;sketch=1;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="610" y="220" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="1" source="fe56MnwprM_20OIwC9dD-11" target="fe56MnwprM_20OIwC9dD-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-11" value="服务实例1" style="ellipse;whiteSpace=wrap;html=1;shadow=1;sketch=1;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="620" y="360" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fontSize=12;" edge="1" parent="1" source="fe56MnwprM_20OIwC9dD-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-12" value="服务实例2" style="ellipse;whiteSpace=wrap;html=1;shadow=1;sketch=1;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="620" y="290" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-16" value="1. 服务注册" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="510" y="315" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-18" value="1. 服务注册" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="270" y="270" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="1" source="fe56MnwprM_20OIwC9dD-7" target="fe56MnwprM_20OIwC9dD-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="108" y="380" />
+              <mxPoint x="192" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-20" value="2. 远程服务调用" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="fe56MnwprM_20OIwC9dD-19">
+          <mxGeometry x="-0.0204" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=12;" edge="1" parent="1" source="fe56MnwprM_20OIwC9dD-24" target="fe56MnwprM_20OIwC9dD-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-24" value="根据负载策略 选取一个服务实例" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=1;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="240" y="410" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="1" source="fe56MnwprM_20OIwC9dD-26" target="fe56MnwprM_20OIwC9dD-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-26" value="调用远程通信" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=1;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="395" y="410" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-28" value="发送数据 获取响应" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="525" y="400" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-30" value="&lt;p style=&quot;line-height: 170% ; font-size: 12px&quot;&gt;Ribbon 默认以轮询的方式按照次序发送请求。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;sketch=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="540" width="740" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-33" value="&lt;p style=&quot;line-height: 170% ; font-size: 12px&quot;&gt;RoundRibbonRule:&amp;nbsp; 轮询策略，默认超过10次 获取到的server 都不可用 ，会返回一个空server&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;sketch=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="670" width="740" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-34" value="&lt;p style=&quot;line-height: 170% ; font-size: 12px&quot;&gt;RandomRule: 随机策略，如果随机到的server 为null 或者不可用，会不停的获取&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;sketch=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="710" width="740" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-35" value="&lt;p style=&quot;line-height: 170% ; font-size: 12px&quot;&gt;RetryRule ： 重试策略，一定时限内循环重试，默认继承RoundRobinRule , 也支持自定义&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;sketch=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="750" width="740" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-36" value="&lt;p style=&quot;line-height: 170% ; font-size: 12px&quot;&gt;BestAvailableRule: 最小连接数策略，遍历serverList ， 选取出可用的且连接数最小的一个server&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;sketch=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="790" width="740" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-37" value="&lt;p style=&quot;line-height: 170% ; font-size: 12px&quot;&gt;AvailabilityFilteringRule：可用过滤策略，扩展了轮询策略，会先通过默认的轮询选取一个server&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;sketch=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="830" width="740" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-38" value="&lt;p style=&quot;line-height: 170% ; font-size: 12px&quot;&gt;ZoneAvoidanceRule： 区域权衡策略，扩展了轮询策略，除了过滤时超时和连接数过多的server ，还会过滤掉不符合要求的zone区域里面的所有节点，始终保证在一个区域/机房内的服务实例进行轮询。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;sketch=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="870" width="740" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-39" value="更改负载策略" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=1;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="920" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fe56MnwprM_20OIwC9dD-40" value="&lt;div&gt;provider-service: #服务提供者的微服务id&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; ribbon:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #设置对应的负载均衡类&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;sketch=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="970" width="740" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
