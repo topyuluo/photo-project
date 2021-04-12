@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-12T04:00:01.261Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="slx6jVKvoKKaUDLaPrsh" version="14.5.8" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-04-12T07:59:33.658Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="71z28i7lyglXLpyerWdy" version="14.5.8" type="github" pages="2">
   <diagram id="QEoOFMB9QdWzOJR0WDVQ" name="架构设计">
     <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -361,8 +361,56 @@
         <mxCell id="bKbJKUieX8mrXtw6g7Ro-21" value="优化" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
           <mxGeometry x="40" y="1830" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="bKbJKUieX8mrXtw6g7Ro-22" value="设置多个Buffer Pool&amp;nbsp; , 如果给Buffer Po0l分配的内存比较小 1G , 那么最多给1个Buffer Pool ,如果内存分配的比较大 ，可以设置多个 Buffer pool&amp;nbsp;&lt;br&gt;&lt;br&gt;&lt;div&gt;[server]&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; innodb_buffer_pool_size = 8589934592&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; innodb_buffer_pool_instances = 4&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=1;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+        <mxCell id="bKbJKUieX8mrXtw6g7Ro-22" value="设置多个Buffer Pool&amp;nbsp; , 如果给Buffer Po0l分配的内存比较小 1G , 那么最多给1个Buffer Pool ,如果内存分配的比较大 ，可以设置多个 Buffer pool&amp;nbsp;&lt;br&gt;&lt;br&gt;&lt;div&gt;[server]&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; innodb_buffer_pool_size = 8589934592&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; innodb_buffer_pool_instances = 4&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;通过&amp;nbsp; show engine innodb status&amp;nbsp; 命令 来查看当前 innodb 的一些具体情况&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=1;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
           <mxGeometry x="80" y="1880" width="700" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="bKbJKUieX8mrXtw6g7Ro-23" value="变长字段长度列表" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;align=left;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+          <mxGeometry x="80" y="2110" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bKbJKUieX8mrXtw6g7Ro-24" value="NULL 值列表" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;align=center;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+          <mxGeometry x="180" y="2110" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bKbJKUieX8mrXtw6g7Ro-25" value="数据头" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;align=center;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+          <mxGeometry x="260" y="2110" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bKbJKUieX8mrXtw6g7Ro-26" value="真实数据" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;align=center;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+          <mxGeometry x="330" y="2110" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bKbJKUieX8mrXtw6g7Ro-27" value="数据行" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+          <mxGeometry x="40" y="2040" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bKbJKUieX8mrXtw6g7Ro-28" value="数据页" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+          <mxGeometry x="40" y="2170" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bKbJKUieX8mrXtw6g7Ro-29" value="文件头" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;align=center;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+          <mxGeometry x="130" y="2220" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bKbJKUieX8mrXtw6g7Ro-30" value="数据页头" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;align=center;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+          <mxGeometry x="130" y="2250" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bKbJKUieX8mrXtw6g7Ro-31" value="最大记录&lt;br&gt;最小记录" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;align=center;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+          <mxGeometry x="130" y="2280" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bKbJKUieX8mrXtw6g7Ro-32" value="多个数据行" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;align=center;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+          <mxGeometry x="130" y="2310" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bKbJKUieX8mrXtw6g7Ro-33" value="空闲空间" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;align=center;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+          <mxGeometry x="130" y="2340" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bKbJKUieX8mrXtw6g7Ro-34" value="数据页目录" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;align=center;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+          <mxGeometry x="130" y="2370" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bKbJKUieX8mrXtw6g7Ro-35" value="文件尾部" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;align=center;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+          <mxGeometry x="130" y="2400" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bKbJKUieX8mrXtw6g7Ro-36" value="too many connections" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+          <mxGeometry x="40" y="2520" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bKbJKUieX8mrXtw6g7Ro-37" value="show variables like &#39;max_connections&#39;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=1;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+          <mxGeometry x="80" y="2580" width="530" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bKbJKUieX8mrXtw6g7Ro-38" value="40" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=1;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+          <mxGeometry x="90" y="2720" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
