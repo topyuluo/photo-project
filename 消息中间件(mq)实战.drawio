@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-04-16T07:50:11.315Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="7W5bDMtiSR_zH4qpUe6L" version="14.5.8" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-04-16T13:47:06.516Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="0oWdLM4twR6B7A4eKOrX" version="14.5.9" type="github" pages="2">
   <diagram id="b8MhGM4gEZMRXQwS6kFo" name="系统架构">
-    <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1298" dy="866" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -492,229 +492,282 @@
         <mxCell id="a1FbAh75zE6ChC6sKaxF-12" value="ulimit" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="414" y="2510" width="188" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-2" value="&lt;p style=&quot;line-height: 40%&quot;&gt;Topic 是一个逻辑概念，它的数据是分布式存储在多个 Master Borker 中的 ， 当消息时，会根据一定的负载均衡算法和容错算法把消息发送到Broker中&lt;/p&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
+        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-2" value="&lt;p style=&quot;line-height: 40%&quot;&gt;Topic 是一个逻辑概念，它的数据是分布式存储在多个 Master Borker 中的 ， 当消息时，会根据一定的负载均衡算法和容错算法把消息发送到Broker中&lt;/p&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#82b366;fillColor=#d5e8d4;" parent="1" vertex="1">
           <mxGeometry x="7" y="2680" width="810" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-3" value="同步发送消息到RocketMQ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-3" value="同步发送消息到RocketMQ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="43" y="2760" width="157" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-5" value="同步发送模式： 在发送代码阶段，程序卡住，等待MQ响应， 一直到返回结果" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-5" value="同步发送模式： 在发送代码阶段，程序卡住，等待MQ响应， 一直到返回结果" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="80" y="2820" width="430" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-6" value="异步发送模式：发送消息之后，代码继续执行，MQ返回结果的时候会回调 回调函数" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-6" value="异步发送模式：发送消息之后，代码继续执行，MQ返回结果的时候会回调 回调函数" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="83.5" y="2860" width="460" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-7" value="单向发送消息： 发送一个消息给MQ , 然后代码就往下走了， 不会关注MQ是否响应了" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-7" value="单向发送消息： 发送一个消息给MQ , 然后代码就往下走了， 不会关注MQ是否响应了" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="78.5" y="2903" width="470" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-8" value="从 RocketMQ 消费消息" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" vertex="1" parent="1">
+        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-8" value="从 RocketMQ 消费消息" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="41.5" y="2950" width="157" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-9" value="push 消费模式：Broker 主动的推送消息给消费者" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-9" value="push 消费模式：Broker 主动的推送消息给消费者" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="80" y="3000" width="280" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-10" value="pull 消费模式：消费者主动发送请求到Broker 去拉取消息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-10" value="pull 消费模式：消费者主动发送请求到Broker 去拉取消息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="80" y="3040" width="320" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-12" value="CDN" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-12" value="CDN" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="94" y="3150" width="96" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-13" value="Nginx" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-13" value="Nginx" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="190" y="3150" width="96" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-14" value="Redis" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-14" value="Redis" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="286" y="3150" width="96" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-15" value="多级缓存架构" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="Nw0g1oIwdo4JGNvuPuyO-15" value="多级缓存架构" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="428" y="3155" width="90" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="tV2qd_1YS7YZi5ua2D5i" name="运行流程">
-    <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1298" dy="866" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="ap82AtaBt_z3wmu0ILEm-0" />
         <mxCell id="ap82AtaBt_z3wmu0ILEm-1" parent="ap82AtaBt_z3wmu0ILEm-0" />
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-2" value="MessageQueue" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;sketch=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-2" value="MessageQueue" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;sketch=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="40" y="40" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-4" value="创建订单的时候，需要指定一个很关键的参数， 就是MessageQueue ， 需要指定这个topic 对应了多少个队列" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-4" value="创建订单的时候，需要指定一个很关键的参数， 就是MessageQueue ， 需要指定这个topic 对应了多少个队列" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="70" y="100" width="590" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="ap82AtaBt_z3wmu0ILEm-1" source="ap82AtaBt_z3wmu0ILEm-5" target="ap82AtaBt_z3wmu0ILEm-13">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="ap82AtaBt_z3wmu0ILEm-1" source="ap82AtaBt_z3wmu0ILEm-5" target="ap82AtaBt_z3wmu0ILEm-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="ap82AtaBt_z3wmu0ILEm-1" source="ap82AtaBt_z3wmu0ILEm-5" target="ap82AtaBt_z3wmu0ILEm-14">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="ap82AtaBt_z3wmu0ILEm-1" source="ap82AtaBt_z3wmu0ILEm-5" target="ap82AtaBt_z3wmu0ILEm-14" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-5" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;sketch=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-5" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;sketch=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="90" y="170" width="200" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-6" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-6" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=0;fillColor=#d5e8d4;strokeColor=#82b366;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="110" y="200" width="160" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-7" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=0;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-7" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=0;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="180" y="211" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-8" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=0;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-8" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=0;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="180" y="242" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-9" value="Master Broker" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-9" value="Master Broker" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="145" y="170" width="90" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-10" value="topic" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-10" value="topic" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="120" y="225" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-11" value="队列" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-11" value="队列" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="200" y="212" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-12" value="队列" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-12" value="队列" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="200" y="242" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-13" value="slave" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=0;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-13" value="slave" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=0;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="380" y="182" width="86" height="32" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-14" value="slave" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=0;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-14" value="slave" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=0;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="470" y="232" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-17" value="数据同步" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-17" value="数据同步" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="310" y="215" width="60" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-18" value="&lt;font style=&quot;font-size: 12px&quot;&gt;MessageQueue&amp;nbsp; 是RocktetMQ中非常关键的一个数据分片机制，通过MessageQueue 将一个Topic 的数据拆分成了很多的数据分片，然后在每个Broker 上都存储一些MessageQueue&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;sketch=0;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-18" value="&lt;font style=&quot;font-size: 12px&quot;&gt;MessageQueue&amp;nbsp; 是RocktetMQ中非常关键的一个数据分片机制，通过MessageQueue 将一个Topic 的数据拆分成了很多的数据分片，然后在每个Broker 上都存储一些MessageQueue&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;sketch=0;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="90" y="330" width="730" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-19" value="生产者发消息的时候存入哪个MessageQueue" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;sketch=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-19" value="生产者发消息的时候存入哪个MessageQueue" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;sketch=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="40" y="370" width="270" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-21" value="Broker 如何持久化数据的" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;sketch=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-21" value="Broker 如何持久化数据的" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;sketch=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="40" y="480" width="180" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-22" value="CommitLog 消息顺序写入机制" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;sketch=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-22" value="CommitLog 消息顺序写入机制" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;sketch=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="40" y="585" width="180" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-23" value="Broker 收到消息之后，会把这条消息，直接写入到磁盘上的日志文件中，这个日志文件叫 commitLog ,直接顺序写入这个文件" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-23" value="Broker 收到消息之后，会把这条消息，直接写入到磁盘上的日志文件中，这个日志文件叫 commitLog ,直接顺序写入这个文件" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="79" y="660" width="670" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="ap82AtaBt_z3wmu0ILEm-1" source="ap82AtaBt_z3wmu0ILEm-24">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="ap82AtaBt_z3wmu0ILEm-1" source="ap82AtaBt_z3wmu0ILEm-24" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="245" y="885" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-34" value="发送消息" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ap82AtaBt_z3wmu0ILEm-25">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-34" value="发送消息" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ap82AtaBt_z3wmu0ILEm-25" vertex="1" connectable="0">
           <mxGeometry x="0.25" relative="1" as="geometry">
             <mxPoint x="-23" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-24" value="生产者" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=0;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-24" value="生产者" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=0;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="65" y="870" width="55" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="ap82AtaBt_z3wmu0ILEm-1" source="ap82AtaBt_z3wmu0ILEm-26">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="ap82AtaBt_z3wmu0ILEm-1" source="ap82AtaBt_z3wmu0ILEm-26" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="480" y="885" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-35" value="持久化" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ap82AtaBt_z3wmu0ILEm-27">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-35" value="持久化" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ap82AtaBt_z3wmu0ILEm-27" vertex="1" connectable="0">
           <mxGeometry x="0.2222" y="-1" relative="1" as="geometry">
             <mxPoint x="-43" y="-1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="ap82AtaBt_z3wmu0ILEm-1" source="ap82AtaBt_z3wmu0ILEm-26" target="ap82AtaBt_z3wmu0ILEm-37">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="ap82AtaBt_z3wmu0ILEm-1" source="ap82AtaBt_z3wmu0ILEm-26" target="ap82AtaBt_z3wmu0ILEm-37" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="270" y="1050" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-26" value="Broker" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;sketch=0;align=center;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-26" value="Broker" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;sketch=0;align=center;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="245" y="866.25" width="50" height="37.5" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-28" value="消息" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=0;align=center;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-28" value="消息" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=0;align=center;fillColor=#fad9d5;strokeColor=#ae4132;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="481" y="825" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-29" value="消息" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=0;align=center;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-29" value="消息" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=0;align=center;fillColor=#fad9d5;strokeColor=#ae4132;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="481" y="855" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="ap82AtaBt_z3wmu0ILEm-1" source="ap82AtaBt_z3wmu0ILEm-30">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="ap82AtaBt_z3wmu0ILEm-1" source="ap82AtaBt_z3wmu0ILEm-30" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="420" y="800" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-30" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=0;align=left;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-30" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=0;align=left;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="481" y="915" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-31" value="消息" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=0;align=center;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-31" value="消息" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;sketch=0;align=center;fillColor=#fad9d5;strokeColor=#ae4132;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="481" y="885" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="ap82AtaBt_z3wmu0ILEm-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="565" y="930" as="targetPoint" />
             <mxPoint x="645" y="930" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-32" value="CommitLog" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;sketch=0;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-32" value="CommitLog" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;sketch=0;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="655" y="920" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-37" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;sketch=0;align=center;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-37" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;sketch=0;align=center;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="330" y="1010" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-38" value="Topic 下每个MessageQueue 都会有一系列的ConsumerQueue文件" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=0;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-38" value="Topic 下每个MessageQueue 都会有一系列的ConsumerQueue文件" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=0;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="65" y="960" width="190" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-39" value="Topic" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=0;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-39" value="Topic" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=0;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="155" y="895" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-40" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;sketch=0;align=center;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-40" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;sketch=0;align=center;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="330" y="1050" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-41" value="ConsumerQueue" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=0;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-41" value="ConsumerQueue" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=0;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="340" y="980" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="ap82AtaBt_z3wmu0ILEm-1" source="ap82AtaBt_z3wmu0ILEm-37" target="ap82AtaBt_z3wmu0ILEm-45">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="ap82AtaBt_z3wmu0ILEm-1" source="ap82AtaBt_z3wmu0ILEm-37" target="ap82AtaBt_z3wmu0ILEm-45" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-50" value="保存的数据" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ap82AtaBt_z3wmu0ILEm-47">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-50" value="保存的数据" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ap82AtaBt_z3wmu0ILEm-47" vertex="1" connectable="0">
           <mxGeometry x="-0.2289" y="-3" relative="1" as="geometry">
             <mxPoint y="-18" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="ap82AtaBt_z3wmu0ILEm-1" source="ap82AtaBt_z3wmu0ILEm-42" target="ap82AtaBt_z3wmu0ILEm-31">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="ap82AtaBt_z3wmu0ILEm-1" source="ap82AtaBt_z3wmu0ILEm-42" target="ap82AtaBt_z3wmu0ILEm-31" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="454" y="900" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-49" value="地址引用" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ap82AtaBt_z3wmu0ILEm-48">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-49" value="地址引用" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ap82AtaBt_z3wmu0ILEm-48" vertex="1" connectable="0">
           <mxGeometry x="-0.4105" relative="1" as="geometry">
             <mxPoint x="1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-42" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;sketch=0;align=center;fillColor=#fad7ac;strokeColor=#b46504;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-42" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;sketch=0;align=center;fillColor=#fad7ac;strokeColor=#b46504;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="441" y="1015" width="25" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-45" value="一条消息对应在CommitLog 文件中的Offset 偏移量 ，消息的长度， tag的hashcode" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;sketch=0;align=center;dashed=1;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-45" value="一条消息对应在CommitLog 文件中的Offset 偏移量 ，消息的长度， tag的hashcode" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;sketch=0;align=center;dashed=1;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="640" y="960" width="160" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="ap82AtaBt_z3wmu0ILEm-1" source="ap82AtaBt_z3wmu0ILEm-52">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="ap82AtaBt_z3wmu0ILEm-1" source="ap82AtaBt_z3wmu0ILEm-52" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="540" y="775" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-52" value="顺序写&lt;br&gt;写入os cache" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;dashed=1;sketch=0;align=center;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-52" value="顺序写&lt;br&gt;写入os cache" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;dashed=1;sketch=0;align=center;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="379" y="750" width="87" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="ap82AtaBt_z3wmu0ILEm-1" source="ap82AtaBt_z3wmu0ILEm-54">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="ap82AtaBt_z3wmu0ILEm-1" source="ap82AtaBt_z3wmu0ILEm-54" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="660" y="775" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-54" value="系统线程" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;sketch=0;align=center;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-54" value="系统线程" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;sketch=0;align=center;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="540" y="757.5" width="70" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-56" value="写入文件" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;rounded=0;shadow=0;dashed=1;sketch=0;align=center;dashPattern=1 1;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+        <mxCell id="ap82AtaBt_z3wmu0ILEm-56" value="写入文件" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;rounded=0;shadow=0;dashed=1;sketch=0;align=center;dashPattern=1 1;" parent="ap82AtaBt_z3wmu0ILEm-1" vertex="1">
           <mxGeometry x="660" y="742.5" width="100" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="ap82AtaBt_z3wmu0ILEm-57" value="53" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=0;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
-          <mxGeometry x="100" y="1120" width="40" height="20" as="geometry" />
+        <mxCell id="qWxfmrXoHlA7xIEVAko6-0" value="消费组" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;sketch=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+          <mxGeometry x="40" y="1120" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qWxfmrXoHlA7xIEVAko6-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ap82AtaBt_z3wmu0ILEm-1" source="qWxfmrXoHlA7xIEVAko6-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="245" y="1300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qWxfmrXoHlA7xIEVAko6-1" value="订单系统" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+          <mxGeometry x="79" y="1280" width="81" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qWxfmrXoHlA7xIEVAko6-6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="ap82AtaBt_z3wmu0ILEm-1" source="qWxfmrXoHlA7xIEVAko6-4" target="qWxfmrXoHlA7xIEVAko6-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qWxfmrXoHlA7xIEVAko6-12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="ap82AtaBt_z3wmu0ILEm-1" source="qWxfmrXoHlA7xIEVAko6-4" target="qWxfmrXoHlA7xIEVAko6-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="443" y="1300" />
+              <mxPoint x="443" y="1390" />
+              <mxPoint x="595" y="1390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qWxfmrXoHlA7xIEVAko6-4" value="master" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+          <mxGeometry x="245" y="1285" width="95" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qWxfmrXoHlA7xIEVAko6-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="ap82AtaBt_z3wmu0ILEm-1" source="qWxfmrXoHlA7xIEVAko6-5" target="qWxfmrXoHlA7xIEVAko6-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qWxfmrXoHlA7xIEVAko6-5" value="slave" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+          <mxGeometry x="400" y="1225" width="81" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="qWxfmrXoHlA7xIEVAko6-7" value="库存系统" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+          <mxGeometry x="550" y="1190" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qWxfmrXoHlA7xIEVAko6-8" value="库存系统" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+          <mxGeometry x="560" y="1213" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qWxfmrXoHlA7xIEVAko6-9" value="营销系统" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+          <mxGeometry x="545" y="1300" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qWxfmrXoHlA7xIEVAko6-10" value="营销系统" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+          <mxGeometry x="555" y="1323" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qWxfmrXoHlA7xIEVAko6-13" value="不同的系统应该设置不同的消费组，如果不同的消费组订阅了同一个Topic ，对Topic 里的一条消息，每个消费组都会获取到这条消息" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+          <mxGeometry x="63" y="1420" width="720" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="qWxfmrXoHlA7xIEVAko6-14" value="集群模式消费&amp;amp;广播模式消费" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;sketch=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+          <mxGeometry x="40" y="1520" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qWxfmrXoHlA7xIEVAko6-15" value="集群模式：一个消费组获取到一条消息，只会交给组内的一台机器去处理，不是每台机器都可以获取到这条消息的&lt;br&gt;广播模式：对于消费组获取到的一条消息，组内的每台机器都可以获取到这条消息。&lt;br&gt;&lt;br&gt;相对与集群模式，常见基本上都是使用集群模式来进行消费的" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+          <mxGeometry x="79" y="1590" width="741" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qWxfmrXoHlA7xIEVAko6-16" value="66" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ap82AtaBt_z3wmu0ILEm-1">
+          <mxGeometry x="90" y="1780" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
