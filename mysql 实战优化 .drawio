@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-15T06:09:38.795Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="Zm78sSAX0dijPmoHQGGk" version="14.5.8" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-04-20T08:56:49.472Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="YeFr1el1uF_HPwTHSb9L" version="14.6.1" type="github" pages="5">
   <diagram id="QEoOFMB9QdWzOJR0WDVQ" name="架构设计">
     <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -679,21 +679,29 @@
         <mxCell id="TUrPbqB6XLqR1-5doVQr-18" value="设计索引的时候，一般考虑哪些因素" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;sketch=0;" parent="BRv4Kc025yiwNedygNVq-1" vertex="1">
           <mxGeometry x="40" y="680" width="210" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="t17BDeJU2CE7WHvZTKqC-2" value="1. 未来对表进行查询的时候，大概会如何来进行查询 ？ 根据where 条件， order by 字段， group by 字段 来创建索引" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="BRv4Kc025yiwNedygNVq-1">
+        <mxCell id="t17BDeJU2CE7WHvZTKqC-2" value="1. 未来对表进行查询的时候，大概会如何来进行查询 ？ 根据where 条件， order by 字段， group by 字段 来创建索引" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="BRv4Kc025yiwNedygNVq-1" vertex="1">
           <mxGeometry x="76" y="740" width="630" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="t17BDeJU2CE7WHvZTKqC-3" value="2.&amp;nbsp; 索引字段的值区分度不明显的字段，最好还是不要创建索引 | 对字段的类型比价小的列来设计索引" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="BRv4Kc025yiwNedygNVq-1">
+        <mxCell id="t17BDeJU2CE7WHvZTKqC-3" value="2.&amp;nbsp; 索引字段的值区分度不明显的字段，最好还是不要创建索引 | 对字段的类型比价小的列来设计索引" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="BRv4Kc025yiwNedygNVq-1" vertex="1">
           <mxGeometry x="70" y="780" width="550" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="t17BDeJU2CE7WHvZTKqC-4" value="3. 索引不要太多，主键要使用自增的，别用UUID 之类的。 自增的主键可以保证聚簇索引不会频繁的分裂，主键值都是有序的" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="BRv4Kc025yiwNedygNVq-1">
+        <mxCell id="t17BDeJU2CE7WHvZTKqC-4" value="3. 索引不要太多，主键要使用自增的，别用UUID 之类的。 自增的主键可以保证聚簇索引不会频繁的分裂，主键值都是有序的" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="BRv4Kc025yiwNedygNVq-1" vertex="1">
           <mxGeometry x="70" y="820" width="680" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="t17BDeJU2CE7WHvZTKqC-5" value="一个字段做范围查询用到了索引， 那么这个字段接下来的条件都不能用索引了，这是规则" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="BRv4Kc025yiwNedygNVq-1">
+        <mxCell id="t17BDeJU2CE7WHvZTKqC-5" value="一个字段做范围查询用到了索引， 那么这个字段接下来的条件都不能用索引了，这是规则" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" parent="BRv4Kc025yiwNedygNVq-1" vertex="1">
           <mxGeometry x="40" y="880" width="490" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="t17BDeJU2CE7WHvZTKqC-6" value="85" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="BRv4Kc025yiwNedygNVq-1">
+        <mxCell id="t17BDeJU2CE7WHvZTKqC-6" value="85" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="BRv4Kc025yiwNedygNVq-1" vertex="1">
           <mxGeometry x="75" y="950" width="30" height="20" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="P3TcEpzMR3TtiEPyyHbl" name="执行计划">
+    <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="vMYw_L7cGvUYPFAZYEPE-0" />
+        <mxCell id="vMYw_L7cGvUYPFAZYEPE-1" parent="vMYw_L7cGvUYPFAZYEPE-0" />
       </root>
     </mxGraphModel>
   </diagram>
