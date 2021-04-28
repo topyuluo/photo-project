@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-28T10:03:16.648Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="-ayBow2PjewfGM6BgnO4" version="14.6.6" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-04-28T10:51:29.767Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="HezO7aD7hdbJg0D_91jl" version="14.6.6" type="github" pages="4">
   <diagram id="b8MhGM4gEZMRXQwS6kFo" name="系统架构">
     <mxGraphModel dx="866" dy="1691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1344,11 +1344,17 @@
         <mxCell id="NaIEnIuPGSC9cdyRH1B3-62" value="物流服务" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=0;align=center;" parent="bJewtTVBS80Dh4kZox1g-1" vertex="1">
           <mxGeometry x="724" y="1113" width="70" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="yPtRCRyC-aFaaaqe8bWt-2" value="" style="group;rotation=-15;textOpacity=20;" vertex="1" connectable="0" parent="bJewtTVBS80Dh4kZox1g-1">
+          <mxGeometry x="128" y="938" width="650" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="yPtRCRyC-aFaaaqe8bWt-3" value="&lt;span style=&quot;font-size: 49px&quot;&gt;&lt;font color=&quot;#b3b3b3&quot;&gt;蚂蚁不是ant - Mr.pan&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;opacity=40;textOpacity=20;rotation=-15;" vertex="1" parent="yPtRCRyC-aFaaaqe8bWt-2">
+          <mxGeometry x="30" y="12" width="575" height="110" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="5Px1-IBBTDrRlaqh-BV2" name="第 4 页">
-    <mxGraphModel dx="1660" dy="834" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1420" dy="834" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="bsFeIYfOkqNymp_O0vPg-0" />
         <mxCell id="bsFeIYfOkqNymp_O0vPg-1" parent="bsFeIYfOkqNymp_O0vPg-0" />
@@ -2365,6 +2371,18 @@
         </mxCell>
         <mxCell id="APCVHtlR04her4zfNDe8-84" value="消费者负载策略：一个消息队列同一个时间只允许被一个消费者消费，一个消费者可以消费多个队列" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;dashPattern=1 4;sketch=0;align=left;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="bsFeIYfOkqNymp_O0vPg-1">
           <mxGeometry x="788" y="3213.16" width="172" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="AAONtbrc1jnwNBAELYmU-0" value="" style="group;rotation=-15;textOpacity=20;" vertex="1" connectable="0" parent="bsFeIYfOkqNymp_O0vPg-1">
+          <mxGeometry x="61.75" y="1303.5" width="650" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="AAONtbrc1jnwNBAELYmU-1" value="&lt;span style=&quot;font-size: 49px&quot;&gt;&lt;font color=&quot;#b3b3b3&quot;&gt;蚂蚁不是ant - Mr.pan&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;opacity=40;textOpacity=20;rotation=-15;" vertex="1" parent="AAONtbrc1jnwNBAELYmU-0">
+          <mxGeometry x="30" y="12" width="575" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="AAONtbrc1jnwNBAELYmU-4" value="" style="group;rotation=-15;textOpacity=20;" vertex="1" connectable="0" parent="bsFeIYfOkqNymp_O0vPg-1">
+          <mxGeometry x="118" y="230" width="650" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="AAONtbrc1jnwNBAELYmU-5" value="&lt;span style=&quot;font-size: 49px&quot;&gt;&lt;font color=&quot;#b3b3b3&quot;&gt;蚂蚁不是ant - Mr.pan&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;opacity=40;textOpacity=20;rotation=-15;" vertex="1" parent="AAONtbrc1jnwNBAELYmU-4">
+          <mxGeometry x="30" y="12" width="575" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
