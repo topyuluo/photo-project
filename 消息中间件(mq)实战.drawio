@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-27T10:45:11.512Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="F4vyj-GK6LeMesszO3Nh" version="14.6.6" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-04-28T03:17:36.761Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="m9ZuT-AKXcbQ0AIuk7BX" version="14.6.6" type="github" pages="4">
   <diagram id="b8MhGM4gEZMRXQwS6kFo" name="系统架构">
     <mxGraphModel dx="866" dy="1691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2081,7 +2081,11 @@
           <mxGeometry x="460" y="2497" width="58" height="18" as="geometry" />
         </mxCell>
         <mxCell id="APCVHtlR04her4zfNDe8-0" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=open;endFill=0;dashed=1;" edge="1" parent="bsFeIYfOkqNymp_O0vPg-1" source="APCVHtlR04her4zfNDe8-3" target="APCVHtlR04her4zfNDe8-18">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="344" y="3067" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="APCVHtlR04her4zfNDe8-1" value="后台线程每30s, 向nameserver 拉取信息" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="APCVHtlR04her4zfNDe8-0">
           <mxGeometry x="0.3474" y="1" relative="1" as="geometry">
@@ -2089,17 +2093,25 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="APCVHtlR04her4zfNDe8-2" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=open;endFill=0;dashed=1;" edge="1" parent="bsFeIYfOkqNymp_O0vPg-1" source="APCVHtlR04her4zfNDe8-3" target="APCVHtlR04her4zfNDe8-23">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="842" y="3087" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="APCVHtlR04her4zfNDe8-3" value="" style="ellipse;whiteSpace=wrap;html=1;rounded=0;shadow=0;sketch=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="bsFeIYfOkqNymp_O0vPg-1">
           <mxGeometry x="480.5" y="2964" width="133" height="56" as="geometry" />
         </mxCell>
         <mxCell id="APCVHtlR04her4zfNDe8-4" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=open;endFill=0;" edge="1" parent="bsFeIYfOkqNymp_O0vPg-1" source="APCVHtlR04her4zfNDe8-7" target="APCVHtlR04her4zfNDe8-3">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="303" y="3006" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="APCVHtlR04her4zfNDe8-5" value="1. 先查询本地缓存获取路由信息，&lt;br&gt;如果没有则从nameserver 上拉取，并更新本地缓存" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="APCVHtlR04her4zfNDe8-4">
           <mxGeometry x="-0.2667" relative="1" as="geometry">
-            <mxPoint x="-23" y="-42" as="offset" />
+            <mxPoint x="-17" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="APCVHtlR04her4zfNDe8-6" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=open;endFill=0;" edge="1" parent="bsFeIYfOkqNymp_O0vPg-1" source="APCVHtlR04her4zfNDe8-7" target="APCVHtlR04her4zfNDe8-14">
@@ -2117,11 +2129,15 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="APCVHtlR04her4zfNDe8-10" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;endArrow=open;endFill=0;" edge="1" parent="bsFeIYfOkqNymp_O0vPg-1" source="APCVHtlR04her4zfNDe8-14" target="APCVHtlR04her4zfNDe8-21">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="577" y="3246" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="APCVHtlR04her4zfNDe8-11" value="3. Broker 完成主从同步，并落盘，完成持久化" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="APCVHtlR04her4zfNDe8-10">
           <mxGeometry x="0.3623" relative="1" as="geometry">
-            <mxPoint x="3" y="-19" as="offset" />
+            <mxPoint x="2" y="-14" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="APCVHtlR04her4zfNDe8-12" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=open;endFill=0;" edge="1" parent="bsFeIYfOkqNymp_O0vPg-1">
@@ -2139,11 +2155,14 @@
         <mxCell id="APCVHtlR04her4zfNDe8-15" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=open;endFill=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="bsFeIYfOkqNymp_O0vPg-1" source="APCVHtlR04her4zfNDe8-17" target="APCVHtlR04her4zfNDe8-3">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="617.5" y="3005" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="903" y="3052" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="APCVHtlR04her4zfNDe8-16" value="4. 消费者查询路由信息" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="APCVHtlR04her4zfNDe8-15">
           <mxGeometry x="-0.3443" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="30" y="1" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="APCVHtlR04her4zfNDe8-17" value="消费者集群" style="ellipse;whiteSpace=wrap;html=1;rounded=0;shadow=0;sketch=1;align=center;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="bsFeIYfOkqNymp_O0vPg-1">
@@ -2158,6 +2177,9 @@
         <mxCell id="APCVHtlR04her4zfNDe8-20" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=34.5;exitDy=0;exitPerimeter=0;startArrow=none;startFill=0;endArrow=open;endFill=0;" edge="1" parent="bsFeIYfOkqNymp_O0vPg-1" source="APCVHtlR04her4zfNDe8-21">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="538.5" y="3211" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="508" y="3243" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="APCVHtlR04her4zfNDe8-21" value="CommitLog" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;rounded=0;shadow=0;sketch=1;align=center;size=17;" vertex="1" parent="bsFeIYfOkqNymp_O0vPg-1">
@@ -2225,7 +2247,7 @@
         <mxCell id="APCVHtlR04her4zfNDe8-42" value="1. 参数校验" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;glass=0;dashed=1;dashPattern=1 1;sketch=0;" vertex="1" parent="bsFeIYfOkqNymp_O0vPg-1">
           <mxGeometry x="34.5" y="3254" width="96" height="14" as="geometry" />
         </mxCell>
-        <mxCell id="APCVHtlR04her4zfNDe8-44" value="2. defaultMQProducerImpl.send(msg)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;glass=0;dashed=1;dashPattern=1 1;sketch=0;" vertex="1" parent="bsFeIYfOkqNymp_O0vPg-1">
+        <mxCell id="APCVHtlR04her4zfNDe8-44" value="2. defaultMQProducerImpl.send(msg)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;glass=0;dashed=1;dashPattern=1 1;sketch=0;" vertex="1" parent="bsFeIYfOkqNymp_O0vPg-1">
           <mxGeometry x="45" y="3275" width="214.5" height="14" as="geometry" />
         </mxCell>
         <mxCell id="APCVHtlR04her4zfNDe8-45" value="3. 校验信息，查找路由" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;glass=0;dashed=1;dashPattern=1 1;sketch=0;" vertex="1" parent="bsFeIYfOkqNymp_O0vPg-1">
@@ -2251,7 +2273,7 @@
         <mxCell id="APCVHtlR04her4zfNDe8-51" value="4. 选择队列" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;glass=0;dashed=1;dashPattern=1 1;sketch=0;" vertex="1" parent="bsFeIYfOkqNymp_O0vPg-1">
           <mxGeometry x="48.5" y="3395" width="64.5" height="14" as="geometry" />
         </mxCell>
-        <mxCell id="APCVHtlR04her4zfNDe8-54" value="取模 % 并规避上次获取到Broker， 达到均衡的效果" style="text;html=1;strokeColor=#005700;fillColor=#008a00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;glass=0;dashed=1;dashPattern=1 1;sketch=0;fontColor=#ffffff;" vertex="1" parent="bsFeIYfOkqNymp_O0vPg-1">
+        <mxCell id="APCVHtlR04her4zfNDe8-54" value="取模 % 并规避上次获取到Broker， 达到均衡的效果" style="text;html=1;strokeColor=#006EAF;fillColor=#1ba1e2;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;glass=0;dashed=1;dashPattern=1 1;sketch=0;fontColor=#ffffff;" vertex="1" parent="bsFeIYfOkqNymp_O0vPg-1">
           <mxGeometry x="173.5" y="3392" width="289.5" height="20" as="geometry" />
         </mxCell>
       </root>
