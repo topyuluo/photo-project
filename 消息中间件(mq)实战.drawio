@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-07T10:59:35.917Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="mRwgEEsvz-UBmht5Yzbe" version="14.6.6" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2021-05-07T10:59:43.661Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="W-J950bYaWtXUbhQZnJ6" version="14.6.6" type="github" pages="5">
   <diagram id="b8MhGM4gEZMRXQwS6kFo" name="系统架构">
     <mxGraphModel dx="866" dy="1691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2799,14 +2799,6 @@
         <mxCell id="N5hsShM0D83pzLSNHNU8-40" value="从请求队列中拉取消息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="LG2m6mpWZEMLS9D3-Oi1-1">
           <mxGeometry x="1040" y="2145" width="140" height="20" as="geometry" />
         </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram id="jsYe9G-Ugm7lPU2p9N3J" name="第 6 页">
-    <mxGraphModel dx="866" dy="466" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <mxCell id="Njctof17tQkUjOTMf30T-0" />
-        <mxCell id="Njctof17tQkUjOTMf30T-1" parent="Njctof17tQkUjOTMf30T-0" />
       </root>
     </mxGraphModel>
   </diagram>
