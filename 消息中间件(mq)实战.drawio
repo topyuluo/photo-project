@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-08T07:24:55.506Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="0-GXZc-HKLP1H-c2PPD9" version="14.6.6" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2021-05-08T07:25:15.082Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="fz_ftVablVs_E_f2Vr_N" version="14.6.6" type="github" pages="5">
   <diagram id="b8MhGM4gEZMRXQwS6kFo" name="系统架构">
     <mxGraphModel dx="866" dy="1691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2380,6 +2380,9 @@
       <root>
         <mxCell id="LG2m6mpWZEMLS9D3-Oi1-0" />
         <mxCell id="LG2m6mpWZEMLS9D3-Oi1-1" parent="LG2m6mpWZEMLS9D3-Oi1-0" />
+        <mxCell id="waY-PkrCEmgeof-azrFP-7" value="" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="LG2m6mpWZEMLS9D3-Oi1-1">
+          <mxGeometry x="615.5" y="2680" width="714.5" height="280" as="geometry" />
+        </mxCell>
         <mxCell id="LG2m6mpWZEMLS9D3-Oi1-76" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;dashed=1;opacity=30;" vertex="1" parent="LG2m6mpWZEMLS9D3-Oi1-1">
           <mxGeometry x="30" y="1450" width="940" height="220" as="geometry" />
         </mxCell>
@@ -2806,7 +2809,7 @@
           <mxGeometry x="320" y="2750" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="waY-PkrCEmgeof-azrFP-5" value="consumer" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="LG2m6mpWZEMLS9D3-Oi1-1">
-          <mxGeometry x="757" y="2710" width="70" height="20" as="geometry" />
+          <mxGeometry x="959" y="2690" width="70" height="20" as="geometry" />
         </mxCell>
         <mxCell id="waY-PkrCEmgeof-azrFP-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;startArrow=none;startFill=0;align=center;" edge="1" parent="LG2m6mpWZEMLS9D3-Oi1-1" source="waY-PkrCEmgeof-azrFP-6" target="waY-PkrCEmgeof-azrFP-4">
           <mxGeometry relative="1" as="geometry" />
@@ -2818,9 +2821,6 @@
         </mxCell>
         <mxCell id="waY-PkrCEmgeof-azrFP-6" value="启动一个线程" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="LG2m6mpWZEMLS9D3-Oi1-1">
           <mxGeometry x="650" y="2765" width="85.5" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="waY-PkrCEmgeof-azrFP-7" value="" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="LG2m6mpWZEMLS9D3-Oi1-1">
-          <mxGeometry x="510" y="2640" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="waY-PkrCEmgeof-azrFP-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;startArrow=none;startFill=0;align=center;" edge="1" parent="LG2m6mpWZEMLS9D3-Oi1-1" source="waY-PkrCEmgeof-azrFP-9" target="waY-PkrCEmgeof-azrFP-12">
           <mxGeometry relative="1" as="geometry" />
