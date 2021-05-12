@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-20T08:56:49.472Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="YeFr1el1uF_HPwTHSb9L" version="14.6.1" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2021-05-12T10:53:53.216Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="F3t5whFBQBIsL7KoBYuL" version="14.6.11" type="github" pages="5">
   <diagram id="QEoOFMB9QdWzOJR0WDVQ" name="架构设计">
     <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -409,13 +409,13 @@
         <mxCell id="bKbJKUieX8mrXtw6g7Ro-37" value="show variables like &#39;max_connections&#39;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=1;" parent="hZ35b4r6HPtFQP_8WnYt-1" vertex="1">
           <mxGeometry x="80" y="2580" width="530" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="s3ftsbSY_EzvWE9D6p-A-1" value="RAID&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+        <mxCell id="s3ftsbSY_EzvWE9D6p-A-1" value="RAID&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="hZ35b4r6HPtFQP_8WnYt-1" vertex="1">
           <mxGeometry x="40" y="2640" width="180" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="s3ftsbSY_EzvWE9D6p-A-2" value="引入 redo log 日志" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+        <mxCell id="s3ftsbSY_EzvWE9D6p-A-2" value="引入 redo log 日志" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="hZ35b4r6HPtFQP_8WnYt-1" vertex="1">
           <mxGeometry x="40" y="2760" width="180" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="s3ftsbSY_EzvWE9D6p-A-3" value="&lt;p style=&quot;line-height: 200%&quot;&gt;缓存页一个时 16kb&amp;nbsp; , 数据比较大， 而且可能就修改了缓存页里面的几个字节的数据&amp;nbsp;&lt;br&gt;缓存页刷磁盘是随机写磁盘， 性能很差&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=1;" vertex="1" parent="hZ35b4r6HPtFQP_8WnYt-1">
+        <mxCell id="s3ftsbSY_EzvWE9D6p-A-3" value="&lt;p style=&quot;line-height: 200%&quot;&gt;缓存页一个时 16kb&amp;nbsp; , 数据比较大， 而且可能就修改了缓存页里面的几个字节的数据&amp;nbsp;&lt;br&gt;缓存页刷磁盘是随机写磁盘， 性能很差&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=1;" parent="hZ35b4r6HPtFQP_8WnYt-1" vertex="1">
           <mxGeometry x="80" y="2820" width="530" height="40" as="geometry" />
         </mxCell>
       </root>
@@ -426,25 +426,25 @@
       <root>
         <mxCell id="BsA3-4Pb5x5gcWoGTt1B-0" />
         <mxCell id="BsA3-4Pb5x5gcWoGTt1B-1" parent="BsA3-4Pb5x5gcWoGTt1B-0" />
-        <mxCell id="BsA3-4Pb5x5gcWoGTt1B-2" value="多个事务对缓存页中同一条数据同时进行更新或者查询" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;" vertex="1" parent="BsA3-4Pb5x5gcWoGTt1B-1">
+        <mxCell id="BsA3-4Pb5x5gcWoGTt1B-2" value="多个事务对缓存页中同一条数据同时进行更新或者查询" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;" parent="BsA3-4Pb5x5gcWoGTt1B-1" vertex="1">
           <mxGeometry x="40" y="40" width="320" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="BsA3-4Pb5x5gcWoGTt1B-3" value="无论是脏读还是脏写，都是因为一个事务去更新或者查询另外一个还没提交的事务更新过的数据" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;" vertex="1" parent="BsA3-4Pb5x5gcWoGTt1B-1">
+        <mxCell id="BsA3-4Pb5x5gcWoGTt1B-3" value="无论是脏读还是脏写，都是因为一个事务去更新或者查询另外一个还没提交的事务更新过的数据" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;" parent="BsA3-4Pb5x5gcWoGTt1B-1" vertex="1">
           <mxGeometry x="80" y="120" width="520" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="BsA3-4Pb5x5gcWoGTt1B-4" value="另外一个事务还没有提交，随时可能会反悔回滚， 那么必然导致更新的数据就没了，或者你之前查询到数据没了，这就是脏写和脏读的场景" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;" vertex="1" parent="BsA3-4Pb5x5gcWoGTt1B-1">
+        <mxCell id="BsA3-4Pb5x5gcWoGTt1B-4" value="另外一个事务还没有提交，随时可能会反悔回滚， 那么必然导致更新的数据就没了，或者你之前查询到数据没了，这就是脏写和脏读的场景" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;" parent="BsA3-4Pb5x5gcWoGTt1B-1" vertex="1">
           <mxGeometry x="80" y="160" width="750" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="BsA3-4Pb5x5gcWoGTt1B-6" value="undo log 版本链条和 Read View 机制" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;" vertex="1" parent="BsA3-4Pb5x5gcWoGTt1B-1">
+        <mxCell id="BsA3-4Pb5x5gcWoGTt1B-6" value="undo log 版本链条和 Read View 机制" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;" parent="BsA3-4Pb5x5gcWoGTt1B-1" vertex="1">
           <mxGeometry x="40" y="200" width="320" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="BsA3-4Pb5x5gcWoGTt1B-7" value="&lt;p style=&quot;line-height: 200%&quot;&gt;读已提交： 每次读取都开启一个新的read-view视图&lt;br&gt;可重复读： 事务开启之后，都使用一个read-view 视图&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;" vertex="1" parent="BsA3-4Pb5x5gcWoGTt1B-1">
+        <mxCell id="BsA3-4Pb5x5gcWoGTt1B-7" value="&lt;p style=&quot;line-height: 200%&quot;&gt;读已提交： 每次读取都开启一个新的read-view视图&lt;br&gt;可重复读： 事务开启之后，都使用一个read-view 视图&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;" parent="BsA3-4Pb5x5gcWoGTt1B-1" vertex="1">
           <mxGeometry x="77" y="280" width="750" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="BsA3-4Pb5x5gcWoGTt1B-8" value="数据库性能抖动" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;" vertex="1" parent="BsA3-4Pb5x5gcWoGTt1B-1">
+        <mxCell id="BsA3-4Pb5x5gcWoGTt1B-8" value="数据库性能抖动" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;" parent="BsA3-4Pb5x5gcWoGTt1B-1" vertex="1">
           <mxGeometry x="40" y="340" width="320" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="BsA3-4Pb5x5gcWoGTt1B-9" value="&lt;p style=&quot;line-height: 200%&quot;&gt;产生抖动的原因有两个：&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;- buffer pool 的缓存页满了， 脏页需要落盘&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;- redo log 在磁盘上的所有文件都写满了，需要回到第一个redo log 文件进行覆写&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;" vertex="1" parent="BsA3-4Pb5x5gcWoGTt1B-1">
+        <mxCell id="BsA3-4Pb5x5gcWoGTt1B-9" value="&lt;p style=&quot;line-height: 200%&quot;&gt;产生抖动的原因有两个：&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;- buffer pool 的缓存页满了， 脏页需要落盘&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;- redo log 在磁盘上的所有文件都写满了，需要回到第一个redo log 文件进行覆写&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;" parent="BsA3-4Pb5x5gcWoGTt1B-1" vertex="1">
           <mxGeometry x="80" y="410" width="750" height="100" as="geometry" />
         </mxCell>
       </root>
@@ -702,6 +702,24 @@
       <root>
         <mxCell id="vMYw_L7cGvUYPFAZYEPE-0" />
         <mxCell id="vMYw_L7cGvUYPFAZYEPE-1" parent="vMYw_L7cGvUYPFAZYEPE-0" />
+        <mxCell id="lNLNrgW6seh0Ze0UprkV-0" value="const -&amp;nbsp; 通过主键或者唯一索引访问" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="vMYw_L7cGvUYPFAZYEPE-1">
+          <mxGeometry x="40" y="50" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="lNLNrgW6seh0Ze0UprkV-1" value="ref&amp;nbsp; - 普通索引 ，或者用 主键/唯一索引 搞了一个 is null / is not null&amp;nbsp;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="vMYw_L7cGvUYPFAZYEPE-1">
+          <mxGeometry x="40" y="90" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="lNLNrgW6seh0Ze0UprkV-2" value="range - 有范围查询" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="vMYw_L7cGvUYPFAZYEPE-1">
+          <mxGeometry x="40" y="130" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="lNLNrgW6seh0Ze0UprkV-3" value="index 只要遍历二级索引 ， 就可以拿到你想要的数据 ， 而不需要会源到聚簇索引的访问方式 ， 就是index&amp;nbsp;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="vMYw_L7cGvUYPFAZYEPE-1">
+          <mxGeometry x="40" y="170" width="580" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="lNLNrgW6seh0Ze0UprkV-4" value="all 全表扫描&amp;nbsp; 扫描聚簇索引的所有叶子节点 ， 也就是一个表里一行一行的数据去扫描" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="vMYw_L7cGvUYPFAZYEPE-1">
+          <mxGeometry x="40" y="210" width="460" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="lNLNrgW6seh0Ze0UprkV-5" value="先访问哪个表， 用哪个索引还是全表扫描 ， 拿到数据之后如何去聚簇索引回表，是否要基于临时磁盘文件做分组聚合或者排序" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="vMYw_L7cGvUYPFAZYEPE-1">
+          <mxGeometry x="40" y="280" width="690" height="20" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
