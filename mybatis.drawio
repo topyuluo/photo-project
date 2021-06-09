@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-06-08T09:03:59.039Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="8DQZWDIxvkzaNqh6jx0F" version="14.7.5" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-06-09T10:22:29.376Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="b1pquXrgDKqtAC56Q08Y" version="14.7.5" type="github" pages="2">
   <diagram id="_C_IYXRYWDwCl6F7tw9B" name="第 1 页">
     <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -159,89 +159,116 @@
       <root>
         <mxCell id="ARLmOl4ktkuHFDdU4ZW2-0" />
         <mxCell id="ARLmOl4ktkuHFDdU4ZW2-1" parent="ARLmOl4ktkuHFDdU4ZW2-0" />
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="FtkUFHBReNDvAZ_2gTk3-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="205" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-7" value="" style="rounded=1;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="110" y="190" width="210" height="30" as="geometry" />
+        </mxCell>
         <mxCell id="ARLmOl4ktkuHFDdU4ZW2-3" value="执行流程" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#b85450;fillColor=#f8cecc;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
           <mxGeometry x="40" y="40" width="60" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ARLmOl4ktkuHFDdU4ZW2-4" value="1. 加载和解析 mybatis-config.xml 这个全局的配置文件" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
-          <mxGeometry x="80" y="80" width="420" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ARLmOl4ktkuHFDdU4ZW2-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="ARLmOl4ktkuHFDdU4ZW2-5" target="ARLmOl4ktkuHFDdU4ZW2-7">
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="FtkUFHBReNDvAZ_2gTk3-0" target="FtkUFHBReNDvAZ_2gTk3-2">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="170" y="210" as="targetPoint" />
+            <mxPoint x="370" y="120" as="targetPoint" />
+            <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ARLmOl4ktkuHFDdU4ZW2-5" value="mybatis-config.xml 文件" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
-          <mxGeometry x="100" y="150" width="140" height="30" as="geometry" />
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-0" value="mybatis-config.xml 文件" style="rounded=1;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="110" y="105" width="150" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ARLmOl4ktkuHFDdU4ZW2-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="ARLmOl4ktkuHFDdU4ZW2-7" target="ARLmOl4ktkuHFDdU4ZW2-8">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ARLmOl4ktkuHFDdU4ZW2-7" value="获取 InputStream&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
-          <mxGeometry x="112.5" y="220" width="115" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ARLmOl4ktkuHFDdU4ZW2-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="ARLmOl4ktkuHFDdU4ZW2-8" target="ARLmOl4ktkuHFDdU4ZW2-14">
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-9" style="edgeStyle=elbowEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;elbow=vertical;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="FtkUFHBReNDvAZ_2gTk3-2">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="400" y="430" as="targetPoint" />
+            <mxPoint x="400" y="205" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ARLmOl4ktkuHFDdU4ZW2-8" value="XMLConfigBuilder -&amp;gt; Builder 对象" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
-          <mxGeometry x="72.5" y="300" width="195" height="30" as="geometry" />
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-2" value="InputStream" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="490" y="108.75" width="100" height="22.5" as="geometry" />
         </mxCell>
-        <mxCell id="ARLmOl4ktkuHFDdU4ZW2-11" value="buidler.parse()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
-          <mxGeometry x="310" y="290" width="90" height="20" as="geometry" />
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-3" value="Resources.getResourceAsStream()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="270" y="95" width="200" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="5f8tf4rInt2xU8H29OyR-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="ARLmOl4ktkuHFDdU4ZW2-12">
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-11" style="edgeStyle=elbowEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="FtkUFHBReNDvAZ_2gTk3-5">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="705" y="650" as="targetPoint" />
+            <mxPoint x="680" y="205" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ARLmOl4ktkuHFDdU4ZW2-12" value="得到Configuration 全局配置对象" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
-          <mxGeometry x="570" y="340" width="180" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="ARLmOl4ktkuHFDdU4ZW2-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="ARLmOl4ktkuHFDdU4ZW2-18">
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-14" style="edgeStyle=elbowEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;dashed=1;entryX=0.436;entryY=-0.133;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="FtkUFHBReNDvAZ_2gTk3-5" target="FtkUFHBReNDvAZ_2gTk3-16">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="560" y="500" as="sourcePoint" />
-            <mxPoint x="620" y="381" as="targetPoint" />
+            <mxPoint x="544" y="265" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ARLmOl4ktkuHFDdU4ZW2-21" value="解析到的信息&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ARLmOl4ktkuHFDdU4ZW2-15">
-          <mxGeometry x="-0.3632" y="2" relative="1" as="geometry">
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-5" value="调用build() 方法" style="rounded=1;whiteSpace=wrap;html=1;align=center;fillColor=#b0e3e6;strokeColor=#0e8088;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="484" y="187.5" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-6" value="创建SqlSessionFactoryBuilder 对象" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="112" y="193.5" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-10" value="build(InputStream in)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="385" y="145" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-12" value="SqlSessionFactory 对象实例&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="690" y="190" width="160" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-13" value="返回" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="620" y="185" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-15" value="内部逻辑" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="550" y="235" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-17" style="edgeStyle=elbowEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="FtkUFHBReNDvAZ_2gTk3-16" target="FtkUFHBReNDvAZ_2gTk3-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="558" y="395" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-16" value="创建XMLConfigBuidler 对象 - parser" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="456" y="315" width="204" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-22" style="edgeStyle=elbowEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;dashed=1;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="FtkUFHBReNDvAZ_2gTk3-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="770" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-18" value="build(parser.parse())" style="rounded=1;whiteSpace=wrap;html=1;align=center;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="456" y="435" width="204" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-21" value="&lt;h1&gt;XMLConfigBuilder&lt;/h1&gt;&lt;p&gt;XMLConfigBuilder 构造方法创建了XPathParser , 用来解析 mybatis-config.xml 文件&lt;/p&gt;&lt;p&gt;XMLConfigBuilder 的父类 BaseBuilder 持有了Configuration 的引用&lt;/p&gt;&lt;p&gt;持有DefaultReflectorFactory&amp;nbsp;&lt;/p&gt;" style="text;html=1;fillColor=#f5f5f5;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;align=left;fontColor=#333333;dashed=1;dashPattern=1 2;strokeColor=#994C00;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="670" y="255" width="270" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-23" value="parse() 方法" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="670" y="425" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-25" style="edgeStyle=elbowEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="FtkUFHBReNDvAZ_2gTk3-24">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="915" y="535" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-24" value="parseConfiguration(parser.evalNode(&quot;/configuration&quot;))" style="rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#fad7ac;strokeColor=#b46504;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="770" y="435" width="290" height="33.75" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-27" value="解析各种属性 - properties| settings | typeAliases | mappers" style="rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="840" y="534" width="315" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-28" value="" style="endArrow=classic;html=1;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" target="FtkUFHBReNDvAZ_2gTk3-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="780" y="585" as="sourcePoint" />
+            <mxPoint x="710" y="515" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-29" value="返回 Configuration 对象实例" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FtkUFHBReNDvAZ_2gTk3-28">
+          <mxGeometry x="0.2083" y="-1" relative="1" as="geometry">
+            <mxPoint x="2" y="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-30" value="填充Configuration 属性" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FtkUFHBReNDvAZ_2gTk3-28">
+          <mxGeometry x="-0.4917" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ARLmOl4ktkuHFDdU4ZW2-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="ARLmOl4ktkuHFDdU4ZW2-14">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="377.5" y="480" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ARLmOl4ktkuHFDdU4ZW2-14" value="解析 mybatis-config.xml 中的各种标签" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
-          <mxGeometry x="267.5" y="410" width="220" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ARLmOl4ktkuHFDdU4ZW2-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="ARLmOl4ktkuHFDdU4ZW2-17" target="ARLmOl4ktkuHFDdU4ZW2-18">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ARLmOl4ktkuHFDdU4ZW2-17" value="解析 mapper 文件" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
-          <mxGeometry x="316.25" y="480" width="122.5" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ARLmOl4ktkuHFDdU4ZW2-18" value="为每个 mapper 文件创建一个 XMLMapperBuilder 实例 进行解析" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
-          <mxGeometry x="282.5" y="560" width="190" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="ARLmOl4ktkuHFDdU4ZW2-20" value="&lt;font color=&quot;#66ff66&quot;&gt;Configuration 是一个单例对象，初始化解析&lt;br&gt;到的全部信息都会记录到Configuration中&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
-          <mxGeometry x="535" y="400" width="250" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="5f8tf4rInt2xU8H29OyR-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="5f8tf4rInt2xU8H29OyR-3">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="360" y="670" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="5f8tf4rInt2xU8H29OyR-3" value="new DefaultSqlSessionFactory(Configuration)" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
-          <mxGeometry x="550" y="650" width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="5f8tf4rInt2xU8H29OyR-5" value="得到 SqlSessionFactory 工厂" style="text;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
-          <mxGeometry x="180" y="655" width="172.5" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="5f8tf4rInt2xU8H29OyR-6" value="&lt;font color=&quot;#33ff33&quot;&gt;XMLConfigBuilder&amp;nbsp; 对配置文件进行解析&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
-          <mxGeometry x="55" y="340" width="230" height="20" as="geometry" />
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-31" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;rounded=1;dashed=1;dashPattern=1 2;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="40" y="100" width="20" height="35" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
