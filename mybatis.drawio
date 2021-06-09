@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-06-09T10:22:29.376Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="b1pquXrgDKqtAC56Q08Y" version="14.7.5" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-06-09T10:56:18.959Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="hMYEIwSIZ62RFpb_L2tM" version="14.7.5" type="github" pages="2">
   <diagram id="_C_IYXRYWDwCl6F7tw9B" name="第 1 页">
     <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -248,6 +248,16 @@
         <mxCell id="FtkUFHBReNDvAZ_2gTk3-24" value="parseConfiguration(parser.evalNode(&quot;/configuration&quot;))" style="rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#fad7ac;strokeColor=#b46504;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
           <mxGeometry x="770" y="435" width="290" height="33.75" as="geometry" />
         </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-35" style="edgeStyle=elbowEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="FtkUFHBReNDvAZ_2gTk3-27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1230" y="549.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-37" style="edgeStyle=elbowEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="FtkUFHBReNDvAZ_2gTk3-27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="919" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="FtkUFHBReNDvAZ_2gTk3-27" value="解析各种属性 - properties| settings | typeAliases | mappers" style="rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
           <mxGeometry x="840" y="534" width="315" height="31" as="geometry" />
         </mxCell>
@@ -269,6 +279,111 @@
         </mxCell>
         <mxCell id="FtkUFHBReNDvAZ_2gTk3-31" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;rounded=1;dashed=1;dashPattern=1 2;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
           <mxGeometry x="40" y="100" width="20" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-34" value="建造者模式 使用的炉火纯青" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="1170" y="240" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-36" value="Configuration 对象实例中保存" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="1230" y="539.5" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-39" style="edgeStyle=elbowEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="FtkUFHBReNDvAZ_2gTk3-38">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="930" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-38" value="解析 Mappers 标签" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;align=center;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="870" y="620" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-45" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="FtkUFHBReNDvAZ_2gTk3-40" target="FtkUFHBReNDvAZ_2gTk3-46">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="953" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-40" value="创建XMLMapperBuilder 实例 - 并持有 Configuration 对象引用" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;align=center;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="870" y="700" width="330" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-41" value="在此处创建Configuration 实例" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="473" y="350" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-42" value="Configuration 传递" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="920" y="468.75" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-43" value="Configuration 传递" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="930" y="565" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-44" value="Configuration 传递" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="940" y="650" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-59" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;fontColor=#000000;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="FtkUFHBReNDvAZ_2gTk3-46">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1010" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-46" value="调用 XMLMapperBuilder 的 parse() 方法" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;align=center;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="837" y="770" width="231" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-54" value="" style="group" vertex="1" connectable="0" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="1155" y="587.5" width="350" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-53" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;align=left;dashed=1;" vertex="1" parent="FtkUFHBReNDvAZ_2gTk3-54">
+          <mxGeometry width="350" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-47" value="&lt;pre style=&quot;background-color: #2b2b2b ; color: #a9b7c6 ; font-family: &amp;#34;jetbrains mono&amp;#34; , monospace ; font-size: 9.0pt&quot;&gt;&lt;br&gt;&lt;/pre&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="FtkUFHBReNDvAZ_2gTk3-54">
+          <mxGeometry x="128" y="14.5" width="20" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-49" value="&amp;lt;mappers&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="FtkUFHBReNDvAZ_2gTk3-54">
+          <mxGeometry x="25" y="5" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-50" value="&amp;lt;mapper resource=&quot;mapper/ProductMapper.xml&quot; /&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="FtkUFHBReNDvAZ_2gTk3-54">
+          <mxGeometry x="25" y="19.25" width="320" height="25.75" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-51" value="&amp;lt;mapper resource=&quot;mapper/ProductMapper.xml&quot; /&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="FtkUFHBReNDvAZ_2gTk3-54">
+          <mxGeometry x="25" y="44.5" width="320" height="20.5" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-52" value="&amp;lt;/mappers&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="FtkUFHBReNDvAZ_2gTk3-54">
+          <mxGeometry x="23" y="68" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-55" value="&lt;font color=&quot;#ff3333&quot;&gt;for 循环遍历&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontColor=#99CCFF;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="770" y="705" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-56" value="&lt;font color=&quot;#000000&quot;&gt;每一个Mapper 标签&amp;nbsp; 对应一个XMLBuilder 进行解析&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontColor=#99CCFF;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="1205" y="705" width="290" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-57" value="解析对应的Mapper 文件 ： 如 mapper/ProductMapper.xml" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="1090" y="775" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-61" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;fontColor=#000000;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="FtkUFHBReNDvAZ_2gTk3-60">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1014" y="930" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-60" value="解析 Mapper 文件 的 对应节点 ： cache | mapper/resultMap | mapper/sql | (select | insert | update | delete)" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#000000;align=center;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="865" y="850" width="595" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-64" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontColor=#000000;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="FtkUFHBReNDvAZ_2gTk3-62">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1088" y="1010" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-62" value="创建 XMLStatementBuidler 对象实例 ， 并调用其 parseStatementNode() 方法" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#000000;align=center;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="865" y="930" width="445" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-63" value="&lt;font color=&quot;#ff3333&quot;&gt;for 循环遍历&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontColor=#99CCFF;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="770" y="935" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-66" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontColor=#000000;" edge="1" parent="ARLmOl4ktkuHFDdU4ZW2-1" source="FtkUFHBReNDvAZ_2gTk3-65">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1088" y="1070" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-65" value="构建 MappedStatement 对象实例" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#000000;align=center;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="981.5" y="1010" width="212" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-67" value="将 MappedStatement 对象 缓存到 Configuration 中 ，缓存容器使用 HashMap" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#000000;align=center;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="975" y="1070" width="435" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FtkUFHBReNDvAZ_2gTk3-68" value="Key:&amp;nbsp; namespace:id&amp;nbsp; &lt;br&gt;Value : statement 对象" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontColor=#000000;" vertex="1" parent="ARLmOl4ktkuHFDdU4ZW2-1">
+          <mxGeometry x="1430" y="1070" width="140" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
