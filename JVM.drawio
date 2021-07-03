@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-03T13:49:47.743Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="PBNlqVWkWaKpPyAGRcpA" version="14.8.4" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-07-03T14:32:55.566Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="KxoBEWmDyrgWl84UNaao" version="14.8.4" type="github" pages="2">
   <diagram id="AmMhCL5ko8pbZrgD_9A5" name="原理知识">
     <mxGraphModel dx="1298" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -257,6 +257,15 @@
         </mxCell>
         <mxCell id="3sARBMo55DoO3OsmveG--7" value="-XX:+UseParNewGC -XX:+UseConcMarkSweepGC" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="xPJ-MtGCqqJg5Sht0kI_-1">
           <mxGeometry x="45" y="740" width="290" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eLd5B8Xswmp5G706e9Uw-0" value="设置阈值" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="xPJ-MtGCqqJg5Sht0kI_-1">
+          <mxGeometry x="20" y="780" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eLd5B8Xswmp5G706e9Uw-1" value="-XX:CMSInitiatingOccupancyFaction=92" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="xPJ-MtGCqqJg5Sht0kI_-1">
+          <mxGeometry x="45" y="820" width="230" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eLd5B8Xswmp5G706e9Uw-2" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;-Xms 3G -Xmx 3G -Xmn1.5G -Xss 1M -XX:MetaSpaceSize=256M -XX:MaxTenuringThreshold =5 -XX:PretenureSizeThreshold = 1M&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: center&quot;&gt;-XX:+UseParNewGC -XX:+UseConcMarkSweepGC&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center&quot;&gt;-XX:CMSInitiatingOccupancyFaction=92 -XX:UseCMSCompactAtFullCollection&lt;br&gt;-XX:CMSFullGCsBeforeCompaction=0&lt;br&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="xPJ-MtGCqqJg5Sht0kI_-1">
+          <mxGeometry x="43" y="880" width="717" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
