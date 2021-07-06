@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-06T07:59:02.038Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="GxSPY4oX3jNReYzn0sUT" version="14.8.3" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-07-06T08:30:30.531Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="zrW5BYnuOYhmnpDC4xJt" version="14.8.3" type="github" pages="3">
   <diagram id="AmMhCL5ko8pbZrgD_9A5" name="原理知识">
     <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -329,6 +329,9 @@
         </mxCell>
         <mxCell id="X8RXfIPzIWcjq-vioxmE-17" value="混合回收" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="X8RXfIPzIWcjq-vioxmE-1">
           <mxGeometry x="620" y="467" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X8RXfIPzIWcjq-vioxmE-19" value="35" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="X8RXfIPzIWcjq-vioxmE-1">
+          <mxGeometry x="125" y="620" width="30" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
