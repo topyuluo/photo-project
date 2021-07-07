@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-06T08:30:30.531Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="zrW5BYnuOYhmnpDC4xJt" version="14.8.3" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-07-07T09:47:50.943Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="HwSDzrUbpFkxULpGHsJT" version="14.8.3" type="github" pages="3">
   <diagram id="AmMhCL5ko8pbZrgD_9A5" name="原理知识">
     <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -267,6 +267,15 @@
         <mxCell id="eLd5B8Xswmp5G706e9Uw-2" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;-Xms 3G -Xmx 3G -Xmn1.5G -Xss 1M -XX:MetaSpaceSize=256M -XX:MaxTenuringThreshold =5 -XX:PretenureSizeThreshold = 1M&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;text-align: center&quot;&gt;-XX:+UseParNewGC -XX:+UseConcMarkSweepGC&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center&quot;&gt;-XX:CMSInitiatingOccupancyFaction=92 -XX:UseCMSCompactAtFullCollection&lt;br&gt;-XX:CMSFullGCsBeforeCompaction=0&lt;br&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" parent="xPJ-MtGCqqJg5Sht0kI_-1" vertex="1">
           <mxGeometry x="43" y="880" width="717" height="70" as="geometry" />
         </mxCell>
+        <mxCell id="0-Vu8XNlEMsKAJjRzUOd-0" value="线上运行的系统 突然卡死 无法访问" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#b85450;fillColor=#f8cecc;" vertex="1" parent="xPJ-MtGCqqJg5Sht0kI_-1">
+          <mxGeometry x="30" y="960" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="0-Vu8XNlEMsKAJjRzUOd-1" value="对象进入老年代的几个条件， 大对象 ， 年龄阈值&amp;nbsp; &amp;nbsp;动态年龄判断 ， 新生代 GC后 对象无法存放到Survivor中" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="xPJ-MtGCqqJg5Sht0kI_-1">
+          <mxGeometry x="43" y="1010" width="590" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="0-Vu8XNlEMsKAJjRzUOd-2" value="内存分配，参数设置不合理， 导致你的对象频繁的进入老年代 ，然后频繁的触发老年代GC ,&amp;nbsp; 导致系统每隔几分钟就要卡 几秒钟" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="xPJ-MtGCqqJg5Sht0kI_-1">
+          <mxGeometry x="50" y="1060" width="750" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -275,62 +284,62 @@
       <root>
         <mxCell id="X8RXfIPzIWcjq-vioxmE-0" />
         <mxCell id="X8RXfIPzIWcjq-vioxmE-1" parent="X8RXfIPzIWcjq-vioxmE-0" />
-        <mxCell id="X8RXfIPzIWcjq-vioxmE-2" value="ParNew + CMS 的痛点" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#b85450;fillColor=#f8cecc;" vertex="1" parent="X8RXfIPzIWcjq-vioxmE-1">
+        <mxCell id="X8RXfIPzIWcjq-vioxmE-2" value="ParNew + CMS 的痛点" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#b85450;fillColor=#f8cecc;" parent="X8RXfIPzIWcjq-vioxmE-1" vertex="1">
           <mxGeometry x="40" y="40" width="140" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="X8RXfIPzIWcjq-vioxmE-3" value="Stop The World&amp;nbsp; , 之后的优化都是朝着 Stop&amp;nbsp; the world 的目标去做的" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="X8RXfIPzIWcjq-vioxmE-1">
+        <mxCell id="X8RXfIPzIWcjq-vioxmE-3" value="Stop The World&amp;nbsp; , 之后的优化都是朝着 Stop&amp;nbsp; the world 的目标去做的" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="X8RXfIPzIWcjq-vioxmE-1" vertex="1">
           <mxGeometry x="80" y="80" width="380" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="X8RXfIPzIWcjq-vioxmE-4" value="G1 垃圾回收器" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#b85450;fillColor=#f8cecc;" vertex="1" parent="X8RXfIPzIWcjq-vioxmE-1">
+        <mxCell id="X8RXfIPzIWcjq-vioxmE-4" value="G1 垃圾回收器" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#b85450;fillColor=#f8cecc;" parent="X8RXfIPzIWcjq-vioxmE-1" vertex="1">
           <mxGeometry x="40" y="130" width="90" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="X8RXfIPzIWcjq-vioxmE-5" value="最大的特点 就是把 java堆内存拆分成了 多个大小相等的 region , 新生代和老年代成为了逻辑上的概念 ， 最大的特点就是设置一个垃圾回收的预期停顿时间。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="X8RXfIPzIWcjq-vioxmE-1">
+        <mxCell id="X8RXfIPzIWcjq-vioxmE-5" value="最大的特点 就是把 java堆内存拆分成了 多个大小相等的 region , 新生代和老年代成为了逻辑上的概念 ， 最大的特点就是设置一个垃圾回收的预期停顿时间。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="X8RXfIPzIWcjq-vioxmE-1" vertex="1">
           <mxGeometry x="80" y="180" width="710" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="X8RXfIPzIWcjq-vioxmE-6" value="每个Region 可能属于新生代 也可能属于老年代" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="X8RXfIPzIWcjq-vioxmE-1">
+        <mxCell id="X8RXfIPzIWcjq-vioxmE-6" value="每个Region 可能属于新生代 也可能属于老年代" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="X8RXfIPzIWcjq-vioxmE-1" vertex="1">
           <mxGeometry x="80" y="230" width="710" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="X8RXfIPzIWcjq-vioxmE-7" value="刚开始的时候 ，新生代对堆内存的占比是 5% ， 最多不超过 60%" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="X8RXfIPzIWcjq-vioxmE-1">
+        <mxCell id="X8RXfIPzIWcjq-vioxmE-7" value="刚开始的时候 ，新生代对堆内存的占比是 5% ， 最多不超过 60%" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="X8RXfIPzIWcjq-vioxmE-1" vertex="1">
           <mxGeometry x="80" y="290" width="710" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="X8RXfIPzIWcjq-vioxmE-8" value="-XX:MaxGCPauseMills&amp;nbsp; 参数设定 默认&amp;nbsp; 200ms&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="X8RXfIPzIWcjq-vioxmE-1">
+        <mxCell id="X8RXfIPzIWcjq-vioxmE-8" value="-XX:MaxGCPauseMills&amp;nbsp; 参数设定 默认&amp;nbsp; 200ms&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="X8RXfIPzIWcjq-vioxmE-1" vertex="1">
           <mxGeometry x="80" y="330" width="710" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="X8RXfIPzIWcjq-vioxmE-9" value="在 G1 中 ，大对象的判定规则就是一个大对象超过了一个Region大小的50% ， 比如按照上面算的 ，每个Region 是2Mb ， 只要一个大对象超过了 1Mb , 就会被放入大对象专门的Regiion中，如果一个对象太大， 可能会横跨多个Region来存放" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="X8RXfIPzIWcjq-vioxmE-1">
+        <mxCell id="X8RXfIPzIWcjq-vioxmE-9" value="在 G1 中 ，大对象的判定规则就是一个大对象超过了一个Region大小的50% ， 比如按照上面算的 ，每个Region 是2Mb ， 只要一个大对象超过了 1Mb , 就会被放入大对象专门的Regiion中，如果一个对象太大， 可能会横跨多个Region来存放" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="X8RXfIPzIWcjq-vioxmE-1" vertex="1">
           <mxGeometry x="80" y="370" width="710" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="X8RXfIPzIWcjq-vioxmE-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="X8RXfIPzIWcjq-vioxmE-1" source="X8RXfIPzIWcjq-vioxmE-10">
+        <mxCell id="X8RXfIPzIWcjq-vioxmE-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="X8RXfIPzIWcjq-vioxmE-1" source="X8RXfIPzIWcjq-vioxmE-10" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="290" y="485" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="X8RXfIPzIWcjq-vioxmE-10" value="初始标记" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="X8RXfIPzIWcjq-vioxmE-1">
+        <mxCell id="X8RXfIPzIWcjq-vioxmE-10" value="初始标记" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="X8RXfIPzIWcjq-vioxmE-1" vertex="1">
           <mxGeometry x="80" y="470" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="X8RXfIPzIWcjq-vioxmE-11" value="STW - 标记GC Roots 对象" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="X8RXfIPzIWcjq-vioxmE-1">
+        <mxCell id="X8RXfIPzIWcjq-vioxmE-11" value="STW - 标记GC Roots 对象" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="X8RXfIPzIWcjq-vioxmE-1" vertex="1">
           <mxGeometry x="50" y="520" width="160" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="X8RXfIPzIWcjq-vioxmE-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="X8RXfIPzIWcjq-vioxmE-1" source="X8RXfIPzIWcjq-vioxmE-13">
+        <mxCell id="X8RXfIPzIWcjq-vioxmE-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" parent="X8RXfIPzIWcjq-vioxmE-1" source="X8RXfIPzIWcjq-vioxmE-13" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="460" y="478" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="X8RXfIPzIWcjq-vioxmE-13" value="并发标记" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="X8RXfIPzIWcjq-vioxmE-1">
+        <mxCell id="X8RXfIPzIWcjq-vioxmE-13" value="并发标记" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="X8RXfIPzIWcjq-vioxmE-1" vertex="1">
           <mxGeometry x="290" y="470" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="X8RXfIPzIWcjq-vioxmE-14" value="GC Roots 追踪" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="X8RXfIPzIWcjq-vioxmE-1">
+        <mxCell id="X8RXfIPzIWcjq-vioxmE-14" value="GC Roots 追踪" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="X8RXfIPzIWcjq-vioxmE-1" vertex="1">
           <mxGeometry x="280" y="510" width="100" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="X8RXfIPzIWcjq-vioxmE-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="X8RXfIPzIWcjq-vioxmE-1" source="X8RXfIPzIWcjq-vioxmE-16" target="X8RXfIPzIWcjq-vioxmE-17">
+        <mxCell id="X8RXfIPzIWcjq-vioxmE-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="X8RXfIPzIWcjq-vioxmE-1" source="X8RXfIPzIWcjq-vioxmE-16" target="X8RXfIPzIWcjq-vioxmE-17" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X8RXfIPzIWcjq-vioxmE-16" value="最终标记" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="X8RXfIPzIWcjq-vioxmE-1">
+        <mxCell id="X8RXfIPzIWcjq-vioxmE-16" value="最终标记" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="X8RXfIPzIWcjq-vioxmE-1" vertex="1">
           <mxGeometry x="460" y="460" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="X8RXfIPzIWcjq-vioxmE-17" value="混合回收" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="X8RXfIPzIWcjq-vioxmE-1">
+        <mxCell id="X8RXfIPzIWcjq-vioxmE-17" value="混合回收" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="X8RXfIPzIWcjq-vioxmE-1" vertex="1">
           <mxGeometry x="620" y="467" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="X8RXfIPzIWcjq-vioxmE-19" value="35" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="X8RXfIPzIWcjq-vioxmE-1">
+        <mxCell id="X8RXfIPzIWcjq-vioxmE-19" value="35" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="X8RXfIPzIWcjq-vioxmE-1" vertex="1">
           <mxGeometry x="125" y="620" width="30" height="20" as="geometry" />
         </mxCell>
       </root>
