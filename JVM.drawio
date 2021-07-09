@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-07-07T09:47:50.943Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="HwSDzrUbpFkxULpGHsJT" version="14.8.3" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-07-09T03:22:17.897Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="6j2sOmY0YJvI0n5gDwRV" version="14.8.5" type="github" pages="3">
   <diagram id="AmMhCL5ko8pbZrgD_9A5" name="原理知识">
-    <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="806" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -154,10 +154,10 @@
         <mxCell id="M2nbLfg0sGjswrngjmOb-15" style="edgeStyle=isometricEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="M2nbLfg0sGjswrngjmOb-6" target="M2nbLfg0sGjswrngjmOb-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="M2nbLfg0sGjswrngjmOb-6" value="大对象" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="M2nbLfg0sGjswrngjmOb-6" value="大对象" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="127" y="585" width="90" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="M2nbLfg0sGjswrngjmOb-7" value="老年代" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="M2nbLfg0sGjswrngjmOb-7" value="老年代" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="430" y="600" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="M2nbLfg0sGjswrngjmOb-10" value="新生代" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
@@ -169,16 +169,16 @@
         <mxCell id="M2nbLfg0sGjswrngjmOb-14" value="&lt;p style=&quot;line-height: 160%&quot;&gt;小对象进入Eden 区去分配内存空间， 如果Eden 已经没有空间分配给 新的对象了 ，则触发 YGC , 在触发YGC之前，需要要进行 老年空间的判断，如果老年代空间大于 新生代中所有的对象的总和 ，则执行 YGC ， 如果新生代对象的内存空间小于所有对象的总和， 则要看是否开启了空间分配担保 ，&amp;nbsp; 如果没有开启空间分配担保，则执行FullGC , 如果开启了空间分配担保，那么就要看年轻代历次晋升老年代的对象的平均大小是否大于老年代的剩余空间，如果大于，则执行FullGC , 如果小于 ，则执行YGC 。 如果本次YGC的剩余对象大小大于了 老年代的剩余空间，则空间担保失败，再次执行Full GC&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#333333;" parent="1" vertex="1">
           <mxGeometry x="110" y="870" width="620" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="M2nbLfg0sGjswrngjmOb-16" value="" style="group" parent="1" vertex="1" connectable="0">
+        <mxCell id="M2nbLfg0sGjswrngjmOb-16" value="" style="group;" parent="1" vertex="1" connectable="0">
           <mxGeometry x="90" y="730" width="237" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="M2nbLfg0sGjswrngjmOb-9" value="Eden" style="rounded=1;whiteSpace=wrap;html=1;" parent="M2nbLfg0sGjswrngjmOb-16" vertex="1">
+        <mxCell id="M2nbLfg0sGjswrngjmOb-9" value="Eden" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="M2nbLfg0sGjswrngjmOb-16" vertex="1">
           <mxGeometry width="103.04347826086956" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="M2nbLfg0sGjswrngjmOb-11" value="S0" style="rounded=1;whiteSpace=wrap;html=1;" parent="M2nbLfg0sGjswrngjmOb-16" vertex="1">
+        <mxCell id="M2nbLfg0sGjswrngjmOb-11" value="S0" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="M2nbLfg0sGjswrngjmOb-16" vertex="1">
           <mxGeometry x="114.4927536231884" width="57.2463768115942" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="M2nbLfg0sGjswrngjmOb-12" value="S1" style="rounded=1;whiteSpace=wrap;html=1;" parent="M2nbLfg0sGjswrngjmOb-16" vertex="1">
+        <mxCell id="M2nbLfg0sGjswrngjmOb-12" value="S1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="M2nbLfg0sGjswrngjmOb-16" vertex="1">
           <mxGeometry x="179.75362318840578" width="57.2463768115942" height="40" as="geometry" />
         </mxCell>
         <mxCell id="M2nbLfg0sGjswrngjmOb-17" style="edgeStyle=isometricEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="M2nbLfg0sGjswrngjmOb-12" target="M2nbLfg0sGjswrngjmOb-7" edge="1">
@@ -200,7 +200,7 @@
           <mxGeometry x="30" y="770" width="60" height="20" as="geometry" />
         </mxCell>
         <mxCell id="6ygN8N_-m9w5AlkQJ7bZ-1" value="&lt;p style=&quot;line-height: 160%&quot;&gt;垃圾回收器在合适的时候 会把系统的工作线程全部停掉， 禁止程序继续运行创建新的对象，然后自己就用多个线程去进行垃圾回收， 回收的机制和算法跟之前说的是一样的。&lt;/p&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#333333;" parent="1" vertex="1">
-          <mxGeometry x="40" y="1200" width="620" height="130" as="geometry" />
+          <mxGeometry x="40" y="1200" width="620" height="60" as="geometry" />
         </mxCell>
         <mxCell id="QQJCR0-cmzw8u14hlUtk-1" value="老年代可用内存小于新生代全部对象的大小，如果没有开启空间担保参数，会直接触发Full GC&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="590" y="650" width="520" height="20" as="geometry" />
