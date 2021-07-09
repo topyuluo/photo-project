@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-09T03:22:17.897Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="6j2sOmY0YJvI0n5gDwRV" version="14.8.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-07-09T08:04:28.304Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="440vFvX5dSKogAbpYt9n" version="14.8.5" type="github" pages="3">
   <diagram id="AmMhCL5ko8pbZrgD_9A5" name="原理知识">
     <mxGraphModel dx="806" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -167,7 +167,7 @@
           <mxGeometry x="110" y="830" width="620" height="30" as="geometry" />
         </mxCell>
         <mxCell id="M2nbLfg0sGjswrngjmOb-14" value="&lt;p style=&quot;line-height: 160%&quot;&gt;小对象进入Eden 区去分配内存空间， 如果Eden 已经没有空间分配给 新的对象了 ，则触发 YGC , 在触发YGC之前，需要要进行 老年空间的判断，如果老年代空间大于 新生代中所有的对象的总和 ，则执行 YGC ， 如果新生代对象的内存空间小于所有对象的总和， 则要看是否开启了空间分配担保 ，&amp;nbsp; 如果没有开启空间分配担保，则执行FullGC , 如果开启了空间分配担保，那么就要看年轻代历次晋升老年代的对象的平均大小是否大于老年代的剩余空间，如果大于，则执行FullGC , 如果小于 ，则执行YGC 。 如果本次YGC的剩余对象大小大于了 老年代的剩余空间，则空间担保失败，再次执行Full GC&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#333333;" parent="1" vertex="1">
-          <mxGeometry x="110" y="870" width="620" height="130" as="geometry" />
+          <mxGeometry x="110" y="870" width="650" height="130" as="geometry" />
         </mxCell>
         <mxCell id="M2nbLfg0sGjswrngjmOb-16" value="" style="group;" parent="1" vertex="1" connectable="0">
           <mxGeometry x="90" y="730" width="237" height="40" as="geometry" />
@@ -185,7 +185,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="M2nbLfg0sGjswrngjmOb-18" value="&lt;p style=&quot;line-height: 160%&quot;&gt;Eden 区满了 ，执行 YGC , 存活的对象，就进入S区 中的一个区域，并清空Eden 区 ，继续产生对象， Eden区又满了， 就再次触发 YGC , 这时回收的区间 就包含了两个部分 ，一个是 Eden 区 和 之前的&amp;nbsp; S区中的一个 ，并将存货的对象 复制到了 S区中的另一个中 。年轻代的垃圾回收算法是 复制算法。 如果存活的对象 s1 + sn 的大小大于了 S区的一半 ， 则 对象中年龄 &amp;gt; n 的 对象 ，将晋升到老年代 。 如果 存活的对象 &amp;lt; S区的大小，则继续在S区存放，同时对象的年龄 +1 ， 如果 存货对象的大小 大于 S区的大小 则直接晋升到 老年代。 如果存活对象对象的年龄达到了晋升的阈值&amp;nbsp; ， 也晋升到老年代中。&lt;/p&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#333333;" parent="1" vertex="1">
-          <mxGeometry x="110" y="1010" width="620" height="130" as="geometry" />
+          <mxGeometry x="110" y="1010" width="690" height="120" as="geometry" />
         </mxCell>
         <mxCell id="M2nbLfg0sGjswrngjmOb-19" value="YGC" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="50" y="1060" width="40" height="20" as="geometry" />
