@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-09T05:43:49.053Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="mL9wftlHDxkWSfMab0aR" version="14.5.7" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2021-07-30T08:42:34.528Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="xNBt0sj7QH4TT-10MlmG" version="14.9.2" type="github" pages="7">
   <diagram id="2Xkt2TAEOzTNxrY3dc94" name="数据结构">
     <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1951,6 +1951,164 @@
         </mxCell>
         <mxCell id="FxToyOXMAds_lEhUvf5q-22" value="通过商品id查询商品信息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
           <mxGeometry x="100" y="3720" width="140" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="oFjMoi1jTSt41ugqG1nr" name="redis 分布式锁">
+    <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-0" />
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-1" parent="QOv29JMI8MwRSJFGYCb6-0" />
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="QOv29JMI8MwRSJFGYCb6-1" source="QOv29JMI8MwRSJFGYCb6-2" target="QOv29JMI8MwRSJFGYCb6-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="95" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-2" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="50" y="70" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-3" value="Redisson客户端" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="45" y="130" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-4" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="340" y="30" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-5" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="360" y="40" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-6" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="400" y="40" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-7" value="Redis 集群" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="475" y="20" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="QOv29JMI8MwRSJFGYCb6-1" source="QOv29JMI8MwRSJFGYCb6-9" target="QOv29JMI8MwRSJFGYCb6-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="195" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-9" value="获取锁对象" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="150" y="180" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-10" value="RedissonLock" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="155" y="210" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-13" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="QOv29JMI8MwRSJFGYCb6-1" source="QOv29JMI8MwRSJFGYCb6-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-12" value="调用lock方法" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="320" y="177.5" width="110" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-15" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="QOv29JMI8MwRSJFGYCb6-1" source="QOv29JMI8MwRSJFGYCb6-14" target="QOv29JMI8MwRSJFGYCb6-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-23" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="QOv29JMI8MwRSJFGYCb6-1" source="QOv29JMI8MwRSJFGYCb6-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="555" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-14" value="选取集群中的一个节点" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="490" y="150" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-16" value="crc16(key)&amp;nbsp; % 16384" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="520" y="100" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-20" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.014;entryY=1.05;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="QOv29JMI8MwRSJFGYCb6-1" source="QOv29JMI8MwRSJFGYCb6-18" target="QOv29JMI8MwRSJFGYCb6-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="670" y="220" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="640" y="226" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-18" value="执行LUA脚本" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="490" y="205" width="117.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-19" value="锁的数据结构：&lt;br&gt;lockName:{&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;UUID:ThreadId： 1&amp;nbsp;&lt;br&gt;&lt;br&gt;}" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="490" y="250" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-21" value="设置key值" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="680" y="212.5" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-22" value="设置过期时间" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="680" y="230" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-26" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="QOv29JMI8MwRSJFGYCb6-1" source="QOv29JMI8MwRSJFGYCb6-25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-27" value="判断key 是否存在 存在就续期" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="QOv29JMI8MwRSJFGYCb6-26">
+          <mxGeometry x="-0.2697" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-25" value="定时任务 10s执行一次" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="640" y="380" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-28" value="watch dog" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d79b00;fillColor=#ffe6cc;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="725" y="350" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-29" value="客户端线程在底层是如何加锁的？" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="10" y="500" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-30" value="先定位 master 节点&amp;nbsp; 通过key 计算出 CRC 16值 ，在CRC16值对16384取模得到&amp;nbsp; hash slot ,&amp;nbsp; 通过这个hash slot 定位到 redis集群中得master 节点" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="45" y="540" width="770" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-31" value="加锁：通过 lua 脚本实现，如果客户端线程第一次取加锁得话，会在key 对应得hash数据结构中添加线程标识 UUID:ThreadId 1&amp;nbsp; 指定该线程已经枷锁一次了" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="45" y="570" width="770" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-32" value="加锁成功之后，此时会对加锁得结果设置一个监听器，如果监听成功了，后台会启动一个定时任务，也就是看门狗机制，每隔10s 执行一次， 检查 如果key 依然存在，就设置 key 得存活时间为 30s&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="40" y="610" width="770" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-33" value="" style="endArrow=classic;html=1;" edge="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="230" as="sourcePoint" />
+            <mxPoint x="770" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="700" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-34" value="key 已经存在" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="QOv29JMI8MwRSJFGYCb6-33">
+          <mxGeometry x="0.2192" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-36" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="QOv29JMI8MwRSJFGYCb6-1" source="QOv29JMI8MwRSJFGYCb6-35">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="950" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-38" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="QOv29JMI8MwRSJFGYCb6-36">
+          <mxGeometry x="0.4" y="-2" relative="1" as="geometry">
+            <mxPoint x="-15" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-40" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="QOv29JMI8MwRSJFGYCb6-1" source="QOv29JMI8MwRSJFGYCb6-35">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="940" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-41" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="QOv29JMI8MwRSJFGYCb6-40">
+          <mxGeometry x="-0.4308" y="-2" relative="1" as="geometry">
+            <mxPoint x="10" y="6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-35" value="判断是否是同一个线程" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="770" y="130" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-39" value="UUID:ThreadId&amp;nbsp; 2&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="950" y="140" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-42" value="pttl&amp;nbsp; anyLock&amp;nbsp; 返回当前key 的剩余存活时间" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#b85450;fillColor=#f8cecc;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="850" y="235" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QOv29JMI8MwRSJFGYCb6-43" value="while 循环" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="QOv29JMI8MwRSJFGYCb6-1">
+          <mxGeometry x="860" y="270" width="70" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
