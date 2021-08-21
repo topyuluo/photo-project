@@ -1,1 +1,197 @@
-<mxfile host="app.diagrams.net" modified="2021-08-21T09:41:12.167Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" version="14.8.5" etag="frQ6hkrZvsioPA1X-mdE" type="github"><diagram id="P7G8GTeyHRKtR24iW_QI">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-08-21T15:36:14.772Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="5FXypbXm6YwuVetyY1NL" version="14.8.5" type="github">
+  <diagram id="P7G8GTeyHRKtR24iW_QI" name="第 1 页">
+    <mxGraphModel dx="1298" dy="866" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-1" value="Leader 节点" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="50" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-2" value="Observer 节点" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-3" value="Follower 节点" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="50" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-4" value="集群中的主节点 ， 负责整个集群的写操作" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="20" y="110" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-5" value="保证集群内事务的顺序性" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="20" y="140" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-6" value="同时还要负责Follower 节点和 Observer 节点的数据同步" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="10" y="180" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-7" value="接收client 的请求，并想client 请求返回结果" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="280" y="100" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-8" value="不处理写请求，而是转发到Leader 节点完成写入操作" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="270" y="130" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-9" value="参与Leader 节点的选举" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="310" y="160" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-10" value="不参与Leader节点的选举" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="600" y="100" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-11" value="其它功能和Follower 节点一样" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="600" y="130" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-12" value="Watch 机制" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="35" y="240" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-13" value="主动推送 ： watcher 机制被触发后，由zookeeper 集群主动将更新" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="310" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-14" value="一次性： watcher 只会被触发一次，如果客户端想要得到后续更新的通知 ， 必须要在Watcher 被触发后重新注册一个Watcher" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="340" width="680" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-15" value="可见性：" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="370" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-16" value="顺序性： 如果多个更新触发了Watcher ， 那么Watcher 被触发的 顺序与更新的顺序一致" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="400" width="480" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-20" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="5PwGi8R45MH65Nu5DJQK-17" target="5PwGi8R45MH65Nu5DJQK-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-21" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.6;entryY=0.033;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="5PwGi8R45MH65Nu5DJQK-17" target="5PwGi8R45MH65Nu5DJQK-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-17" value="Leader" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="490" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-18" value="follower&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="570" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-19" value="observer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="570" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-23" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="5PwGi8R45MH65Nu5DJQK-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="665" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-25" value="reader" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5PwGi8R45MH65Nu5DJQK-23">
+          <mxGeometry x="0.1259" y="2" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-24" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="5PwGi8R45MH65Nu5DJQK-22" target="5PwGi8R45MH65Nu5DJQK-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-26" value="reader" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5PwGi8R45MH65Nu5DJQK-24">
+          <mxGeometry x="0.1744" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-27" style="edgeStyle=isometricEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5PwGi8R45MH65Nu5DJQK-22" target="5PwGi8R45MH65Nu5DJQK-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="600" />
+              <mxPoint x="210" y="550" />
+              <mxPoint x="150" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-28" value="reader" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5PwGi8R45MH65Nu5DJQK-27">
+          <mxGeometry x="-0.0163" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-22" value="client" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="650" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-29" value="leader&amp;nbsp; follower observer 都可以处理读请求" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="195" y="670" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-30" value="每个节点上都保存了相同的数据副本，直接进行读取即可返回Client" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="230" y="700" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-31" value="读请求操作流程" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="30" y="530" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-32" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="5PwGi8R45MH65Nu5DJQK-34" target="5PwGi8R45MH65Nu5DJQK-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-33" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.6;entryY=0.033;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="5PwGi8R45MH65Nu5DJQK-34" target="5PwGi8R45MH65Nu5DJQK-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-46" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5PwGi8R45MH65Nu5DJQK-34" target="5PwGi8R45MH65Nu5DJQK-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-47" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5PwGi8R45MH65Nu5DJQK-34" target="5PwGi8R45MH65Nu5DJQK-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-34" value="Leader" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="375" y="800" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="5PwGi8R45MH65Nu5DJQK-35" target="5PwGi8R45MH65Nu5DJQK-34">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="880" />
+              <mxPoint x="310" y="815" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-42" value="2⃣️请求转发" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5PwGi8R45MH65Nu5DJQK-41">
+          <mxGeometry x="-0.2933" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-50" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.389;entryY=1.033;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="5PwGi8R45MH65Nu5DJQK-35" target="5PwGi8R45MH65Nu5DJQK-34">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="888" />
+              <mxPoint x="400" y="831" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-51" value="5⃣️" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5PwGi8R45MH65Nu5DJQK-50">
+          <mxGeometry x="0.1474" y="5" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-35" value="follower&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="880" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-36" value="observer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="475" y="880" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-39" value="1⃣️write" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5PwGi8R45MH65Nu5DJQK-38" target="5PwGi8R45MH65Nu5DJQK-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-38" value="client" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="35" y="880" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-40" value="写操作处理流程" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="55" y="800" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-43" value="3⃣️ 会为写请求 生成一个全局的事务ID zxid" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="490" y="800" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-44" value="通过 zxid 的大小比较 就可以实现写操作的顺序一致性" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="520" y="830" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-45" value="4⃣️ 将带有 zxid 的消息作为一个proposal（提案） 分发给所有的follower 节点" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="255" y="770" width="420" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-48" value="4⃣️" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="405" y="870" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-49" value="5⃣️ 当Follower 节点接收到 proposal 之后 ，&lt;br&gt;会先讲 proposal 写到本地事务日志中 ，写事务成功之后，再向Leader 节点回应一个ack" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="280" y="940" width="480" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-52" value="6⃣️ 当Leader 节点接收到过半的Follower 的ack 响应之后， Leader 节点就向所有Follower 节点发送Commit 命令&lt;br&gt;并在本地执行提交" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="220" y="985" width="600" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-53" value="7⃣️ 当Follower 收到消息的commit 命令之后&amp;nbsp; 也会执行commit 操作 ， 写操作到此完成" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="215" y="1030" width="460" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PwGi8R45MH65Nu5DJQK-54" value="8⃣️ 最后 follower 节点会返回 Client 写请求的响应的响应" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="215" y="1070" width="310" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
