@@ -1,1 +1,100 @@
-<mxfile host="app.diagrams.net" modified="2021-08-23T04:02:41.724Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="Fecioxul9QjL8IwpmZTu" version="14.9.8" type="github"><diagram id="dtXTNnCRT1JeaTBHfS76" name="第 1 页">7Vptj5s4EP41ltoPWwHm9SMkpK10e1cpJ7X7qWKDQ7gSzBGnm/TX3wyY8LpRViJk91QpUuyxx9jPPDOeISF0tj18zINsc89DlhBNCQ+EzommqbqmEfwo4bGU2IpeCqI8DkuRUguW8S8mNSvpPg7ZTspKkeA8EXHWFq54mrKVaMmCPOdP7WlrnoQtQRZErCdYroKkL/0ah2IjT6FZtfwTi6NN9WTVdMqRbVBNlifZbYKQPzVE1Cd0lnMuytb2MGMJgtfGZfHM6GljOUvFJQrGl6WeO9+V7/vs3qP33vrh4/5OWmcnjtWBWQjnl12eiw2PeBokfi31cr5PQ4arKtCr5/zBeQZCFYT/MCGO0pjBXnAQbcQ2kaPsEItvjfYDLvXBkL35Qa5cdI5VJxX58Vuz09DCbq1W9Cq98nx4qGdhk6Id3+crdgarin5BHjFxZh49GRe8gvEtg/2AXs6SQMQ/2/sIJD2j07yT6hceww41pXIlWxJLOpJa8apaotyX1Kp5AI3GNmpRwY4XMEV/K0wZ2+KjW1KjHUva01rSfiuWfEM+b43BFDfPg2NjQoYM2J0hkjJMpMWF8+EsHX6VOxiVbfLQP4NkL2EgurLM8jiNPLj73CxL4pWIedpjZc05JM3TJhZsmQWFuZ4g2WjzSz6F5YIdzlu9b6VKoYOmWaKjPNX3vqpLV9007nyqPG/Xlu++FDp6HroZT9dxtM+DV4Gepj1zPzXhM6eEzxiCb8a3GU/hTJDjvQLQulfBEOe0KUGr8u7b3A71jfDQGHm1t4N14e2gXieRoJ2IpTnTJhLWkIP5afCYMBdM/MriU8fVThXmzeKT04fPt4ltEdclvkFsl7h21VBwyJvjR2tcAdAhvkUcl9g68R3iecSxcarrE7eQ2KA/xzmgCcKuFQBP0YY6SOIohfYKcGU5CBD1GApiVw5s4zAsvZ7t4l9obOlYMl2BdQ2PGHNcC1iwK30el96JnP9gM55wWHeeQhgex7S6QjumHYiizoBpuyXUeFH0pnX1GFHUmjLJvjTLVq9TWutmOzTQrstfOY6qAzky+r1CnEUVABwIrZ8hdclLnzeJR4vwAK4OAYPePLxSoxNejYHwOm0mY/72wRf4IL3UB40xfPClpa6p6m0X1WiTIL35lu6cm3+lUte6LeO0N5U8X844+ypR3+pkz3Ti7Ll6/G+2jMqWxm8rY7LFMKwWW3R9YrYMvAyC1MBdEG9W5AjQhsis9AqvMmlYsoStBOTdWAmoWCfcOmHQnU7CYPcThlNyME3CMPDCCPOrBcKFEC+IY9YAYkFm4SgMeX5RgOnEgwLOq0syQLio1T6sA0Q/ZjtM3WAVqPJwtkc8s1jaRAOiPX3i9ePC1LaxOskcVQZsM20yZw/axlsUSJqIJNa7vWIZJdBuVsmvxQGszgsJqt86Y64e1okxgJ7d5L2JvJcuUaJ9ArkiMDTAvbE+KVzCnd8cbbPz2we1LkS7G+fHQ3ug6tPMBF/H7DJ8N92Ay/x3j38T8FbluxMX77Po8Z2qmFgNarABRcXwVbU14z12EDnlMVj9iAq47zrqRY0mVTrt9/UzoRXJ72Jza17ci/3N4cBd+brHLTaRHQZWAfrYDta2GAhn2Eb6zIr493xExZq3uOocXPre/9u9+/zn4i8A/hRgxaoMsHKbMFTutL37QgPRrcT/xxdi3dCiWWY/fhsDZK/C7AvIDt36PyxltlP/E4j6/wE=</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-08-23T06:25:10.801Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="rBFJ_XY-kgtMFW80p_rT" version="14.9.8" type="github">
+  <diagram id="dtXTNnCRT1JeaTBHfS76" name="第 1 页">
+    <mxGraphModel dx="1422" dy="804" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5PS4r9_0_upMB3MBfYGu-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="5PS4r9_0_upMB3MBfYGu-1" target="5PS4r9_0_upMB3MBfYGu-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="189" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5PS4r9_0_upMB3MBfYGu-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="5PS4r9_0_upMB3MBfYGu-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="239" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5PS4r9_0_upMB3MBfYGu-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="5PS4r9_0_upMB3MBfYGu-1" target="5PS4r9_0_upMB3MBfYGu-7" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="209" y="180" />
+              <mxPoint x="209" y="225" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5PS4r9_0_upMB3MBfYGu-1" value="@SpringBootAppliction" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="19" y="165" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PS4r9_0_upMB3MBfYGu-3" value="@SpringBootConfiguration" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="229" y="120" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PS4r9_0_upMB3MBfYGu-5" value="@ComponentScan" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="239" y="165" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PS4r9_0_upMB3MBfYGu-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="5PS4r9_0_upMB3MBfYGu-7" target="5PS4r9_0_upMB3MBfYGu-11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="319" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5PS4r9_0_upMB3MBfYGu-7" value="@EnableAutoConfiguration" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="239" y="210" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PS4r9_0_upMB3MBfYGu-9" value="自动加载 SpringBoot 的默认配置" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="403" y="215" width="190" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5PS4r9_0_upMB3MBfYGu-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="5PS4r9_0_upMB3MBfYGu-11" target="5PS4r9_0_upMB3MBfYGu-13" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="469" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5PS4r9_0_upMB3MBfYGu-11" value="借助@Import 注解" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="359" y="250" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PS4r9_0_upMB3MBfYGu-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="5PS4r9_0_upMB3MBfYGu-13" target="5PS4r9_0_upMB3MBfYGu-15" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="614" y="323" />
+              <mxPoint x="749" y="323" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5PS4r9_0_upMB3MBfYGu-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="5PS4r9_0_upMB3MBfYGu-13" target="5PS4r9_0_upMB3MBfYGu-18" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="719" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5PS4r9_0_upMB3MBfYGu-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="5PS4r9_0_upMB3MBfYGu-13" target="5PS4r9_0_upMB3MBfYGu-20" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="557" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5PS4r9_0_upMB3MBfYGu-13" value="导入 AutoConfigurationImportSelector类" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="499" y="280" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PS4r9_0_upMB3MBfYGu-15" value="读取类路径下的 spring.factories文件内容" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="759" y="300" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PS4r9_0_upMB3MBfYGu-18" value="过滤加载到的类" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="739" y="340" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PS4r9_0_upMB3MBfYGu-20" value="将类添加到容器中" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="609" y="370" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5PS4r9_0_upMB3MBfYGu-21" value="&lt;span style=&quot;color: rgb(106 , 115 , 125) ; background-color: rgb(250 , 250 , 250)&quot;&gt;&lt;font style=&quot;font-size: 12px&quot;&gt;所有包路径下 ： META-INFO/spring.fatcories&lt;/font&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="739" y="276" width="250" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="Lq-H3Xx7saDETIWOeCJo-2" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint y="80" as="sourcePoint" />
+            <mxPoint x="980" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lq-H3Xx7saDETIWOeCJo-3" value="springboot 自动配置流程" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Lq-H3Xx7saDETIWOeCJo-2">
+          <mxGeometry x="0.034" y="1" relative="1" as="geometry">
+            <mxPoint x="-376" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
