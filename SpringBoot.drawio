@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-23T06:25:10.801Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="rBFJ_XY-kgtMFW80p_rT" version="14.9.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-23T06:27:27.639Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="4UzypGNY_cJqkIzPUl46" version="14.9.8" type="github">
   <diagram id="dtXTNnCRT1JeaTBHfS76" name="第 1 页">
     <mxGraphModel dx="1422" dy="804" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -42,56 +42,52 @@
         <mxCell id="5PS4r9_0_upMB3MBfYGu-9" value="自动加载 SpringBoot 的默认配置" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="403" y="215" width="190" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="5PS4r9_0_upMB3MBfYGu-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="5PS4r9_0_upMB3MBfYGu-11" target="5PS4r9_0_upMB3MBfYGu-13" edge="1">
+        <mxCell id="5PS4r9_0_upMB3MBfYGu-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.383;entryY=0.067;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="5PS4r9_0_upMB3MBfYGu-11" target="5PS4r9_0_upMB3MBfYGu-13" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="469" y="330" as="targetPoint" />
+            <mxPoint x="419" y="330" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="5PS4r9_0_upMB3MBfYGu-11" value="借助@Import 注解" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="359" y="250" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="5PS4r9_0_upMB3MBfYGu-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="5PS4r9_0_upMB3MBfYGu-13" target="5PS4r9_0_upMB3MBfYGu-15" edge="1">
+        <mxCell id="Lq-H3Xx7saDETIWOeCJo-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5PS4r9_0_upMB3MBfYGu-13" target="5PS4r9_0_upMB3MBfYGu-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lq-H3Xx7saDETIWOeCJo-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5PS4r9_0_upMB3MBfYGu-13" target="5PS4r9_0_upMB3MBfYGu-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lq-H3Xx7saDETIWOeCJo-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" target="5PS4r9_0_upMB3MBfYGu-15">
           <mxGeometry relative="1" as="geometry">
+            <mxPoint x="445" y="368" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="614" y="323" />
-              <mxPoint x="749" y="323" />
+              <mxPoint x="445" y="379" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="5PS4r9_0_upMB3MBfYGu-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="5PS4r9_0_upMB3MBfYGu-13" target="5PS4r9_0_upMB3MBfYGu-18" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="719" y="390" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="5PS4r9_0_upMB3MBfYGu-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="5PS4r9_0_upMB3MBfYGu-13" target="5PS4r9_0_upMB3MBfYGu-20" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="557" y="440" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="5PS4r9_0_upMB3MBfYGu-13" value="导入 AutoConfigurationImportSelector类" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="499" y="280" width="230" height="30" as="geometry" />
+          <mxGeometry x="330" y="340" width="230" height="24" as="geometry" />
         </mxCell>
         <mxCell id="5PS4r9_0_upMB3MBfYGu-15" value="读取类路径下的 spring.factories文件内容" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="759" y="300" width="220" height="30" as="geometry" />
+          <mxGeometry x="590" y="364" width="220" height="20" as="geometry" />
         </mxCell>
         <mxCell id="5PS4r9_0_upMB3MBfYGu-18" value="过滤加载到的类" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="739" y="340" width="120" height="30" as="geometry" />
+          <mxGeometry x="590" y="400" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="5PS4r9_0_upMB3MBfYGu-20" value="将类添加到容器中" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="609" y="370" width="120" height="40" as="geometry" />
+          <mxGeometry x="590" y="430" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="5PS4r9_0_upMB3MBfYGu-21" value="&lt;span style=&quot;color: rgb(106 , 115 , 125) ; background-color: rgb(250 , 250 , 250)&quot;&gt;&lt;font style=&quot;font-size: 12px&quot;&gt;所有包路径下 ： META-INFO/spring.fatcories&lt;/font&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="739" y="276" width="250" height="18" as="geometry" />
+          <mxGeometry x="570" y="330" width="250" height="18" as="geometry" />
         </mxCell>
         <mxCell id="Lq-H3Xx7saDETIWOeCJo-2" value="" style="endArrow=none;html=1;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint y="80" as="sourcePoint" />
-            <mxPoint x="980" y="80" as="targetPoint" />
+            <mxPoint x="820" y="80" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="Lq-H3Xx7saDETIWOeCJo-3" value="springboot 自动配置流程" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Lq-H3Xx7saDETIWOeCJo-2">
           <mxGeometry x="0.034" y="1" relative="1" as="geometry">
-            <mxPoint x="-376" as="offset" />
+            <mxPoint x="-344" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
