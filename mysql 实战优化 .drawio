@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-08-23T11:02:05.672Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="3nPuhnvxUhqOddwwenwO" version="14.9.8" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2021-08-24T03:06:15.593Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="z33m-htHLgcZsOyyXnty" version="14.9.8" type="github" pages="6">
   <diagram id="QEoOFMB9QdWzOJR0WDVQ" name="架构设计">
-    <mxGraphModel dx="868" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="838" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -116,7 +116,7 @@
         <mxCell id="zALf2eaeC74s68lvdfPb-69" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=classic;endFill=1;" parent="1" source="zALf2eaeC74s68lvdfPb-35" target="zALf2eaeC74s68lvdfPb-67" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="zALf2eaeC74s68lvdfPb-35" value="Buffer Pool&lt;br&gt;缓冲池" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+        <mxCell id="zALf2eaeC74s68lvdfPb-35" value="&lt;font color=&quot;#ff3333&quot;&gt;Buffer Pool&lt;br&gt;缓冲池&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="237.75" y="813" width="78.5" height="50" as="geometry" />
         </mxCell>
         <mxCell id="zALf2eaeC74s68lvdfPb-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="zALf2eaeC74s68lvdfPb-36" target="zALf2eaeC74s68lvdfPb-35" edge="1">
@@ -130,7 +130,7 @@
         <mxCell id="zALf2eaeC74s68lvdfPb-36" value="磁盘" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;shadow=1;sketch=1;" parent="1" vertex="1">
           <mxGeometry x="252" y="940" width="50" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="zALf2eaeC74s68lvdfPb-40" value="&lt;p style=&quot;line-height: 200%&quot;&gt;在执行这一条更新语句的时候，首先要找到这条更新语句 ，先看是否在缓冲池中，如果不在，就直接从磁盘加载到缓冲池中，然后给该记录添加独占锁&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;将原来的旧值，写入到 undo 日志文件 ，便于回滚操作&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;更新内存中的数据 ， 此时脏数据便产生了，因为内存中的数据是更新后的值，但是磁盘中对应的数据还是原来的值&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;将更新操作，写入到 redo log buffer 中&amp;nbsp; ，作为备选方案，在服务宕机时，完成数据的一致性。&amp;nbsp; 注意此时事务还没有提交，系统宕机不影响数据的一致性 ，提交事务的时候，按照一定的策略把redo 日志从redo log buffer 里刷入到磁盘文件里去。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=0;" parent="1" vertex="1">
+        <mxCell id="zALf2eaeC74s68lvdfPb-40" value="&lt;p style=&quot;line-height: 200%&quot;&gt;在执行这一条更新语句的时候，首先要找到这条更新语句 ，先看是否在缓冲池中，如果不在，就直接从磁盘加载到缓冲池中，然后给该记录添加&lt;font color=&quot;#ff3333&quot;&gt;独占锁&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;将原来的旧值，写入到 undo 日志文件 ，便于回滚操作&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;更新内存中的数据 ， 此时脏数据便产生了，因为内存中的数据是更新后的值，但是磁盘中对应的数据还是原来的值&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;将更新操作，写入到 redo log buffer 中&amp;nbsp; ，作为备选方案，在服务宕机时，完成数据的一致性。&amp;nbsp; 注意此时事务还没有提交，系统宕机不影响数据的一致性 ，提交事务的时候，按照一定的策略把redo 日志从redo log buffer 里刷入到磁盘文件里去。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;sketch=0;" parent="1" vertex="1">
           <mxGeometry x="80" y="1000" width="740" height="180" as="geometry" />
         </mxCell>
         <mxCell id="zALf2eaeC74s68lvdfPb-42" value="undo&amp;nbsp; 日志文件" style="shape=card;whiteSpace=wrap;html=1;shadow=0;sketch=1;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
