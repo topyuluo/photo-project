@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-25T06:07:38.609Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="cTZHQVQ9elzkyxB83L15" version="14.9.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-25T06:44:36.568Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="WgclJTXvZ9uUTXGZvSW4" version="14.9.8" type="github">
   <diagram id="U75D6ok_2tAu_uyZ1ZS5" name="注册中心-registry">
     <mxGraphModel dx="868" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -36,27 +36,25 @@
         <mxCell id="jPJzqkFTm8ux6lbCC3V2-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="jPJzqkFTm8ux6lbCC3V2-9" target="jPJzqkFTm8ux6lbCC3V2-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.409;entryY=-0.067;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="jPJzqkFTm8ux6lbCC3V2-9" target="jPJzqkFTm8ux6lbCC3V2-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="jPJzqkFTm8ux6lbCC3V2-9" value="Registry" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="499" y="200" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="jPJzqkFTm8ux6lbCC3V2-13" value="拥有注册能力的节点" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="609" y="205" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="jPJzqkFTm8ux6lbCC3V2-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="jPJzqkFTm8ux6lbCC3V2-14">
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="jPJzqkFTm8ux6lbCC3V2-14" target="jPJzqkFTm8ux6lbCC3V2-9">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="550" y="248" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jPJzqkFTm8ux6lbCC3V2-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="jPJzqkFTm8ux6lbCC3V2-14" target="jPJzqkFTm8ux6lbCC3V2-22">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="470" y="300" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="jPJzqkFTm8ux6lbCC3V2-14" value="RegistryFactory" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="290" y="230" width="110" height="35" as="geometry" />
+          <mxGeometry x="285" y="205" width="110" height="35" as="geometry" />
         </mxCell>
         <mxCell id="jPJzqkFTm8ux6lbCC3V2-15" value="工厂接口：负责创建Registry 对象" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry x="245" y="200" width="190" height="20" as="geometry" />
+          <mxGeometry x="270" y="180" width="190" height="20" as="geometry" />
         </mxCell>
         <mxCell id="jPJzqkFTm8ux6lbCC3V2-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="jPJzqkFTm8ux6lbCC3V2-17" target="jPJzqkFTm8ux6lbCC3V2-14">
           <mxGeometry relative="1" as="geometry" />
@@ -69,11 +67,25 @@
         <mxCell id="jPJzqkFTm8ux6lbCC3V2-17" value="RegistryFactoryWrapper" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="10" y="320" width="150" height="35" as="geometry" />
         </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="jPJzqkFTm8ux6lbCC3V2-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="507" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="jPJzqkFTm8ux6lbCC3V2-22" value="AbstractRegistry" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="450" y="310" width="110" height="30" as="geometry" />
+          <mxGeometry x="479" y="310" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="jPJzqkFTm8ux6lbCC3V2-23" value="将当前节点订阅的URL信息缓存到本地Properties 文件中" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="440" y="280" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-27" value="FailbackRegistry&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="479" y="380" width="101" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-28" value="失败的任务提交到时间轮" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="620" y="390" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-29" value="提供了重试机制" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="589" y="370" width="100" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
