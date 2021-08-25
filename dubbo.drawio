@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-25T08:06:10.320Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="rCn-1WSRS1StnYoRh-H8" version="14.9.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-25T08:39:48.376Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="OPVOhLshQT3fOImr5gp7" version="14.9.8" type="github">
   <diagram id="U75D6ok_2tAu_uyZ1ZS5" name="注册中心-registry">
     <mxGraphModel dx="868" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -134,14 +134,17 @@
         <mxCell id="jPJzqkFTm8ux6lbCC3V2-41" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jPJzqkFTm8ux6lbCC3V2-34" target="jPJzqkFTm8ux6lbCC3V2-39">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-68" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="jPJzqkFTm8ux6lbCC3V2-34" target="jPJzqkFTm8ux6lbCC3V2-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="jPJzqkFTm8ux6lbCC3V2-34" value="providers" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="160" y="1090" width="70" height="30" as="geometry" />
         </mxCell>
         <mxCell id="jPJzqkFTm8ux6lbCC3V2-35" value="consumers" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="240" y="1090" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jPJzqkFTm8ux6lbCC3V2-39" value="host:ip ，host:ip" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="120" y="1150" width="110" height="30" as="geometry" />
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-39" value="host:ip" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1169" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="jPJzqkFTm8ux6lbCC3V2-45" value="routes" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="330" y="1090" width="70" height="30" as="geometry" />
@@ -199,6 +202,9 @@
         </mxCell>
         <mxCell id="jPJzqkFTm8ux6lbCC3V2-66" value="这两种状态需要重新注册/订阅" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="565" y="620" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-67" value="host:ip" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="1160" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
