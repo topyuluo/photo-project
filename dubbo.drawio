@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2021-08-25T07:13:12.336Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="VJIMSM_uiImtYZB1bfVX" version="14.9.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-25T08:06:10.320Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="rCn-1WSRS1StnYoRh-H8" version="14.9.8" type="github">
   <diagram id="U75D6ok_2tAu_uyZ1ZS5" name="注册中心-registry">
     <mxGraphModel dx="868" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-60" value="zk 集群" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="452.5" width="230" height="115" as="geometry" />
+        </mxCell>
         <mxCell id="jPJzqkFTm8ux6lbCC3V2-1" value="" style="endArrow=none;html=1;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint y="20" as="sourcePoint" />
@@ -50,18 +53,23 @@
             <mxPoint x="550" y="248" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-48" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="jPJzqkFTm8ux6lbCC3V2-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="jPJzqkFTm8ux6lbCC3V2-14" value="RegistryFactory" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="285" y="205" width="110" height="35" as="geometry" />
         </mxCell>
         <mxCell id="jPJzqkFTm8ux6lbCC3V2-15" value="工厂接口：负责创建Registry 对象" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="270" y="180" width="190" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="jPJzqkFTm8ux6lbCC3V2-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="jPJzqkFTm8ux6lbCC3V2-17" target="jPJzqkFTm8ux6lbCC3V2-14">
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="jPJzqkFTm8ux6lbCC3V2-17" target="jPJzqkFTm8ux6lbCC3V2-14">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="jPJzqkFTm8ux6lbCC3V2-19" value="封装了一个 ListenerRegistryWrapper" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="jPJzqkFTm8ux6lbCC3V2-18">
           <mxGeometry x="-0.1078" y="1" relative="1" as="geometry">
-            <mxPoint x="-26" y="-28" as="offset" />
+            <mxPoint x="-155" y="-28" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="jPJzqkFTm8ux6lbCC3V2-17" value="RegistryFactoryWrapper" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -140,6 +148,57 @@
         </mxCell>
         <mxCell id="jPJzqkFTm8ux6lbCC3V2-47" value="configurations" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="429" y="1100" width="96" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-49" value="AbstractRegistryFactory" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="349" width="135" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-51" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="jPJzqkFTm8ux6lbCC3V2-50">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-50" value="ZookeeperTransporter" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="490" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-54" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="jPJzqkFTm8ux6lbCC3V2-52">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-62" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="jPJzqkFTm8ux6lbCC3V2-52">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-52" value="ZookeeperClient" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="490" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-53" value="创建" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="190" y="480" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-55" value="实例" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="380" y="490" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-56" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="500" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-57" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="460" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-58" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="525" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-63" value="添加一个连接状态监听器" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="590" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-64" value="reconnected" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="630" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-65" value="new_session_created" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="585" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jPJzqkFTm8ux6lbCC3V2-66" value="这两种状态需要重新注册/订阅" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="565" y="620" width="170" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
