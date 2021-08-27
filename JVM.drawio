@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-07-15T09:42:32.443Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="nZbe84hGKZCSqB-i28Sj" version="14.8.6" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-08-27T06:25:20.722Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="DxbtIzzilho0kEWAWf0V" version="14.9.8" type="github" pages="4">
   <diagram id="AmMhCL5ko8pbZrgD_9A5" name="原理知识">
-    <mxGraphModel dx="806" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="868" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -217,20 +217,20 @@
         <mxCell id="xaewUkdE2cHyr1QLKa09-1" value="空间分配担保参数 在1.6以后被废弃了" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="594" y="780" width="220" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="rBLAgPQ19MgcERj1dq79-1" value="什么情况下 会发生 MetaSpace 内存溢出" style="text;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="rBLAgPQ19MgcERj1dq79-1" value="什么情况下 会发生 MetaSpace 内存溢出" style="text;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="40" y="1300" width="230" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="rBLAgPQ19MgcERj1dq79-2" value="MetaSpace 使用默认参数， 不设置大小" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="rBLAgPQ19MgcERj1dq79-2" value="MetaSpace 使用默认参数， 不设置大小" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="60" y="1350" width="230" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="rBLAgPQ19MgcERj1dq79-3" value="使用 cglib 之类的技术动态生成一些类，&amp;nbsp; 一旦代码中没有控制好 ， 导致生成了太多的类" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="rBLAgPQ19MgcERj1dq79-3" value="使用 cglib 之类的技术动态生成一些类，&amp;nbsp; 一旦代码中没有控制好 ， 导致生成了太多的类" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="60" y="1380" width="480" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="GTvnA2pV-J6S61azsthF" name="案例实战">
-    <mxGraphModel dx="1360" dy="834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="868" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="xPJ-MtGCqqJg5Sht0kI_-0" />
         <mxCell id="xPJ-MtGCqqJg5Sht0kI_-1" parent="xPJ-MtGCqqJg5Sht0kI_-0" />
@@ -285,38 +285,38 @@
         <mxCell id="0-Vu8XNlEMsKAJjRzUOd-2" value="内存分配，参数设置不合理， 导致你的对象频繁的进入老年代 ，然后频繁的触发老年代GC ,&amp;nbsp; 导致系统每隔几分钟就要卡 几秒钟" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="xPJ-MtGCqqJg5Sht0kI_-1" vertex="1">
           <mxGeometry x="50" y="1060" width="750" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="kEZIg4psn-Hf0njjS_xB-0" value="cpu 负载过高的原因" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="xPJ-MtGCqqJg5Sht0kI_-1">
+        <mxCell id="kEZIg4psn-Hf0njjS_xB-0" value="cpu 负载过高的原因" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="xPJ-MtGCqqJg5Sht0kI_-1" vertex="1">
           <mxGeometry x="30" y="1110" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="kEZIg4psn-Hf0njjS_xB-1" value="第一个场景：&amp;nbsp; 系统创建了大量的线程 ，这些线程同时运行，工作负载都很重， 过多的线程同时并发的运行就会导致CPU负载过高" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="xPJ-MtGCqqJg5Sht0kI_-1">
+        <mxCell id="kEZIg4psn-Hf0njjS_xB-1" value="第一个场景：&amp;nbsp; 系统创建了大量的线程 ，这些线程同时运行，工作负载都很重， 过多的线程同时并发的运行就会导致CPU负载过高" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="xPJ-MtGCqqJg5Sht0kI_-1" vertex="1">
           <mxGeometry x="50" y="1160" width="720" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="kEZIg4psn-Hf0njjS_xB-2" value="第二个场景：&amp;nbsp; 服务器在执行频繁的 Full GC , Full GC 是非常耗费CPU资源的" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="xPJ-MtGCqqJg5Sht0kI_-1">
+        <mxCell id="kEZIg4psn-Hf0njjS_xB-2" value="第二个场景：&amp;nbsp; 服务器在执行频繁的 Full GC , Full GC 是非常耗费CPU资源的" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="xPJ-MtGCqqJg5Sht0kI_-1" vertex="1">
           <mxGeometry x="50" y="1190" width="720" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="kEZIg4psn-Hf0njjS_xB-3" value="频繁Full GC 的原因" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#9673a6;fillColor=#e1d5e7;" vertex="1" parent="xPJ-MtGCqqJg5Sht0kI_-1">
+        <mxCell id="kEZIg4psn-Hf0njjS_xB-3" value="频繁Full GC 的原因" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#9673a6;fillColor=#e1d5e7;" parent="xPJ-MtGCqqJg5Sht0kI_-1" vertex="1">
           <mxGeometry x="45" y="1240" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="kEZIg4psn-Hf0njjS_xB-4" value="内存分配不合理， 导致对象频繁进入老年代 ，进而引发频繁的Full GC" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="xPJ-MtGCqqJg5Sht0kI_-1">
+        <mxCell id="kEZIg4psn-Hf0njjS_xB-4" value="内存分配不合理， 导致对象频繁进入老年代 ，进而引发频繁的Full GC" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="xPJ-MtGCqqJg5Sht0kI_-1" vertex="1">
           <mxGeometry x="80" y="1280" width="620" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="kEZIg4psn-Hf0njjS_xB-5" value="存在内存泄漏 等问题 ， 就是内存里驻留了大量的对象塞满了老年代" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="xPJ-MtGCqqJg5Sht0kI_-1">
+        <mxCell id="kEZIg4psn-Hf0njjS_xB-5" value="存在内存泄漏 等问题 ， 就是内存里驻留了大量的对象塞满了老年代" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="xPJ-MtGCqqJg5Sht0kI_-1" vertex="1">
           <mxGeometry x="80" y="1310" width="620" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="kEZIg4psn-Hf0njjS_xB-6" value="永久代里 类太多 ， 触发了 FullGC&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="xPJ-MtGCqqJg5Sht0kI_-1">
+        <mxCell id="kEZIg4psn-Hf0njjS_xB-6" value="永久代里 类太多 ， 触发了 FullGC&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="xPJ-MtGCqqJg5Sht0kI_-1" vertex="1">
           <mxGeometry x="80" y="1340" width="620" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="kEZIg4psn-Hf0njjS_xB-7" value="显式调用&amp;nbsp; System.gc()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="xPJ-MtGCqqJg5Sht0kI_-1">
+        <mxCell id="kEZIg4psn-Hf0njjS_xB-7" value="显式调用&amp;nbsp; System.gc()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="xPJ-MtGCqqJg5Sht0kI_-1" vertex="1">
           <mxGeometry x="80" y="1370" width="620" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="-0SwxpCEsYQMBkTRbr6w-0" value="“-Xms4096M -Xmx4096M -Xmn3072M -Xss1M -XX:MetaspaceSize=256M -XX:MaxMetaspaceSize=256M -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFaction=92 -XX:+UseCMSCompactAtFullCollection -XX:CMSFullGCsBeforeCompaction=0 -XX:+CMSParallelInitialMarkEnabled -XX:+CMSScavengeBeforeRemark -XX:+DisableExplicitGC -XX:+PrintGCDetails -Xloggc:gc.log -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/usr/local/app/oom”" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="xPJ-MtGCqqJg5Sht0kI_-1">
+        <mxCell id="-0SwxpCEsYQMBkTRbr6w-0" value="“-Xms4096M -Xmx4096M -Xmn3072M -Xss1M -XX:MetaspaceSize=256M -XX:MaxMetaspaceSize=256M -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFaction=92 -XX:+UseCMSCompactAtFullCollection -XX:CMSFullGCsBeforeCompaction=0 -XX:+CMSParallelInitialMarkEnabled -XX:+CMSScavengeBeforeRemark -XX:+DisableExplicitGC -XX:+PrintGCDetails -Xloggc:gc.log -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/usr/local/app/oom”" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="xPJ-MtGCqqJg5Sht0kI_-1" vertex="1">
           <mxGeometry x="80" y="1420" width="690" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="__VSMCPXQtOVtfrFC9ZD" name="垃圾回收器">
-    <mxGraphModel dx="866" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="868" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="X8RXfIPzIWcjq-vioxmE-0" />
         <mxCell id="X8RXfIPzIWcjq-vioxmE-1" parent="X8RXfIPzIWcjq-vioxmE-0" />
@@ -377,6 +377,149 @@
         </mxCell>
         <mxCell id="X8RXfIPzIWcjq-vioxmE-19" value="35" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="X8RXfIPzIWcjq-vioxmE-1" vertex="1">
           <mxGeometry x="125" y="620" width="30" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="I4liHpHVkyVAWp47B3re" name="对象">
+    <mxGraphModel dx="868" dy="492" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-0" />
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-1" parent="eDpRbFdm1n3JCNUc__xO-0" />
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-2" value="32 位 虚拟机 对象头分配情况" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="62" y="28" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-3" value="锁状态" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7EA6E0;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="80" y="120" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-4" value="无锁" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#C3ABD0;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="80" y="170" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-5" value="偏向锁" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#C3ABD0;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="80" y="200" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-6" value="轻量级锁" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#C3ABD0;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="80" y="230" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-7" value="重量级锁" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#C3ABD0;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="80" y="260" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-8" value="" style="endArrow=none;html=1;dashed=1;strokeColor=#7EA6E0;" edge="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="150" as="sourcePoint" />
+            <mxPoint x="550" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-9" value="" style="endArrow=none;html=1;dashed=1;" edge="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="280" as="sourcePoint" />
+            <mxPoint x="170" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-10" value="25位" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7EA6E0;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="180" y="100" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-11" value="23位" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7EA6E0;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="180" y="126" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-12" value="2位" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7EA6E0;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="260" y="126" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-13" value="" style="endArrow=none;html=1;exitX=0.033;exitY=0.95;exitDx=0;exitDy=0;exitPerimeter=0;dashed=1;" edge="1" parent="eDpRbFdm1n3JCNUc__xO-1" source="eDpRbFdm1n3JCNUc__xO-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="280" as="sourcePoint" />
+            <mxPoint x="302" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-14" value="" style="endArrow=none;html=1;exitX=1.017;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;dashed=1;" edge="1" parent="eDpRbFdm1n3JCNUc__xO-1" source="eDpRbFdm1n3JCNUc__xO-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="280" as="sourcePoint" />
+            <mxPoint x="360" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-15" value="4位" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7EA6E0;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="318" y="120" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-16" value="1 位" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7EA6E0;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="390" y="106" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-17" value="是否偏向锁" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#7EA6E0;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="370" y="130" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-18" value="" style="endArrow=none;html=1;dashed=1;" edge="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="280" as="sourcePoint" />
+            <mxPoint x="450" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-19" value="2 位" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7EA6E0;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="485" y="106" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-20" value="锁的标志位" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#7EA6E0;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="460" y="130" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-22" value="" style="endArrow=none;html=1;dashed=1;" edge="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="190" as="sourcePoint" />
+            <mxPoint x="550" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-23" value="标记对象的hashcode" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="170" y="160" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-24" value="分代年龄" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="300" y="160" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-25" value="0" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="400" y="160" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-26" value="01" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="485" y="160" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-27" value="" style="endArrow=none;html=1;dashed=1;" edge="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="220" as="sourcePoint" />
+            <mxPoint x="550" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-28" value="线程id" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="175" y="200" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-29" value="epoch" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="250" y="200" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-30" value="分代年龄" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="300" y="200" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-31" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="400" y="200" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-32" value="01" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="485" y="200" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-33" value="" style="endArrow=none;html=1;dashed=1;" edge="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="249" as="sourcePoint" />
+            <mxPoint x="550" y="249" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-34" value="指向栈中锁记录指针" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="250" y="230" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-35" value="00" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="485" y="230" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-36" value="" style="endArrow=none;html=1;" edge="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="280" as="sourcePoint" />
+            <mxPoint x="550" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-37" value="指向重量级锁的指针" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="250" y="260" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eDpRbFdm1n3JCNUc__xO-38" value="10" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="eDpRbFdm1n3JCNUc__xO-1">
+          <mxGeometry x="485" y="260" width="30" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
