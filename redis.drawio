@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-09-02T04:15:22.212Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="xufH5SahnqThvdaSzo1L" version="15.0.3" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2021-09-02T06:59:37.536Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="5LLBiA7iaa79AgRq5x52" version="15.0.3" type="github" pages="7">
   <diagram id="2Xkt2TAEOzTNxrY3dc94" name="数据结构">
     <mxGraphModel dx="868" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1707,7 +1707,7 @@
           <mxGeometry x="80" y="990" width="740" height="40" as="geometry" />
         </mxCell>
         <mxCell id="Ob7KSYr4x1QFicvUf9MM-49" value="紧凑列表" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="R8Xmmlt4IPB7zrE09Ldw-1" vertex="1">
-          <mxGeometry x="40" y="1050" width="90" height="30" as="geometry" />
+          <mxGeometry x="40" y="1130" width="90" height="30" as="geometry" />
         </mxCell>
         <mxCell id="IBC3VaC30Nt8yrkGzKnn-3" value="" style="endArrow=none;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="R8Xmmlt4IPB7zrE09Ldw-1" source="Ob7KSYr4x1QFicvUf9MM-28" target="Ob7KSYr4x1QFicvUf9MM-28" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -1744,6 +1744,9 @@
         </mxCell>
         <mxCell id="HwfDgC5BpMnmd-p-qhcY-1" value="&lt;span style=&quot;font-size: 49px&quot;&gt;&lt;font color=&quot;#b3b3b3&quot;&gt;蚂蚁不是ant - Mr.pan&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;opacity=40;textOpacity=20;rotation=-15;" parent="HwfDgC5BpMnmd-p-qhcY-0" vertex="1">
           <mxGeometry x="30" y="12" width="575" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="4FsPZaoSf79rtmNonRwa-0" value="跳跃表在链表的基础上， 增加多级索引提升查找效率" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=13;" vertex="1" parent="R8Xmmlt4IPB7zrE09Ldw-1">
+          <mxGeometry x="80" y="1050" width="320" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -1825,20 +1828,20 @@
         <mxCell id="M1zMZmoeTWhk0v8dZeMA-21" value="缓存与数据库双写一致性" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
           <mxGeometry x="40" y="880" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="xCT3tCEGww_5zrkCECiz-0" value="&lt;p style=&quot;line-height: 0px&quot;&gt;最经典的缓存 + 数据库读写的模式： Cache Aside Pattern&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;line-height: 24px&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 读的时候先读缓存 ，缓存没有的话在读数据库， 然后取出数据后，在放入缓存中，同时返回响应&lt;/p&gt;&lt;p style=&quot;line-height: 24px&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 更新的时候 ，先删除缓存，在更新数据库， 在删除缓存 ， 延时双删策略&lt;/p&gt;&lt;p style=&quot;line-height: 24px&quot;&gt;延时双删策略其实还是有问题，如果第二次删除缓存失败了，同时在第一个删除完成之后，更新操作完成之前，来一个查询请求，那么此时缓存的数据就是更新之前的数据，也会有不一致的问题，当然这种是概率的问题，如果业务中不允许出现这样的不一致情况，延时双删策略可能不太合适。分布式环境中，想要保证数据一致性，是一件极其困难的事，只能尽可能的降低这种数据不一致产生的情况。&lt;/p&gt;&lt;p style=&quot;line-height: 24px&quot;&gt;如果要保证缓存和数据库的强一致，那就要做串行化操作， 将请求压入队列，在更新操作完成之前，不做读操作。这样其实又带来了两外的一个问题，系统的性能受到影响，串行化后，可能导致大量的读请求 阻塞 ，要解决这个问题，只能是根据并发量 增加机器，增加服务实例的数量，来提高系统的吞吐量&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="80" y="940" width="735" height="260" as="geometry" />
+        <mxCell id="xCT3tCEGww_5zrkCECiz-0" value="&lt;p style=&quot;line-height: 0px; font-size: 13px;&quot;&gt;最经典的缓存 + 数据库读写的模式： Cache Aside Pattern&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;line-height: 24px; font-size: 13px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 读的时候先读缓存 ，缓存没有的话在读数据库， 然后取出数据后，在放入缓存中，同时返回响应&lt;/p&gt;&lt;p style=&quot;line-height: 24px; font-size: 13px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 更新的时候 ，先删除缓存，在更新数据库，休眠一下 在删除缓存 ， 延时双删策略&lt;/p&gt;&lt;p style=&quot;line-height: 24px; font-size: 13px;&quot;&gt;延时双删策略其实还是有问题，如果第二次删除缓存失败了，同时在第一个删除完成之后，更新操作完成之前，来一个查询请求，那么此时缓存的数据就是更新之前的数据，也会有不一致的问题，当然这种是概率的问题，如果业务中不允许出现这样的不一致情况，延时双删策略可能不太合适。分布式环境中，想要保证数据一致性，是一件极其困难的事，只能尽可能的降低这种数据不一致产生的情况。&lt;/p&gt;&lt;p style=&quot;line-height: 24px; font-size: 13px;&quot;&gt;如果要保证缓存和数据库的强一致，那就要做串行化操作， 将请求压入队列，在更新操作完成之前，不做读操作。这样其实又带来了两外的一个问题，系统的性能受到影响，串行化后，可能导致大量的读请求 阻塞 ，要解决这个问题，只能是根据并发量 增加机器，增加服务实例的数量，来提高系统的吞吐量&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;fontSize=13;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
+          <mxGeometry x="80" y="940" width="735" height="300" as="geometry" />
         </mxCell>
         <mxCell id="xCT3tCEGww_5zrkCECiz-1" value="并发竞争" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="40" y="1210" width="110" height="30" as="geometry" />
+          <mxGeometry x="43" y="2060" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="xCT3tCEGww_5zrkCECiz-2" value="&lt;p style=&quot;line-height: 200%&quot;&gt;多客户端同时并发写入一个key , 本来应该先到的数据后到了，导致数据版本错了，或者是多个客户同时获取一个key ,修改值之后再写回去&lt;/p&gt;&lt;p style=&quot;line-height: 0px&quot;&gt;只要顺序错了， 数据就错了。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="80" y="1270" width="735" height="60" as="geometry" />
+          <mxGeometry x="73" y="2100" width="735" height="60" as="geometry" />
         </mxCell>
         <mxCell id="xCT3tCEGww_5zrkCECiz-3" value="zookeeper" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;sketch=1;align=center;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="348" y="1340" width="82" height="30" as="geometry" />
+          <mxGeometry x="348" y="2164" width="82" height="30" as="geometry" />
         </mxCell>
         <mxCell id="xCT3tCEGww_5zrkCECiz-4" value="缓存" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;shadow=0;labelBackgroundColor=none;sketch=1;align=center;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="370" y="1470" width="60" height="60" as="geometry" />
+          <mxGeometry x="370" y="2294" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="xCT3tCEGww_5zrkCECiz-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;startArrow=none;startFill=0;" parent="uUWCNbAPGHeyCcKTkVrY-1" source="xCT3tCEGww_5zrkCECiz-5" target="xCT3tCEGww_5zrkCECiz-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -1847,7 +1850,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="xCT3tCEGww_5zrkCECiz-5" value="A" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;sketch=1;align=center;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="250" y="1400" width="70" height="30" as="geometry" />
+          <mxGeometry x="250" y="2224" width="70" height="30" as="geometry" />
         </mxCell>
         <mxCell id="xCT3tCEGww_5zrkCECiz-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;" parent="uUWCNbAPGHeyCcKTkVrY-1" source="xCT3tCEGww_5zrkCECiz-6" target="xCT3tCEGww_5zrkCECiz-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -1856,7 +1859,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="xCT3tCEGww_5zrkCECiz-6" value="B" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;sketch=1;align=center;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="365" y="1400" width="70" height="30" as="geometry" />
+          <mxGeometry x="365" y="2224" width="70" height="30" as="geometry" />
         </mxCell>
         <mxCell id="xCT3tCEGww_5zrkCECiz-10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;" parent="uUWCNbAPGHeyCcKTkVrY-1" source="xCT3tCEGww_5zrkCECiz-7" target="xCT3tCEGww_5zrkCECiz-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -1865,168 +1868,168 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="xCT3tCEGww_5zrkCECiz-7" value="C" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;sketch=1;align=center;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="470" y="1400" width="70" height="30" as="geometry" />
+          <mxGeometry x="470" y="2224" width="70" height="30" as="geometry" />
         </mxCell>
         <mxCell id="xCT3tCEGww_5zrkCECiz-14" value="&lt;p style=&quot;line-height: 200%&quot;&gt;使用 zookeeper 的 分布式锁， 天然的是公平锁，可以保证请求的顺序性，避免数据错乱。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;写入缓存的数据都是从数据库中查询出来的， 一般数据库中表的字段中都有一个&amp;nbsp; update_time 时间戳，每次在写之前，需要先判断一下，缓存中的 时间戳和要写入数据的时间戳 ， 如果缓存中时间戳比 要更新的时间错新的话，此次操作就不能执行。&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="80" y="1540" width="735" height="110" as="geometry" />
+          <mxGeometry x="80" y="2374" width="735" height="110" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-0" value="&lt;p style=&quot;line-height: 200%&quot;&gt;上面比较粗略的介绍了缓存中可能出现的一些问题和相应的解决方案，下面再来总结一下：&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 缓存过期后，将尝试从后端数据库获取数据，这是一个看似非常合理的流程。但是在高并发场景下，有可能有多个请求去从数据库获取数据，对后端数据库造成极大的冲击 ，甚至导致 「宕机」 的现象。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 此外，当某个缓存key 在被更新时，同时也可能被大量请求在获取，这也会导致不一致的问题。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;那如何避免类似的问题呢 ？&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 很自然的会想到加锁的机制，在缓存更新或者过期的情况下，先尝试获取锁，当更新或者从数据库获取到数据后在释放锁，其它的请求需要牺牲一定的等待时间 ，即可直接从缓存中获取数据。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;缓存穿透：&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;在高并发场景下，如果某一个key 被高并发访问，没有被命中，处于对容错性的考虑，会尝试从数据库中获取，从而导致了大量的请求到达了数据库，而当该key对应的数据本身就是NULL 的情况下，这就导致了数据库中并发的执行了很多不必要的查询操作，从而导致巨大冲击和压力。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 可以通过下面的两种方式来避免缓存穿透的问题：&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 1. 缓存空对象&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 2. 单独过滤处理&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="80" y="1670" width="735" height="490" as="geometry" />
+          <mxGeometry x="80" y="2494" width="735" height="490" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-2" value="分布式锁的实现原理" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="40" y="2160" width="120" height="30" as="geometry" />
+          <mxGeometry x="40" y="2984" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-3" value="&lt;p style=&quot;line-height: 200%&quot;&gt;分布式锁，业界比较流行和工业级使用的方案都是 Redisson ，当然也可以使用 set方法来实现，但是需要手动实现逻辑，既然已经有了成熟的方案，还是不要重复造轮子了，下面就来聊一聊 Redisson 的实现原理。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="80" y="2200" width="735" height="90" as="geometry" />
+          <mxGeometry x="80" y="3024" width="735" height="90" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="uUWCNbAPGHeyCcKTkVrY-1" source="7whBfMgbD_qqsudYZGVB-5" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="220" y="2362" as="targetPoint" />
+            <mxPoint x="220" y="3186" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-26" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="uUWCNbAPGHeyCcKTkVrY-1" source="7whBfMgbD_qqsudYZGVB-5" target="7whBfMgbD_qqsudYZGVB-27" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="160" y="2490" as="targetPoint" />
+            <mxPoint x="160" y="3314" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="160" y="2451" />
+              <mxPoint x="160" y="3275" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-36" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.55;entryDx=0;entryDy=0;entryPerimeter=0;" parent="uUWCNbAPGHeyCcKTkVrY-1" source="7whBfMgbD_qqsudYZGVB-5" target="7whBfMgbD_qqsudYZGVB-35" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="140" y="2591" />
+              <mxPoint x="140" y="3415" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-5" value="客户端 - redisson" style="ellipse;whiteSpace=wrap;html=1;rotation=5;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="59.99999999999999" y="2328.68" width="80" height="60" as="geometry" />
+          <mxGeometry x="60" y="3152.68" width="80" height="60" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="uUWCNbAPGHeyCcKTkVrY-1" source="7whBfMgbD_qqsudYZGVB-7" target="7whBfMgbD_qqsudYZGVB-9" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="360" y="2362" as="targetPoint" />
+            <mxPoint x="360" y="3186" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-23" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="uUWCNbAPGHeyCcKTkVrY-1" source="7whBfMgbD_qqsudYZGVB-7" target="7whBfMgbD_qqsudYZGVB-19" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="560" y="2362" />
-              <mxPoint x="560" y="2416" />
+              <mxPoint x="560" y="3186" />
+              <mxPoint x="560" y="3240" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-24" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="uUWCNbAPGHeyCcKTkVrY-1" source="7whBfMgbD_qqsudYZGVB-7" target="7whBfMgbD_qqsudYZGVB-16" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="560" y="2362" />
-              <mxPoint x="560" y="2476" />
+              <mxPoint x="560" y="3186" />
+              <mxPoint x="560" y="3300" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-7" value="根据&amp;nbsp; hash算法选择一个节点" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="220" y="2345.68" width="90" height="32" as="geometry" />
+          <mxGeometry x="220" y="3169.68" width="90" height="32" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-14" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;rounded=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" source="7whBfMgbD_qqsudYZGVB-9" target="7whBfMgbD_qqsudYZGVB-13" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="687.4999999999909" y="2483.3399999999997" as="sourcePoint" />
+            <mxPoint x="687.4999999999909" y="3307.3399999999997" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-9" value="master" style="ellipse;whiteSpace=wrap;html=1;sketch=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="620" y="2345.68" width="65" height="31.32" as="geometry" />
+          <mxGeometry x="620" y="3169.68" width="65" height="31.32" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-11" value="Redis 集群" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="540" y="2280" width="70" height="21.32" as="geometry" />
+          <mxGeometry x="540" y="3104" width="70" height="21.32" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-13" value="slave" style="ellipse;whiteSpace=wrap;html=1;sketch=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="742.5" y="2345.68" width="65" height="31.32" as="geometry" />
+          <mxGeometry x="742.5" y="3169.68" width="65" height="31.32" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-15" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;rounded=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" source="7whBfMgbD_qqsudYZGVB-16" target="7whBfMgbD_qqsudYZGVB-17" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-16" value="master" style="ellipse;whiteSpace=wrap;html=1;sketch=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="620" y="2460" width="65" height="31.32" as="geometry" />
+          <mxGeometry x="620" y="3284" width="65" height="31.32" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-17" value="slave" style="ellipse;whiteSpace=wrap;html=1;sketch=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="730" y="2460" width="65" height="31.32" as="geometry" />
+          <mxGeometry x="730" y="3284" width="65" height="31.32" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-18" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;rounded=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" source="7whBfMgbD_qqsudYZGVB-19" target="7whBfMgbD_qqsudYZGVB-20" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-19" value="master" style="ellipse;whiteSpace=wrap;html=1;sketch=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="620" y="2400" width="65" height="31.32" as="geometry" />
+          <mxGeometry x="620" y="3224" width="65" height="31.32" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-20" value="slave" style="ellipse;whiteSpace=wrap;html=1;sketch=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="737.5" y="2400" width="65" height="31.32" as="geometry" />
+          <mxGeometry x="737.5" y="3224" width="65" height="31.32" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-22" value="lua 脚本加锁" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="340" y="2340" width="80" height="20" as="geometry" />
+          <mxGeometry x="340" y="3164" width="80" height="20" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-28" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="uUWCNbAPGHeyCcKTkVrY-1" source="7whBfMgbD_qqsudYZGVB-27" target="7whBfMgbD_qqsudYZGVB-29" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="270" y="2550" as="targetPoint" />
+            <mxPoint x="270" y="3374" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-27" value="加锁成功" style="rhombus;whiteSpace=wrap;html=1;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="200" y="2411.32" width="80" height="80" as="geometry" />
+          <mxGeometry x="200" y="3235.32" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-30" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="uUWCNbAPGHeyCcKTkVrY-1" source="7whBfMgbD_qqsudYZGVB-29" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="500" y="2370" as="targetPoint" />
+            <mxPoint x="500" y="3194" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-29" value="watch dog&amp;nbsp;&lt;br&gt;看门狗" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="290" y="2510" width="70" height="40" as="geometry" />
+          <mxGeometry x="290" y="3334" width="70" height="40" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-31" value="锁有效期 30s" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="450" y="2328.68" width="90" height="11.32" as="geometry" />
+          <mxGeometry x="450" y="3152.68" width="90" height="11.32" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-33" value="没隔10s 看一下&lt;br&gt;如果还持有锁&lt;br&gt;延长生存时间" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="290" y="2426.32" width="100" height="50" as="geometry" />
+          <mxGeometry x="290" y="3250.32" width="100" height="50" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-35" value="如果释放锁，就直接删除 Lock 的那个key" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="175" y="2580" width="230" height="20" as="geometry" />
+          <mxGeometry x="175" y="3404" width="230" height="20" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-38" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="uUWCNbAPGHeyCcKTkVrY-1" source="7whBfMgbD_qqsudYZGVB-37" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="240" y="2673" as="targetPoint" />
+            <mxPoint x="240" y="3497" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-37" value="客户端 - redisson" style="ellipse;whiteSpace=wrap;html=1;rotation=5;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="55" y="2640" width="80" height="60" as="geometry" />
+          <mxGeometry x="55" y="3464" width="80" height="60" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-40" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="uUWCNbAPGHeyCcKTkVrY-1" source="7whBfMgbD_qqsudYZGVB-39" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="530" y="2370" as="targetPoint" />
+            <mxPoint x="530" y="3194" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="530" y="2670" />
+              <mxPoint x="530" y="3494" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-41" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="uUWCNbAPGHeyCcKTkVrY-1" source="7whBfMgbD_qqsudYZGVB-39" target="7whBfMgbD_qqsudYZGVB-37" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="285" y="2740" />
-              <mxPoint x="92" y="2740" />
+              <mxPoint x="285" y="3564" />
+              <mxPoint x="92" y="3564" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-39" value="能否加锁" style="rhombus;whiteSpace=wrap;html=1;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="245" y="2630" width="80" height="80" as="geometry" />
+          <mxGeometry x="245" y="3454" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-42" value="while 循环 等待" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="130" y="2720" width="100" height="20" as="geometry" />
+          <mxGeometry x="130" y="3544" width="100" height="20" as="geometry" />
         </mxCell>
         <mxCell id="7whBfMgbD_qqsudYZGVB-43" value="否" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="290" y="2720" width="30" height="20" as="geometry" />
+          <mxGeometry x="290" y="3544" width="30" height="20" as="geometry" />
         </mxCell>
         <mxCell id="W2EOOQv8Cj7B72yQ1AWK-0" value="锁的自动续期" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="80" y="2760" width="90" height="30" as="geometry" />
+          <mxGeometry x="80" y="3584" width="90" height="30" as="geometry" />
         </mxCell>
         <mxCell id="W2EOOQv8Cj7B72yQ1AWK-1" value="&lt;p style=&quot;line-height: 200%&quot;&gt;加锁成功之后 ，就会启动一个后台线程 watch dog 看门狗 ， 会每隔10s 检查一下 ，当前客户端是否还持有锁 key ， 如果还持有，就会不断的延长锁 key 的生存时间。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="85" y="2800" width="735" height="90" as="geometry" />
+          <mxGeometry x="92" y="3214" width="735" height="90" as="geometry" />
         </mxCell>
         <mxCell id="W2EOOQv8Cj7B72yQ1AWK-2" value="&lt;p style=&quot;line-height: 200%&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;缺陷：&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Redisson 是对某一个master&amp;nbsp; 进行加锁，如果加锁成功了，slave 还没有完成数据的复制，master 宕机了，此时执行主备切换， redis 的 slave 变成了 master ，就会导致 另一个客户端来加锁的时候，直接加锁成功，就会导致 多个客户端对一个分布式锁完成了加锁，这时系统业务语义上就会出现问题，导致脏数据的产生。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="80" y="2890" width="735" height="90" as="geometry" />
+          <mxGeometry x="80" y="3714" width="735" height="90" as="geometry" />
         </mxCell>
         <mxCell id="qeulV645QN60k744e97G-2" value="" style="group;rotation=-15;textOpacity=20;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1" connectable="0">
           <mxGeometry x="70" y="205" width="650" height="130" as="geometry" />
@@ -2041,93 +2044,163 @@
           <mxGeometry x="30" y="12" width="575" height="110" as="geometry" />
         </mxCell>
         <mxCell id="qeulV645QN60k744e97G-6" value="" style="group;rotation=-15;textOpacity=20;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1" connectable="0">
-          <mxGeometry x="64" y="2600" width="650" height="130" as="geometry" />
+          <mxGeometry x="64" y="3424" width="650" height="130" as="geometry" />
         </mxCell>
         <mxCell id="qeulV645QN60k744e97G-7" value="&lt;span style=&quot;font-size: 49px&quot;&gt;&lt;font color=&quot;#b3b3b3&quot;&gt;蚂蚁不是ant - Mr.pan&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;opacity=40;textOpacity=20;rotation=-15;" parent="qeulV645QN60k744e97G-6" vertex="1">
           <mxGeometry x="30" y="12" width="575" height="110" as="geometry" />
         </mxCell>
         <mxCell id="qeulV645QN60k744e97G-1" value="&lt;span style=&quot;font-size: 49px&quot;&gt;&lt;font color=&quot;#b3b3b3&quot;&gt;蚂蚁不是ant - Mr.pan&lt;/font&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;opacity=40;textOpacity=20;rotation=-15;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="139" y="1780" width="575" height="110" as="geometry" />
+          <mxGeometry x="139" y="2604" width="575" height="110" as="geometry" />
         </mxCell>
         <mxCell id="M1zMZmoeTWhk0v8dZeMA-23" value="redis 的 大 key" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="40" y="3010" width="110" height="30" as="geometry" />
+          <mxGeometry x="40" y="3834" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="M1zMZmoeTWhk0v8dZeMA-24" value="Redis 的 热点key&amp;nbsp;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="40" y="3090" width="110" height="30" as="geometry" />
+          <mxGeometry x="40" y="3914" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="M1zMZmoeTWhk0v8dZeMA-25" value="如何让 一组key&amp;nbsp; 都存储在一台 机器上" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="40" y="3280" width="220" height="40" as="geometry" />
+          <mxGeometry x="40" y="4104" width="220" height="40" as="geometry" />
         </mxCell>
         <mxCell id="M1zMZmoeTWhk0v8dZeMA-26" value="Redis&amp;nbsp; CPU&amp;nbsp; 100%" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="40" y="3330" width="130" height="30" as="geometry" />
+          <mxGeometry x="40" y="4154" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="4rov-A6-OaIKI-HkXfAs-0" value="什么样的数据适合存放在Redis" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="40" y="3370" width="170" height="30" as="geometry" />
+          <mxGeometry x="40" y="4194" width="170" height="30" as="geometry" />
         </mxCell>
         <mxCell id="4rov-A6-OaIKI-HkXfAs-1" value="持久化机制， 各有什么优缺点" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="40" y="3450" width="170" height="30" as="geometry" />
+          <mxGeometry x="40" y="4274" width="170" height="30" as="geometry" />
         </mxCell>
         <mxCell id="FxToyOXMAds_lEhUvf5q-0" value="如何设计一个缓存策略 ，可以动态缓存热点数据？" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="40" y="3530" width="290" height="40" as="geometry" />
+          <mxGeometry x="40" y="4354" width="290" height="40" as="geometry" />
         </mxCell>
         <mxCell id="FxToyOXMAds_lEhUvf5q-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=openThin;endFill=0;entryX=0;entryY=0.414;entryDx=0;entryDy=0;entryPerimeter=0;" parent="uUWCNbAPGHeyCcKTkVrY-1" source="FxToyOXMAds_lEhUvf5q-1" target="FxToyOXMAds_lEhUvf5q-3" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="210" y="3660" as="targetPoint" />
+            <mxPoint x="210" y="4484" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="FxToyOXMAds_lEhUvf5q-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=openThin;endFill=0;" parent="uUWCNbAPGHeyCcKTkVrY-1" source="FxToyOXMAds_lEhUvf5q-1" target="FxToyOXMAds_lEhUvf5q-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="FxToyOXMAds_lEhUvf5q-1" value="客户端" style="ellipse;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;opacity=50;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="45" y="3640" width="60" height="40" as="geometry" />
+          <mxGeometry x="45" y="4464" width="60" height="40" as="geometry" />
         </mxCell>
         <mxCell id="FxToyOXMAds_lEhUvf5q-3" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="270" y="3600" width="390" height="70" as="geometry" />
+          <mxGeometry x="270" y="4424" width="390" height="70" as="geometry" />
         </mxCell>
         <mxCell id="FxToyOXMAds_lEhUvf5q-4" value="商品1" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="294" y="3620" width="56" height="30" as="geometry" />
+          <mxGeometry x="294" y="4444" width="56" height="30" as="geometry" />
         </mxCell>
         <mxCell id="FxToyOXMAds_lEhUvf5q-6" value="商品2" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="370" y="3620" width="56" height="30" as="geometry" />
+          <mxGeometry x="370" y="4444" width="56" height="30" as="geometry" />
         </mxCell>
         <mxCell id="FxToyOXMAds_lEhUvf5q-7" value="商品3" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="450" y="3620" width="56" height="30" as="geometry" />
+          <mxGeometry x="450" y="4444" width="56" height="30" as="geometry" />
         </mxCell>
         <mxCell id="FxToyOXMAds_lEhUvf5q-8" value="....." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=0;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="530" y="3625" width="40" height="20" as="geometry" />
+          <mxGeometry x="530" y="4449" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="FxToyOXMAds_lEhUvf5q-9" value="商品n" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="580" y="3620" width="56" height="30" as="geometry" />
+          <mxGeometry x="580" y="4444" width="56" height="30" as="geometry" />
         </mxCell>
         <mxCell id="FxToyOXMAds_lEhUvf5q-10" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="270" y="3720" width="390" height="70" as="geometry" />
+          <mxGeometry x="270" y="4544" width="390" height="70" as="geometry" />
         </mxCell>
         <mxCell id="FxToyOXMAds_lEhUvf5q-11" value="商品信息" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="294" y="3740" width="56" height="30" as="geometry" />
+          <mxGeometry x="294" y="4564" width="56" height="30" as="geometry" />
         </mxCell>
         <mxCell id="FxToyOXMAds_lEhUvf5q-16" value="商品信息" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="394" y="3740" width="56" height="30" as="geometry" />
+          <mxGeometry x="394" y="4564" width="56" height="30" as="geometry" />
         </mxCell>
         <mxCell id="FxToyOXMAds_lEhUvf5q-17" value="商品信息" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="477" y="3740" width="56" height="30" as="geometry" />
+          <mxGeometry x="477" y="4564" width="56" height="30" as="geometry" />
         </mxCell>
         <mxCell id="FxToyOXMAds_lEhUvf5q-18" value="商品信息" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="580" y="3740" width="56" height="30" as="geometry" />
+          <mxGeometry x="580" y="4564" width="56" height="30" as="geometry" />
         </mxCell>
         <mxCell id="FxToyOXMAds_lEhUvf5q-21" value="根据商品id 查询商品是否存在" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="55" y="3600" width="170" height="20" as="geometry" />
+          <mxGeometry x="55" y="4424" width="170" height="20" as="geometry" />
         </mxCell>
         <mxCell id="FxToyOXMAds_lEhUvf5q-22" value="通过商品id查询商品信息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="100" y="3720" width="140" height="20" as="geometry" />
+          <mxGeometry x="100" y="4544" width="140" height="20" as="geometry" />
         </mxCell>
         <mxCell id="KabLdxtVOEFo3nRDZvIs-0" value="用户消费的数据 远大于生产的数据 ， 如秒杀 ， 热点新闻等读多写少的场景 ；&lt;br&gt;请求分片集中 ，超过单redis 服务器的性能 ， 比如固定名称 key" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=13;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
-          <mxGeometry x="85" y="3130" width="470" height="40" as="geometry" />
+          <mxGeometry x="85" y="3954" width="470" height="40" as="geometry" />
         </mxCell>
         <mxCell id="KabLdxtVOEFo3nRDZvIs-1" value="如何识别到热点 key ?&amp;nbsp; &amp;nbsp;凭经验判断哪些是热点key ； 客户端统计上报 ； 服务代理层 统计上报" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=13;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
-          <mxGeometry x="80" y="3180" width="550" height="20" as="geometry" />
+          <mxGeometry x="80" y="4004" width="550" height="20" as="geometry" />
         </mxCell>
         <mxCell id="KabLdxtVOEFo3nRDZvIs-2" value="&lt;p style=&quot;line-height: 180%&quot;&gt;如何解决热key问题？ Redis 集群扩容 ，增加分片副本 ， 均衡读流量 ；&lt;br&gt;将热key 分散到不同的服务器中 ； 使用二级缓存，即本地JVM缓存，减少redis 读请求；&lt;/p&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=13;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
-          <mxGeometry x="85" y="3200" width="520" height="80" as="geometry" />
+          <mxGeometry x="85" y="4024" width="520" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-0" value="第二次删除缓存失败 后的处理机制" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=13;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="80" y="1260" width="210" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-1" value="重试机制" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=13;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="100" y="1300" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-2" value="如果删除缓存失败， 则将删除失败的key 放入队列中 ，应用程序从队列中读取到key 值 ， 在次进行删除，如果还是失败， 则报警处理" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=13;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="42" y="1340" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-4" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=13;" edge="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="383.5" y="1470" as="targetPoint" />
+            <mxPoint x="383.5" y="1440" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-3" value="写请求" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;align=center;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="338.5" y="1400" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-6" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=13;" edge="1" parent="uUWCNbAPGHeyCcKTkVrY-1" source="_nMWT1fpLIKslkGIO-HL-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="548.5" y="1485" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-10" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.645;entryY=0.02;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=13;" edge="1" parent="uUWCNbAPGHeyCcKTkVrY-1" source="_nMWT1fpLIKslkGIO-HL-5" target="_nMWT1fpLIKslkGIO-HL-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-12" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fontSize=13;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="uUWCNbAPGHeyCcKTkVrY-1" source="_nMWT1fpLIKslkGIO-HL-5" target="_nMWT1fpLIKslkGIO-HL-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="278.5" y="1485" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-17" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=13;" edge="1" parent="uUWCNbAPGHeyCcKTkVrY-1" source="_nMWT1fpLIKslkGIO-HL-5" target="_nMWT1fpLIKslkGIO-HL-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-5" value="应用程序" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;align=center;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="338.5" y="1470" width="98" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-7" value="数据库" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=13;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="552" y="1455" width="60" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-8" value="&lt;font color=&quot;#00ff00&quot;&gt;① 更新数据库&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=13;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="443.5" y="1460" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-9" value="缓存" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=13;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="348.5" y="1580" width="62" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-11" value="② 删除缓存失败" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=13;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="395.5" y="1540" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-15" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fontSize=13;" edge="1" parent="uUWCNbAPGHeyCcKTkVrY-1" source="_nMWT1fpLIKslkGIO-HL-13" target="_nMWT1fpLIKslkGIO-HL-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-13" value="消息队列" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=13;align=center;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="178.5" y="1470" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-14" value="③ 放入队列" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=13;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="258.5" y="1490" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-16" value="④ 读取队列中的数据" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=13;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="228.5" y="1445" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-18" value="⑤ 再次删除" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=13;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="284.5" y="1545" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-19" value="读取binlog 异步删除缓存" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=13;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="50" y="1670" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_nMWT1fpLIKslkGIO-HL-20" value="如果一个数据 更新的非常的频繁， 可能就不适合存放到缓存中给， 直接读取数据库就比较的合适" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=13;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="55" y="1720" width="570" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
