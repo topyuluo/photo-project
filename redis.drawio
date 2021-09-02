@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-09-02T03:54:21.567Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="hJNIwrC6eBjQgNdhH65u" version="15.0.3" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2021-09-02T04:15:22.212Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="xufH5SahnqThvdaSzo1L" version="15.0.3" type="github" pages="7">
   <diagram id="2Xkt2TAEOzTNxrY3dc94" name="数据结构">
     <mxGraphModel dx="868" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1760,7 +1760,7 @@
           <mxGeometry x="40" y="400" width="70" height="30" as="geometry" />
         </mxCell>
         <mxCell id="M1zMZmoeTWhk0v8dZeMA-2" value="缓存穿透" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="40" y="520" width="70" height="30" as="geometry" />
+          <mxGeometry x="35" y="540" width="70" height="30" as="geometry" />
         </mxCell>
         <mxCell id="M1zMZmoeTWhk0v8dZeMA-4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=none;startFill=0;" parent="uUWCNbAPGHeyCcKTkVrY-1" source="M1zMZmoeTWhk0v8dZeMA-3" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -1813,8 +1813,8 @@
         <mxCell id="M1zMZmoeTWhk0v8dZeMA-17" value="&lt;p style=&quot;line-height: 200%&quot;&gt;解决方案， 定时任务写入缓存数据的时候，给缓存的过期时间添加一个随机值， 让缓存的失效的实现相对分散，不要在同一时间集中过期。或者设置缓存不过期&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
           <mxGeometry x="80" y="320" width="735" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="M1zMZmoeTWhk0v8dZeMA-18" value="&lt;p style=&quot;line-height: 200%&quot;&gt;某一个key 非常的热点，大量的并发都对整个key 进行访问，当这个key 在失效的瞬间，持续的大并发就穿破缓存，直接请求到数据库中，从而打崩数据库。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="80" y="450" width="735" height="60" as="geometry" />
+        <mxCell id="M1zMZmoeTWhk0v8dZeMA-18" value="&lt;p style=&quot;line-height: 200%&quot;&gt;某一个key 非常的热点，大量的并发都对整个key 进行访问，当这个key 在失效的瞬间，持续的大并发就穿破缓存，直接请求到数据库中，从而打崩数据库。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;使用互斥锁方案&amp;nbsp; ， 永不过期&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
+          <mxGeometry x="77.5" y="450" width="735" height="60" as="geometry" />
         </mxCell>
         <mxCell id="M1zMZmoeTWhk0v8dZeMA-19" value="&lt;p style=&quot;line-height: 200%&quot;&gt;请求越过了缓存，直接请求到了数据库中， 数据库种也查不到对应的结果，比如一些恶意的请求。&lt;/p&gt;&lt;p style=&quot;line-height: 200%&quot;&gt;针对这种情况，业务层要对参数做校验，将一些非法的参数拦截在业务层。如果数据库中也没有查询到结果，就在Redis 种缓存 空值， 并给一个过期时间 ； 还可以使用布隆过滤器，&amp;nbsp; 但是布隆过滤器有误判， 数据可能存在，但是判断可能是不存在，会查询数据库，但是误判的概率相抵可控，它判断不存在，数据就是不存在，可以直接拦截。&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;sketch=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
           <mxGeometry x="80" y="580" width="735" height="110" as="geometry" />
@@ -2056,10 +2056,10 @@
           <mxGeometry x="40" y="3090" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="M1zMZmoeTWhk0v8dZeMA-25" value="如何让 一组key&amp;nbsp; 都存储在一台 机器上" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="40" y="3179" width="220" height="40" as="geometry" />
+          <mxGeometry x="40" y="3280" width="220" height="40" as="geometry" />
         </mxCell>
         <mxCell id="M1zMZmoeTWhk0v8dZeMA-26" value="Redis&amp;nbsp; CPU&amp;nbsp; 100%" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
-          <mxGeometry x="40" y="3290" width="130" height="30" as="geometry" />
+          <mxGeometry x="40" y="3330" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="4rov-A6-OaIKI-HkXfAs-0" value="什么样的数据适合存放在Redis" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;shadow=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
           <mxGeometry x="40" y="3370" width="170" height="30" as="geometry" />
@@ -2119,6 +2119,15 @@
         </mxCell>
         <mxCell id="FxToyOXMAds_lEhUvf5q-22" value="通过商品id查询商品信息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="uUWCNbAPGHeyCcKTkVrY-1" vertex="1">
           <mxGeometry x="100" y="3720" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="KabLdxtVOEFo3nRDZvIs-0" value="用户消费的数据 远大于生产的数据 ， 如秒杀 ， 热点新闻等读多写少的场景 ；&lt;br&gt;请求分片集中 ，超过单redis 服务器的性能 ， 比如固定名称 key" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=13;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="85" y="3130" width="470" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KabLdxtVOEFo3nRDZvIs-1" value="如何识别到热点 key ?&amp;nbsp; &amp;nbsp;凭经验判断哪些是热点key ； 客户端统计上报 ； 服务代理层 统计上报" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=13;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="80" y="3180" width="550" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="KabLdxtVOEFo3nRDZvIs-2" value="&lt;p style=&quot;line-height: 180%&quot;&gt;如何解决热key问题？ Redis 集群扩容 ，增加分片副本 ， 均衡读流量 ；&lt;br&gt;将热key 分散到不同的服务器中 ； 使用二级缓存，即本地JVM缓存，减少redis 读请求；&lt;/p&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=13;" vertex="1" parent="uUWCNbAPGHeyCcKTkVrY-1">
+          <mxGeometry x="85" y="3200" width="520" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
