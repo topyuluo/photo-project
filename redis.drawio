@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-09-02T02:37:18.130Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="akp5Y07ObzopdpfKao2p" version="15.0.3" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2021-09-02T02:55:53.967Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="vEAAz3pcAyvXFFYP9Fgm" version="15.0.3" type="github" pages="7">
   <diagram id="2Xkt2TAEOzTNxrY3dc94" name="数据结构">
     <mxGraphModel dx="868" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -22,8 +22,8 @@
         <mxCell id="DcSzvV2dXJmABJle09KA-7" value="set：集合" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="65" y="660" width="60" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="DcSzvV2dXJmABJle09KA-8" value="&lt;font color=&quot;#1a1a1a&quot; style=&quot;font-size: 13px;&quot;&gt;redis 的字符串是动态字符串，是可以修改的字符串，内部结构类似于 Java的ArrayList , 采用预分配冗余空间的方式来减少内存的频繁分配，字符串的最大长度是 512M&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
-          <mxGeometry x="90" y="100" width="710" height="60" as="geometry" />
+        <mxCell id="DcSzvV2dXJmABJle09KA-8" value="&lt;font color=&quot;#1a1a1a&quot; style=&quot;font-size: 13px ; line-height: 190%&quot;&gt;redis 的字符串是动态字符串，是可以修改的字符串，内部结构类似于 Java的ArrayList , 采用预分配冗余空间的方式来减少内存的频繁分配，字符串的最大长度是 512M&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="87.5" y="100" width="710" height="50" as="geometry" />
         </mxCell>
         <mxCell id="DcSzvV2dXJmABJle09KA-9" value="&lt;font color=&quot;#1a1a1a&quot; style=&quot;font-size: 13px;&quot;&gt;Redis 的列表相当于Java语言里面的LinkedList , 注意它是链表而不是数组 ， 这意味着&amp;nbsp; 插入和删除操作非常的快 ，时间复杂度 O(1) , 但是索引定位很慢 ，时间复杂度 O(n)&amp;nbsp;&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;br style=&quot;font-size: 13px;&quot;&gt;当列表弹出最后一个元素之后 ， 该数据结构自动被删除， 内存被回收。&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;br style=&quot;font-size: 13px;&quot;&gt;Redis 的列表用来做异步队列使用，将需要延后处理的任务结构体序列化成字符串塞进Redis列表。另一个线程从这个列表中轮询数据进行处理。&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;br style=&quot;font-size: 13px;&quot;&gt;快速链表： redis底层存储的还不是一个简单的LinkedList ,而是称之为快速链表quicklist的结构，首先在链表元素较少的情况下使用一块连续的存储存储，这个结构是 ziplist , 压缩列表。当数据量比较多的时候才会改成 quicklist&amp;nbsp; ,&amp;nbsp;&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="90" y="210" width="700" height="170" as="geometry" />
