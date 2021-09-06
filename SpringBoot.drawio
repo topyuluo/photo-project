@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-09-06T09:31:38.064Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="WeylK9-KfGkBL5ysOPZF" version="15.0.6" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-09-06T11:03:27.265Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="34-n_ydBRjst6ULO1w_j" version="15.0.6" type="github" pages="2">
   <diagram id="dtXTNnCRT1JeaTBHfS76" name="springboot">
     <mxGraphModel dx="868" dy="492" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -162,6 +162,31 @@
         </mxCell>
         <mxCell id="orLs4Tc3gnN9HglfhHpP-19" value="postProcessor.postProcessBeanFactory()" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#66CC00;align=center;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
           <mxGeometry x="230" y="530" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontColor=#66CC00;" edge="1" parent="orLs4Tc3gnN9HglfhHpP-1" source="orLs4Tc3gnN9HglfhHpP-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="815" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-20" value="扫描读取定义类" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#66CC00;align=center;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="40" y="800" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontColor=#66CC00;" edge="1" parent="orLs4Tc3gnN9HglfhHpP-1" source="orLs4Tc3gnN9HglfhHpP-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="815" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-22" value="BeanDefinition 保存" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#66CC00;align=center;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="210" y="797.5" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-24" value="DefaultListableBeanFactory" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#66CC00;align=center;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="380" y="785" width="170" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-25" value="Map -&amp;gt; beanDefinitionMap" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#66CC00;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="385" y="830" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-28" value="载入" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FF8000;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="60" y="770" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
