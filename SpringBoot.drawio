@@ -1,5 +1,5 @@
-<mxfile host="app.diagrams.net" modified="2021-08-31T09:51:22.475Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="TJpLgCumwRCpbeV0POTE" version="15.0.3" type="github">
-  <diagram id="dtXTNnCRT1JeaTBHfS76" name="第 1 页">
+<mxfile host="app.diagrams.net" modified="2021-09-06T08:54:12.461Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="OdiHgT6xBMEuHKdOEniL" version="15.0.6" type="github" pages="2">
+  <diagram id="dtXTNnCRT1JeaTBHfS76" name="springboot">
     <mxGraphModel dx="868" dy="492" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
@@ -93,21 +93,29 @@
         <mxCell id="f7SXbs6pzfq8MQyHs4yp-3" value="获取候选Bean" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="736" y="391" width="90" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="MpyIza94_yYRXoHKSqZg-1" value="自动配置类 选择器 ， &lt;br&gt;该类可以实现配置类批量载入容器" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="MpyIza94_yYRXoHKSqZg-1" value="自动配置类 选择器 ， &lt;br&gt;该类可以实现配置类批量载入容器" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="118" y="336" width="190" height="32" as="geometry" />
         </mxCell>
-        <mxCell id="MpyIza94_yYRXoHKSqZg-2" value="核心方法 getCandidateConfigruations 目的在于候选的配置" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="MpyIza94_yYRXoHKSqZg-2" value="核心方法 getCandidateConfigruations 目的在于候选的配置" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="114" y="379" width="321" height="18" as="geometry" />
         </mxCell>
-        <mxCell id="MpyIza94_yYRXoHKSqZg-3" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="5PS4r9_0_upMB3MBfYGu-15">
+        <mxCell id="MpyIza94_yYRXoHKSqZg-3" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="5PS4r9_0_upMB3MBfYGu-15" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="446" y="434" as="sourcePoint" />
             <mxPoint x="669" y="423" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="MpyIza94_yYRXoHKSqZg-4" value="委托 SpringFactoriesLoader 去读取" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+        <mxCell id="MpyIza94_yYRXoHKSqZg-4" value="委托 SpringFactoriesLoader 去读取" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="463" y="371" width="198" height="18" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="hn6NrzEXIqjuF2CO8Ll_" name="spring">
+    <mxGraphModel dx="868" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-0" />
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-1" parent="orLs4Tc3gnN9HglfhHpP-0" />
       </root>
     </mxGraphModel>
   </diagram>
