@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-09-06T08:54:12.461Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="OdiHgT6xBMEuHKdOEniL" version="15.0.6" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-09-06T09:17:54.696Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="rgcf1Qh5FP9628yIh0Q5" version="15.0.6" type="github" pages="2">
   <diagram id="dtXTNnCRT1JeaTBHfS76" name="springboot">
     <mxGraphModel dx="868" dy="492" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -116,6 +116,15 @@
       <root>
         <mxCell id="orLs4Tc3gnN9HglfhHpP-0" />
         <mxCell id="orLs4Tc3gnN9HglfhHpP-1" parent="orLs4Tc3gnN9HglfhHpP-0" />
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-2" value="&lt;p style=&quot;line-height: 190%&quot;&gt;BeanFactoryPostProcessor , 在Spring 解析 BeanDefinition 之后 ， 根据 BeanDefinition 初始化之前 ，&amp;nbsp; 会调用 编写的 BeanFactoryPostProcessor 实现类 ， 并调用 postProcessBeanFactory方法&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="30" y="30" width="780" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-4" value="Spring 何时解析BeanDefinition ?&amp;nbsp;&lt;br&gt;&lt;br&gt;Spring 何时回调BeanFactoryPostProcessor?&lt;br&gt;&lt;br&gt;Spring 何时初始化Bean?" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="30" y="110" width="770" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-5" value="初始Reader 和 Scanner 两个对象 ， 使用 Scanner 进行扫描 ，使用Reader 进行读取 ， 将类包装成 BeanDefinition 并注册进容器" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="30" y="230" width="700" height="20" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
