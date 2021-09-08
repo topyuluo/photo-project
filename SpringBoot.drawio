@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-09-07T10:53:40.029Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="KbVOUT2nGQFXntuWLvUv" version="15.0.6" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-09-08T07:06:32.334Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="BGgXAAcr1QiFyh_rYY_0" version="15.0.6" type="github" pages="2">
   <diagram id="dtXTNnCRT1JeaTBHfS76" name="springboot">
     <mxGraphModel dx="868" dy="492" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -385,6 +385,48 @@
         </mxCell>
         <mxCell id="orLs4Tc3gnN9HglfhHpP-96" value="jsp" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FF8000;align=center;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
           <mxGeometry x="75" y="1730" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-105" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#FF8000;" edge="1" parent="orLs4Tc3gnN9HglfhHpP-1" source="orLs4Tc3gnN9HglfhHpP-98" target="orLs4Tc3gnN9HglfhHpP-104">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-98" value="事务的传播机制" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FF8000;align=center;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="10" y="1860" width="145" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-99" value="事务的隔离机制" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FF8000;align=center;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="30" y="1890" width="145" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-101" value="只读" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FF8000;align=center;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="50" y="1920" width="145" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-102" value="事务超时" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FF8000;align=center;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="70" y="1950" width="145" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-103" value="回滚原则" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FF8000;align=center;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="95" y="1980" width="145" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-104" value="事务嵌套的场景" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FF8000;align=center;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="235" y="1865" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-106" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;fontColor=#FF8000;align=center;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="395" y="1815" width="20" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-107" value="已有事务&amp;nbsp; 将当前事务加入到已有事务 ， 如果没有 则创建一个事务执行" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FF8000;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="415" y="1800" width="390" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-108" value="已有事务 ，将加入当前事务 ， 如果没有， 以非事务方式执行" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FF8000;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="415" y="1830" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-109" value="每次都创建一个新的事务， 并将外层事务挂起" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FF8000;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="420" y="1860" width="260" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-110" value="不支持事务， 如果外层存在事务， 则挂起" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FF8000;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="420" y="1890" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-111" value="不支持事务， 如果外层有事务， 则抛出异常" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FF8000;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="420" y="1920" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="orLs4Tc3gnN9HglfhHpP-112" value="外层没有事务 则抛出异常" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FF8000;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="425" y="1950" width="150" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
