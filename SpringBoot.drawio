@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-09-09T10:59:08.290Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="LyHpznT-E4lZdcrki6O0" version="15.1.0" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-09-09T11:28:42.850Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="owYad8f1V0y-EmkV_YbG" version="15.1.0" type="github" pages="2">
   <diagram id="dtXTNnCRT1JeaTBHfS76" name="springboot">
     <mxGraphModel dx="868" dy="492" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -466,6 +466,27 @@
         </mxCell>
         <mxCell id="PFW6LFftXs6cW2eC899F-11" value="TransactionAttrubute" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
           <mxGeometry x="146.5" y="2420" width="183.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PFW6LFftXs6cW2eC899F-12" value="大事物引发的问题" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="300" y="2600" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PFW6LFftXs6cW2eC899F-13" value="死锁" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="130" y="2560" width="105" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PFW6LFftXs6cW2eC899F-14" value="回滚事件长" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="130" y="2610" width="105" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PFW6LFftXs6cW2eC899F-15" value="并发情况下 数据库连接池被占满" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="60" y="2660" width="175" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PFW6LFftXs6cW2eC899F-16" value="锁等待" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="485" y="2550" width="175" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PFW6LFftXs6cW2eC899F-17" value="接口超时" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="485" y="2610" width="175" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PFW6LFftXs6cW2eC899F-18" value="数据库主从延迟" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="485" y="2660" width="175" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
