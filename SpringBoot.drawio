@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-09-10T07:21:46.079Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="8RJveXqGAg2GA3s0nQnA" version="15.1.0" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-09-10T07:25:40.568Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="cgJL5ADjWTppzKaKwDoS" version="15.1.0" type="github" pages="2">
   <diagram id="dtXTNnCRT1JeaTBHfS76" name="springboot">
     <mxGraphModel dx="868" dy="492" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -112,7 +112,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="hn6NrzEXIqjuF2CO8Ll_" name="spring">
-    <mxGraphModel dx="868" dy="436" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="868" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="orLs4Tc3gnN9HglfhHpP-0" />
         <mxCell id="orLs4Tc3gnN9HglfhHpP-1" parent="orLs4Tc3gnN9HglfhHpP-0" />
@@ -764,6 +764,9 @@
         </mxCell>
         <mxCell id="PFW6LFftXs6cW2eC899F-100" value="postProcessAfterInitialization(result ,beanName)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#00CC00;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
           <mxGeometry x="1150" y="4140" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="PFW6LFftXs6cW2eC899F-101" value="实例属性注入" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#00CC00;rotation=90;" vertex="1" parent="orLs4Tc3gnN9HglfhHpP-1">
+          <mxGeometry x="1080" y="3770" width="90" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
