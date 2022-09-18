@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-09-18T08:08:33.280Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="7s7AFhsZyqJ3QkzI1Qs3" version="20.0.4" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-09-18T08:13:16.872Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="MyoWlEWUuwZni_giDX8T" version="20.0.4" type="github" pages="6">
   <diagram id="b8MhGM4gEZMRXQwS6kFo" name="系统架构">
     <mxGraphModel dx="1666" dy="1970" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2864,7 +2864,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="TOong8cylYVW4iUDLNmZ" name="一图进阶mq">
-    <mxGraphModel dx="946" dy="-548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1426" dy="-368" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3349,10 +3349,10 @@
           <mxGeometry x="370" y="3104" width="140" height="37" as="geometry" />
         </mxCell>
         <mxCell id="LlJehNdUR2WYzwzW1zPY-123" value="DefaultMQProducer" style="swimlane;rounded=0;shadow=0;glass=0;dashed=1;labelBackgroundColor=none;sketch=0;fillStyle=auto;strokeColor=#10739e;strokeWidth=1;fillColor=#b1ddf0;opacity=50;swimlaneLine=1;" vertex="1" parent="1">
-          <mxGeometry x="41" y="2890" width="239" height="550" as="geometry" />
+          <mxGeometry x="41" y="2890" width="239" height="790" as="geometry" />
         </mxCell>
         <mxCell id="LlJehNdUR2WYzwzW1zPY-124" value="DefaultMQProducerImpl" style="swimlane;rounded=0;shadow=0;glass=0;dashed=1;labelBackgroundColor=none;sketch=0;fillStyle=auto;strokeColor=#10739e;strokeWidth=1;fillColor=#b1ddf0;opacity=50;swimlaneLine=1;" vertex="1" parent="1">
-          <mxGeometry x="280" y="2890" width="460" height="930" as="geometry" />
+          <mxGeometry x="280" y="2890" width="380" height="790" as="geometry" />
         </mxCell>
         <mxCell id="LlJehNdUR2WYzwzW1zPY-118" value="并改变生产者instanceName 为进程id" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#000000;" vertex="1" parent="LlJehNdUR2WYzwzW1zPY-124">
           <mxGeometry x="218.5" y="157" width="220" height="30" as="geometry" />
@@ -3367,7 +3367,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="LlJehNdUR2WYzwzW1zPY-125" value="MQClientManger" style="swimlane;rounded=0;shadow=0;glass=0;dashed=1;labelBackgroundColor=none;sketch=0;fillStyle=auto;strokeColor=#10739e;strokeWidth=1;fillColor=#b1ddf0;opacity=50;swimlaneLine=1;" vertex="1" parent="1">
-          <mxGeometry x="740" y="2890" width="460" height="930" as="geometry" />
+          <mxGeometry x="660" y="2890" width="460" height="790" as="geometry" />
+        </mxCell>
+        <mxCell id="LlJehNdUR2WYzwzW1zPY-159" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;labelBackgroundColor=none;sketch=0;fillStyle=auto;strokeColor=#23445d;strokeWidth=1;fillColor=#bac8d3;opacity=50;" vertex="1" parent="LlJehNdUR2WYzwzW1zPY-125">
+          <mxGeometry x="20" y="450" width="320" height="210" as="geometry" />
         </mxCell>
         <mxCell id="LlJehNdUR2WYzwzW1zPY-127" value="获取MQClientManager" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;labelBackgroundColor=none;sketch=1;fillStyle=auto;strokeColor=#ae4132;strokeWidth=1;fillColor=#fad9d5;opacity=50;" vertex="1" parent="LlJehNdUR2WYzwzW1zPY-125">
           <mxGeometry x="52" y="214" width="140" height="37" as="geometry" />
@@ -3397,37 +3400,37 @@
           <mxGeometry x="40" y="470" width="140" height="37" as="geometry" />
         </mxCell>
         <mxCell id="LlJehNdUR2WYzwzW1zPY-149" value="开启定时任务" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;labelBackgroundColor=none;sketch=0;fillStyle=auto;fontColor=#000000;strokeColor=default;strokeWidth=1;fillColor=#FFCC99;gradientColor=none;opacity=50;" vertex="1" parent="LlJehNdUR2WYzwzW1zPY-125">
-          <mxGeometry x="40" y="510" width="140" height="40" as="geometry" />
+          <mxGeometry x="182" y="470" width="140" height="40" as="geometry" />
         </mxCell>
         <mxCell id="LlJehNdUR2WYzwzW1zPY-150" value="启动消息拉取服务" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;labelBackgroundColor=none;sketch=0;fillStyle=auto;fontColor=#000000;strokeColor=default;strokeWidth=1;fillColor=#FFCC99;gradientColor=none;opacity=50;" vertex="1" parent="LlJehNdUR2WYzwzW1zPY-125">
-          <mxGeometry x="40" y="552" width="140" height="40" as="geometry" />
+          <mxGeometry x="40" y="510" width="140" height="40" as="geometry" />
         </mxCell>
         <mxCell id="LlJehNdUR2WYzwzW1zPY-151" value="启动rebalance service" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;labelBackgroundColor=none;sketch=0;fillStyle=auto;fontColor=#000000;strokeColor=default;strokeWidth=1;fillColor=#FFCC99;gradientColor=none;opacity=50;" vertex="1" parent="LlJehNdUR2WYzwzW1zPY-125">
-          <mxGeometry x="40" y="595" width="140" height="40" as="geometry" />
+          <mxGeometry x="183" y="512" width="140" height="40" as="geometry" />
         </mxCell>
         <mxCell id="LlJehNdUR2WYzwzW1zPY-152" value="启动push 服务" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;labelBackgroundColor=none;sketch=0;fillStyle=auto;fontColor=#000000;strokeColor=default;strokeWidth=1;fillColor=#FFCC99;gradientColor=none;opacity=50;" vertex="1" parent="LlJehNdUR2WYzwzW1zPY-125">
-          <mxGeometry x="40" y="638" width="140" height="40" as="geometry" />
+          <mxGeometry x="40" y="554" width="140" height="40" as="geometry" />
         </mxCell>
         <mxCell id="LlJehNdUR2WYzwzW1zPY-153" value="更改服务状态 - RUNNING" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;labelBackgroundColor=none;sketch=0;fillStyle=auto;fontColor=#000000;strokeColor=default;strokeWidth=1;fillColor=#FFCC99;gradientColor=none;opacity=50;" vertex="1" parent="LlJehNdUR2WYzwzW1zPY-125">
-          <mxGeometry x="40" y="681" width="140" height="40" as="geometry" />
+          <mxGeometry x="183" y="554" width="140" height="40" as="geometry" />
         </mxCell>
         <mxCell id="LlJehNdUR2WYzwzW1zPY-154" value="发送心跳" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;labelBackgroundColor=none;sketch=0;fillStyle=auto;fontColor=#000000;strokeColor=default;strokeWidth=1;fillColor=#FFCC99;gradientColor=none;opacity=50;" vertex="1" parent="LlJehNdUR2WYzwzW1zPY-125">
-          <mxGeometry x="40" y="724" width="140" height="40" as="geometry" />
+          <mxGeometry x="41" y="597" width="140" height="40" as="geometry" />
         </mxCell>
         <mxCell id="LlJehNdUR2WYzwzW1zPY-155" value="启动扫描过期请求" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;dashed=1;labelBackgroundColor=none;sketch=0;fillStyle=auto;fontColor=#000000;strokeColor=default;strokeWidth=1;fillColor=#FFCC99;gradientColor=none;opacity=50;" vertex="1" parent="LlJehNdUR2WYzwzW1zPY-125">
-          <mxGeometry x="40" y="767" width="140" height="40" as="geometry" />
+          <mxGeometry x="183" y="597" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="LlJehNdUR2WYzwzW1zPY-156" value="生产者启动成功， 等待消息发送" style="whiteSpace=wrap;html=1;fillColor=#FFCC99;fontColor=#000000;rounded=1;shadow=0;glass=0;dashed=1;labelBackgroundColor=none;sketch=0;fillStyle=auto;strokeWidth=1;gradientColor=none;opacity=50;" vertex="1" parent="LlJehNdUR2WYzwzW1zPY-125">
-          <mxGeometry x="15" y="860" width="190" height="60" as="geometry" />
+        <mxCell id="LlJehNdUR2WYzwzW1zPY-156" value="生产者启动成功， 等待消息发送" style="whiteSpace=wrap;html=1;fillColor=#b0e3e6;rounded=1;shadow=0;glass=0;dashed=1;labelBackgroundColor=none;sketch=0;fillStyle=auto;strokeWidth=1;opacity=50;strokeColor=#0e8088;" vertex="1" parent="LlJehNdUR2WYzwzW1zPY-125">
+          <mxGeometry x="350" y="700" width="190" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="LlJehNdUR2WYzwzW1zPY-157" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#000000;strokeColor=#33FF33;fillColor=#B2C9AB;elbow=vertical;" edge="1" parent="LlJehNdUR2WYzwzW1zPY-125" source="LlJehNdUR2WYzwzW1zPY-155" target="LlJehNdUR2WYzwzW1zPY-156">
+        <mxCell id="LlJehNdUR2WYzwzW1zPY-157" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#000000;strokeColor=#33FF33;fillColor=#B2C9AB;elbow=vertical;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="LlJehNdUR2WYzwzW1zPY-125" source="LlJehNdUR2WYzwzW1zPY-155" target="LlJehNdUR2WYzwzW1zPY-156">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="LlJehNdUR2WYzwzW1zPY-133" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;fontColor=#000000;strokeColor=#33FF33;fillColor=#B2C9AB;elbow=vertical;" edge="1" parent="1" source="LlJehNdUR2WYzwzW1zPY-130" target="LlJehNdUR2WYzwzW1zPY-132">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="LlJehNdUR2WYzwzW1zPY-130" value="getOrCreateMQClientInstance" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;labelBackgroundColor=none;sketch=1;fillStyle=auto;strokeColor=#ae4132;strokeWidth=1;fillColor=#fad9d5;opacity=50;" vertex="1" parent="1">
-          <mxGeometry x="1012" y="3104" width="178" height="37" as="geometry" />
+          <mxGeometry x="932" y="3104" width="178" height="37" as="geometry" />
         </mxCell>
         <mxCell id="LlJehNdUR2WYzwzW1zPY-131" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;fontColor=#000000;strokeColor=#33FF33;fillColor=#B2C9AB;elbow=vertical;" edge="1" parent="1" source="LlJehNdUR2WYzwzW1zPY-127" target="LlJehNdUR2WYzwzW1zPY-130">
           <mxGeometry relative="1" as="geometry" />
