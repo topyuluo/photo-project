@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-03-08T08:03:11.827Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="sJtw9PbLHOZv3iMsFW7w" version="20.8.21" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-08T08:43:25.572Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="VFK3JlMYZPNHWA-iexUL" version="20.8.21" type="github">
   <diagram name="第 1 页" id="9OgkaWjk8Vnta-lFfhUs">
-    <mxGraphModel dx="1286" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1286" dy="803" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -64,8 +64,8 @@
         <mxCell id="ThDRUaUQ9ZC6cObNtzou-21" value="熔断 限流" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="459" y="283" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ThDRUaUQ9ZC6cObNtzou-22" value="金丝雀部署" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="459" y="299" width="80" height="30" as="geometry" />
+        <mxCell id="ThDRUaUQ9ZC6cObNtzou-22" value="（灰度发布）金丝雀部署" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="445" y="300" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ThDRUaUQ9ZC6cObNtzou-23" value="业务层" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="64" y="325" width="120" height="60" as="geometry" />
